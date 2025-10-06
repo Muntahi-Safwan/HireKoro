@@ -93,7 +93,10 @@
             // 
             // sidePanel
             // 
-            this.sidePanel.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.sidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(40)))));
+            this.sidePanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
+            this.sidePanel.BorderRadius = 8;
+            this.sidePanel.BorderThickness = 2;
             this.sidePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sidePanel.Location = new System.Drawing.Point(0, 0);
             this.sidePanel.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
