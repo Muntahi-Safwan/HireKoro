@@ -16,5 +16,10 @@ namespace HireKoro.Forms
         {
             InitializeComponent();
         }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
