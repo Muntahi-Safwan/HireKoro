@@ -52,6 +52,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\ClientRegister.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ClientRegister.Designer.cs">
+      <DependentUpon>ClientRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FreelancerRegister.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\FreelancerRegister.Designer.cs">
+      <DependentUpon>FreelancerRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Login.cs">
       <SubType>UserControl</SubType>
     </Compile>
