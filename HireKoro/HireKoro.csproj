@@ -53,11 +53,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\ClientHomePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ClientHomePage.Designer.cs">
+      <DependentUpon>ClientHomePage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ClientRegister.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Forms\ClientRegister.Designer.cs">
       <DependentUpon>ClientRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CreateProjectPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateProjectPage.Designer.cs">
+      <DependentUpon>CreateProjectPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FreelancerDetailsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\FreelancerDetailsPage.Designer.cs">
+      <DependentUpon>FreelancerDetailsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FreelancerProfilePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\FreelancerProfilePage.Designer.cs">
+      <DependentUpon>FreelancerProfilePage.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FreelancerRegister.cs">
       <SubType>UserControl</SubType>
@@ -71,11 +95,23 @@
     <Compile Include="Forms\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MessagesPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\MessagesPage.Designer.cs">
+      <DependentUpon>MessagesPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\SignUp.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Forms\SignUp.Designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UsersPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UsersPage.Designer.cs">
+      <DependentUpon>UsersPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Welcome.cs">
       <SubType>UserControl</SubType>
