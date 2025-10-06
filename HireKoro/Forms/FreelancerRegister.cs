@@ -1,5 +1,4 @@
-﻿using HireKoro.Utilities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,14 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HireKoro
+namespace HireKoro.Forms
 {
-    public partial class Main : Form
+    public partial class FreelancerRegister : UserControl
     {
-        public Main()
+        public FreelancerRegister()
         {
             InitializeComponent();
-            DraggableWindow.MakePanelDraggable(this.TopPanel, this);
         }
     }
 }
