@@ -150,6 +150,12 @@
     <EmbeddedResource Include="Forms\ClientRegister.resx">
       <DependentUpon>ClientRegister.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FreelancerDetailsPage.resx">
+      <DependentUpon>FreelancerDetailsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FreelancerProfilePage.resx">
+      <DependentUpon>FreelancerProfilePage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FreelancerRegister.resx">
       <DependentUpon>FreelancerRegister.cs</DependentUpon>
     </EmbeddedResource>
