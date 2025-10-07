@@ -135,6 +135,9 @@
     <EmbeddedResource Include="Forms\FreelancerRegister.resx">
       <DependentUpon>FreelancerRegister.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ClientHomePage.resx">
+      <DependentUpon>ClientHomePage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
