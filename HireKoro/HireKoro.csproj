@@ -129,6 +129,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities\DataAccess.cs" />
     <Compile Include="Utilities\DraggableWindow.cs" />
+    <EmbeddedResource Include="Forms\ClientRegister.resx">
+      <DependentUpon>ClientRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FreelancerRegister.resx">
+      <DependentUpon>FreelancerRegister.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ClientHomePage.resx">
       <DependentUpon>ClientHomePage.cs</DependentUpon>
     </EmbeddedResource>
@@ -137,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Welcome.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
