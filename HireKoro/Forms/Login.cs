@@ -21,5 +21,12 @@ namespace HireKoro.Forms
         {
 
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            Main.ClientHomePage = new ClientHomePage();
+            Main.ChangeWindow(Main.ClientHomePage);
+            Main.SidePanel.Visible = true;
+        }
     }
 }
