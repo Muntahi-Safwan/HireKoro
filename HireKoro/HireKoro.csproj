@@ -71,6 +71,12 @@
     <Compile Include="Forms\CreateProjectPage.Designer.cs">
       <DependentUpon>CreateProjectPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FreelancerCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\FreelancerCard.Designer.cs">
+      <DependentUpon>FreelancerCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FreelancerDetailsPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -100,6 +106,18 @@
     </Compile>
     <Compile Include="Forms\MessagesPage.Designer.cs">
       <DependentUpon>MessagesPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ProjectCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ProjectCard.Designer.cs">
+      <DependentUpon>ProjectCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReviewCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ReviewCard.Designer.cs">
+      <DependentUpon>ReviewCard.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\SignUp.cs">
       <SubType>UserControl</SubType>
