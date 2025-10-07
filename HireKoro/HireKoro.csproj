@@ -83,6 +83,12 @@
     <Compile Include="Forms\FreelancerDetailsPage.Designer.cs">
       <DependentUpon>FreelancerDetailsPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FreelancerHiringPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\FreelancerHiringPage.Designer.cs">
+      <DependentUpon>FreelancerHiringPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FreelancerProfilePage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -94,6 +100,12 @@
     </Compile>
     <Compile Include="Forms\FreelancerRegister.Designer.cs">
       <DependentUpon>FreelancerRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FreelancerTaskPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\FreelancerTaskPage.Designer.cs">
+      <DependentUpon>FreelancerTaskPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Login.cs">
       <SubType>UserControl</SubType>
@@ -124,6 +136,12 @@
     </Compile>
     <Compile Include="Forms\SignUp.Designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TaskCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\TaskCard.Designer.cs">
+      <DependentUpon>TaskCard.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\UsersPage.cs">
       <SubType>UserControl</SubType>
