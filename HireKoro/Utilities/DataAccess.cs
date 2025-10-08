@@ -42,7 +42,7 @@ namespace HireKoro.Utilities
 
         public DataAccess()
         {
-            this.Sqlcon = new SqlConnection(@"Data Source=PROJECTR\SQLEXPRESS;Initial Catalog=ProjectR_DB;Persist Security Info=True;User ID=sa;Password=12345;");
+            this.Sqlcon = new SqlConnection(@"Data Source=IronMan\SQLEXPRESS;Initial Catalog=HireKoroDB;Integrated Security=True;");
             Sqlcon.Open();
         }
 

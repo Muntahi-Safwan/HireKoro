@@ -36,6 +36,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
+            this.pnlMainPanel = new Guna.UI2.WinForms.Guna2GradientPanel();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -160,6 +161,18 @@
             this.btnLogin.Text = "Sign";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
+            // pnlMainPanel
+            // 
+            this.pnlMainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMainPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(22)))), ((int)(((byte)(26)))));
+            this.pnlMainPanel.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(58)))), ((int)(((byte)(82)))));
+            this.pnlMainPanel.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.pnlMainPanel.Location = new System.Drawing.Point(0, 0);
+            this.pnlMainPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlMainPanel.Name = "pnlMainPanel";
+            this.pnlMainPanel.Size = new System.Drawing.Size(1150, 661);
+            this.pnlMainPanel.TabIndex = 8;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -172,6 +185,7 @@
             this.Controls.Add(this.guna2TextBox1);
             this.Controls.Add(this.guna2PictureBox2);
             this.Controls.Add(this.guna2PictureBox1);
+            this.Controls.Add(this.pnlMainPanel);
             this.Name = "Login";
             this.Size = new System.Drawing.Size(1150, 661);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
@@ -190,5 +204,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private Guna.UI2.WinForms.Guna2Button btnLogin;
+        private Guna.UI2.WinForms.Guna2GradientPanel pnlMainPanel;
     }
 }
