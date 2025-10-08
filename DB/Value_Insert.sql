@@ -16,10 +16,10 @@ VALUES
 (1, 3, 'Completed', 'Mobile App UI Design', 'Design the UI for a new app', GETDATE(), 40, 1200.00);
 
 -- TASKS
-INSERT INTO TASKS (ProjectID, Status, Description, Deadline, Priority)
+INSERT INTO TASKS (ProjectID, Name, Status, Description, Deadline, Priority)
 VALUES 
-(1, 'In Progress', 'Create homepage layout', '2025-10-15', 'High'),
-(1, 'Pending', 'Implement contact form', '2025-10-20', 'Medium');
+(1, 'In Progress','React Project', 'Setup React project structure', '2025-10-15', 'High'),
+(1, 'Completed','Contact Form', 'Implement contact form', '2025-10-20', 'Medium');
 
 -- INVOICES
 INSERT INTO INVOICES (ProjectID, Status, Amount, IssueDate, DueDate)
