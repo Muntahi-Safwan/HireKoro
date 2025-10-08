@@ -208,8 +208,14 @@
     <EmbeddedResource Include="Forms\AdminProjects.resx">
       <DependentUpon>AdminProjects.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminReviews.resx">
+      <DependentUpon>AdminReviews.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminTasksPage.resx">
       <DependentUpon>AdminTasksPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminUsers.resx">
+      <DependentUpon>AdminUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ClientRegister.resx">
       <DependentUpon>ClientRegister.cs</DependentUpon>
