@@ -202,6 +202,9 @@
     <Compile Include="Utilities\DataAccess.cs" />
     <Compile Include="Utilities\DraggableWindow.cs" />
     <Compile Include="Utilities\PasswordHelper.cs" />
+    <EmbeddedResource Include="Forms\AdminInvoices.resx">
+      <DependentUpon>AdminInvoices.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminProjects.resx">
       <DependentUpon>AdminProjects.cs</DependentUpon>
     </EmbeddedResource>
