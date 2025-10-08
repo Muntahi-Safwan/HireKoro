@@ -22,7 +22,13 @@ namespace HireKoro
         // Pages
         internal static UserControl WelcomePage { get; set; }
         internal static UserControl SignInPage { get; set; }
+        internal static UserControl SignUpPage { get; set; }
+        internal static UserControl FreelancerRegisterPage { get; set; }
+        internal static UserControl ClientRegisterPage { get; set; }
         internal static UserControl ClientHomePage { get; set; }
+        internal static UserControl ProfilePage { get; set;  }
+        
+        
 
         public Main()
         {
@@ -60,6 +66,13 @@ namespace HireKoro
         {
             ChangeWindow(WelcomePage);
             SidePanel.Visible = false;
+        }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            ProfilePage = new FreelancerProfilePage();
+            ChangeWindow(ProfilePage);
+            SidePanel.Visible = true;
         }
     }
 }

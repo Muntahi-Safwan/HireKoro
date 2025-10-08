@@ -53,11 +53,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\AdminInvoices.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminInvoices.Designer.cs">
+      <DependentUpon>AdminInvoices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminProjects.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminProjects.Designer.cs">
+      <DependentUpon>AdminProjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminReviews.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminReviews.Designer.cs">
+      <DependentUpon>AdminReviews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminTasksPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminTasksPage.Designer.cs">
+      <DependentUpon>AdminTasksPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminUsers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminUsers.Designer.cs">
+      <DependentUpon>AdminUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ClientHomePage.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Forms\ClientHomePage.Designer.cs">
       <DependentUpon>ClientHomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ClientProfilePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ClientProfilePage.Designer.cs">
+      <DependentUpon>ClientProfilePage.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ClientRegister.cs">
       <SubType>UserControl</SubType>
@@ -166,6 +202,12 @@
     <Compile Include="Utilities\DataAccess.cs" />
     <Compile Include="Utilities\DraggableWindow.cs" />
     <Compile Include="Utilities\PasswordHelper.cs" />
+    <EmbeddedResource Include="Forms\AdminProjects.resx">
+      <DependentUpon>AdminProjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminTasksPage.resx">
+      <DependentUpon>AdminTasksPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ClientRegister.resx">
       <DependentUpon>ClientRegister.cs</DependentUpon>
     </EmbeddedResource>

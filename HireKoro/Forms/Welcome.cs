@@ -22,5 +22,13 @@ namespace HireKoro.Forms
             Main.SignInPage = new Login();
             Main.ChangeWindow(Main.SignInPage);
         }
+
+        private void btnSignUp_Click(object sender, EventArgs e)
+        {
+            Main.SignUpPage = new SignUp();
+            Main.ChangeWindow(Main.SignUpPage);
+        }
+
+
     }
 }
