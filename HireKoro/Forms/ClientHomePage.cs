@@ -16,5 +16,29 @@ namespace HireKoro.Forms
         {
             InitializeComponent();
         }
+
+        private void ClientHomePage_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                string query = "Select COUNT(*) FROM USERS WHERE UserTypeID=2";
+                var response = Main.DB.ExecuteQuery(query);
+                int count = 0;
+                foreach (DataRow row in response.Rows)
+                {
+                    count++;
+                }
+                for (int i = 0; i < count; i++)
+                {
+                    FreelancerCard freelancerCard = new FreelancerCard();
+                    flowPanel.Controls.Add(freelancerCard);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+             
+        }
     }
 }

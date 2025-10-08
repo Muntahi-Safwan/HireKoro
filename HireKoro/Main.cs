@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using HireKoro.Forms;
+using Guna.UI2.WinForms;
 
 namespace HireKoro
 {
@@ -16,7 +17,7 @@ namespace HireKoro
     {
         internal static Panel MainPanel { get;  set; }
         internal static Panel SidePanel { get; set; }
-
+        internal static Guna2HtmlLabel TopLabelText { get; set; }
 
 
         // Pages
@@ -27,16 +28,23 @@ namespace HireKoro
         internal static UserControl ClientRegisterPage { get; set; }
         internal static UserControl ClientHomePage { get; set; }
         internal static UserControl ProfilePage { get; set;  }
-        
-        
+        internal static UserControl AdminProjectsPage { get; set; }
+        internal static UserControl AdminTasksPage { get; set; }
+        internal static UserControl AdminUsersPage { get; set; }
+        internal static UserControl AdminReviewsPage { get; set; }
+        internal static UserControl AdminInvoicesPage { get; set; }
+
+        // Data Access Object
+        internal static DataAccess DB { get; set; }
 
         public Main()
         {
             InitializeComponent();
             DraggableWindow.MakePanelDraggable(this.TopPanel, this);
-
+            DB = new DataAccess();
             MainPanel = this.pnlMainPanel;
             SidePanel = this.pnlSidePanel;
+            TopLabelText = this.lblTopText;
             WelcomePage = new Welcome();
             ChangeWindow(WelcomePage);
 
@@ -73,6 +81,20 @@ namespace HireKoro
             ProfilePage = new FreelancerProfilePage();
             ChangeWindow(ProfilePage);
             SidePanel.Visible = true;
+        }
+
+        private void btnProjects_Click(object sender, EventArgs e)
+        {
+            AdminProjectsPage = new AdminProjects();
+            ChangeWindow(AdminProjectsPage);
+            Main.TopLabelText.Text = "Admin - Projects";
+        }
+
+        private void btnTask_Click(object sender, EventArgs e)
+        {
+            AdminTasksPage = new AdminTasksPage();
+            ChangeWindow(AdminTasksPage);
+            Main.TopLabelText.Text = "Admin - Tasks";
         }
     }
 }

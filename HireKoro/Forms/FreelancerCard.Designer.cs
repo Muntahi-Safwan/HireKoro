@@ -142,6 +142,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2PictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(10);
             this.Name = "FreelancerCard";
             this.Size = new System.Drawing.Size(112, 175);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();

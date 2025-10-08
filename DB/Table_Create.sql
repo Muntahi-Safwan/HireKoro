@@ -35,6 +35,7 @@ CREATE TABLE PROJECTS (
 CREATE TABLE TASKS (
     TaskID INT IDENTITY(1,1) PRIMARY KEY,
     ProjectID INT NOT NULL,
+    Name NVARCHAR(100),
     Status NVARCHAR(50),
     Description NVARCHAR(MAX),
     Deadline DATETIME,
@@ -42,6 +43,12 @@ CREATE TABLE TASKS (
     IsCompleted BIT DEFAULT 0,
     FOREIGN KEY (ProjectID) REFERENCES PROJECTS(ProjectID)
 );
+
+INSERT INTO TASKS (ProjectID, Name, Status, Description, Deadline, Priority)
+VALUES 
+(1, 'In Progress','React Project', 'Setup React project structure', '2025-10-15', 'High'),
+(1, 'Completed','Contact Form', 'Implement contact form', '2025-10-20', 'Medium');
+
 
 CREATE TABLE INVOICES (
     InvoiceID INT IDENTITY(1,1) PRIMARY KEY,
@@ -91,5 +98,3 @@ CREATE TABLE PaymentLog (
     Status NVARCHAR(100),
     Comment NVARCHAR(MAX)
 );
-
-
