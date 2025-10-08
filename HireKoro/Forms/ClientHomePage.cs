@@ -21,15 +21,12 @@ namespace HireKoro.Forms
         {
             try
             {
-                string query = "Select COUNT(*) FROM USERS WHERE UserTypeID=2";
-                var response = Main.DB.ExecuteQuery(query);
+                string query = "Select * FROM USERS WHERE UserTypeID=2\r\n";
+                var response = Main.DB.ExecuteQueryTable(query);
                 int count = 0;
-                foreach (DataRow row in response.Rows)
+                while(count < response.Rows.Count)
                 {
                     count++;
-                }
-                for (int i = 0; i < count; i++)
-                {
                     FreelancerCard freelancerCard = new FreelancerCard();
                     flowPanel.Controls.Add(freelancerCard);
                 }
