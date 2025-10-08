@@ -17,19 +17,16 @@ namespace HireKoro.Forms
             InitializeComponent();
         }
 
-        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        private void btnFreelancerSelect_Click(object sender, EventArgs e)
         {
-
+            Main.FreelancerRegisterPage = new FreelancerRegister();
+            Main.ChangeWindow(Main.FreelancerRegisterPage);
         }
 
-        private void guna2Button2_Click(object sender, EventArgs e)
+        private void btnClientSelect_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-
+            Main.ClientRegisterPage = new ClientRegister();
+            Main.ChangeWindow(Main.ClientRegisterPage);
         }
     }
 }
