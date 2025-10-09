@@ -795,7 +795,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnlMainPanel);
-            this.Name = "AdminUsers";
+            //this.Name = "AdminUsers";
             this.Size = new System.Drawing.Size(929, 661);
             this.pnlMainPanel.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
