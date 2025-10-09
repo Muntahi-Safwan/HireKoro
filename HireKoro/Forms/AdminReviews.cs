@@ -15,6 +15,26 @@ namespace HireKoro.Forms
         public AdminReviews()
         {
             InitializeComponent();
+            this.LoadReviews();
+
         }
+
+        internal void LoadReviews()
+        {
+            try
+            {
+                string query = "SELECTS * FROM REVIEWS";
+                var response = Main.DB.ExecuteQueryTable(query);
+                dgvReviews.DataSource = response;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading projects: " + ex.Message);
+            }
+        }
+
+
+
+
     }
 }
