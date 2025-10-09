@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -47,7 +48,6 @@ namespace HireKoro.Forms
             this.txtDescription.Clear();
             this.txtHours.Clear();
             this.txtCost.Clear();
-
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -67,6 +67,84 @@ namespace HireKoro.Forms
             this.txtCost.Text = this.dgvProjects.CurrentRow.Cells["Cost"].Value.ToString();
 
 
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            this.txtProjectID.Text = this.dgvProjects.CurrentRow.Cells["ProjectID"].Value.ToString();
+            try
+            {
+                string query = $"DELETE FROM PROJECTS WHERE ProjectID = {this.txtProjectID.Text};";
+                var response = Main.DB.ExecuteDMLQuery(query);
+                dgvProjects.DataSource = response;
+                this.LoadProjects();
+                MessageBox.Show("Project deleted successfully!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error deleting projects: " + ex.Message);
+            }
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            // Check if ProjectID field has a value to determine create vs update mode
+            bool isUpdateMode = !string.IsNullOrEmpty(txtProjectID.Text.Trim());
+            
+            if (isUpdateMode)
+            {
+                UpdateProject();
+            }
+            else
+            {
+                CreateProject();
+            }
+        }
+
+        private void CreateProject()
+        {
+            try
+            {
+                string query = $@"INSERT INTO PROJECTS (ClientID, FreelancerID, Title, ProjectDescription, 
+                                 ProjectStatus, ProjectHours, StartDate, Cost) 
+                                 VALUES ({txtClientID.Text}, {txtFreelancerID.Text}, '{txtTitle.Text}', 
+                                 '{txtDescription.Text}', '{txtStatus.Text}', {txtHours.Text}, 
+                                 '{DateTime.Now:yyyy-MM-dd}', {txtCost.Text})";
+                
+                Main.DB.ExecuteDMLQuery(query);
+                MessageBox.Show("Project created successfully!");
+                LoadProjects();
+                Clearall();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error creating project: " + ex.Message);
+            }
+        }
+
+        private void UpdateProject()
+        {
+            try
+            {
+                string query = $@"UPDATE PROJECTS SET 
+                                 ClientID = {txtClientID.Text},
+                                 FreelancerID = {txtFreelancerID.Text},
+                                 Title = '{txtTitle.Text}',
+                                 ProjectDescription = '{txtDescription.Text}',
+                                 ProjectStatus = '{txtStatus.Text}',
+                                 ProjectHours = {txtHours.Text},
+                                 Cost = {txtCost.Text}
+                                 WHERE ProjectID = {txtProjectID.Text}";
+                
+                Main.DB.ExecuteDMLQuery(query);
+                MessageBox.Show("Project updated successfully!");
+                LoadProjects();
+                Clearall(); 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error updating project: " + ex.Message);
+            }
         }
     }
 }

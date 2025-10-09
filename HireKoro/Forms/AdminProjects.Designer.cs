@@ -34,9 +34,9 @@
             this.pnlMainPanel = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             this.btnClear = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCreate = new Guna.UI2.WinForms.Guna2Button();
             this.dtpStartdate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.txtCost = new Guna.UI2.WinForms.Guna2TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -106,9 +106,9 @@
             // 
             // guna2GradientPanel2
             // 
-            this.guna2GradientPanel2.Controls.Add(this.guna2Button3);
+            this.guna2GradientPanel2.Controls.Add(this.btnDelete);
             this.guna2GradientPanel2.Controls.Add(this.btnClear);
-            this.guna2GradientPanel2.Controls.Add(this.guna2Button1);
+            this.guna2GradientPanel2.Controls.Add(this.btnCreate);
             this.guna2GradientPanel2.Controls.Add(this.dtpStartdate);
             this.guna2GradientPanel2.Controls.Add(this.txtCost);
             this.guna2GradientPanel2.Controls.Add(this.label10);
@@ -138,24 +138,25 @@
             this.guna2GradientPanel2.Size = new System.Drawing.Size(220, 661);
             this.guna2GradientPanel2.TabIndex = 3;
             // 
-            // guna2Button3
+            // btnDelete
             // 
-            this.guna2Button3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
-            this.guna2Button3.BorderRadius = 9;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(121)))), ((int)(((byte)(121)))));
-            this.guna2Button3.Font = new System.Drawing.Font("Poppins", 9F);
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.Location = new System.Drawing.Point(22, 609);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(181, 30);
-            this.guna2Button3.TabIndex = 23;
-            this.guna2Button3.Text = "Delete";
-            this.guna2Button3.UseTransparentBackground = true;
+            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
+            this.btnDelete.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
+            this.btnDelete.BorderRadius = 9;
+            this.btnDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(121)))), ((int)(((byte)(121)))));
+            this.btnDelete.Font = new System.Drawing.Font("Poppins", 9F);
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(22, 609);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(181, 30);
+            this.btnDelete.TabIndex = 23;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseTransparentBackground = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnClear
             // 
@@ -178,25 +179,26 @@
             this.btnClear.UseTransparentBackground = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // guna2Button1
+            // btnCreate
             // 
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
-            this.guna2Button1.BorderRadius = 9;
-            this.guna2Button1.BorderThickness = 1;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Poppins", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
-            this.guna2Button1.Location = new System.Drawing.Point(21, 537);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(181, 30);
-            this.guna2Button1.TabIndex = 13;
-            this.guna2Button1.Text = "Create / Update";
-            this.guna2Button1.UseTransparentBackground = true;
+            this.btnCreate.BackColor = System.Drawing.Color.Transparent;
+            this.btnCreate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
+            this.btnCreate.BorderRadius = 9;
+            this.btnCreate.BorderThickness = 1;
+            this.btnCreate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCreate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCreate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCreate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCreate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
+            this.btnCreate.Font = new System.Drawing.Font("Poppins", 9F);
+            this.btnCreate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
+            this.btnCreate.Location = new System.Drawing.Point(21, 537);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(181, 30);
+            this.btnCreate.TabIndex = 13;
+            this.btnCreate.Text = "Create / Update";
+            this.btnCreate.UseTransparentBackground = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // dtpStartdate
             // 
@@ -209,7 +211,7 @@
             this.dtpStartdate.Font = new System.Drawing.Font("Poppins", 6F);
             this.dtpStartdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
             this.dtpStartdate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpStartdate.Location = new System.Drawing.Point(26, 364);
+            this.dtpStartdate.Location = new System.Drawing.Point(18, 365);
             this.dtpStartdate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpStartdate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpStartdate.Name = "dtpStartdate";
@@ -733,9 +735,9 @@
         private Guna.UI2.WinForms.Guna2TextBox txtTitle;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpStartdate;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnCreate;
         private Guna.UI2.WinForms.Guna2Button btnClear;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button btnDelete;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private Guna.UI2.WinForms.Guna2DataGridView dgvProjects;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProjectID;
