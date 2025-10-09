@@ -15,6 +15,25 @@ namespace HireKoro.Forms
         public AdminInvoices()
         {
             InitializeComponent();
+            this.LoadInvoices();
         }
+
+        internal void LoadInvoices()
+        {
+            try
+            {
+                string query = "SELECT * FROM INVOICES";
+                var response = Main.DB.ExecuteQueryTable(query);
+                dgvInvoices.DataSource = response;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading projects: " + ex.Message);
+            }
+        }
+
+
+
+
     }
 }
