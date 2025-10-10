@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblFreelancerName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,16 +48,16 @@
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // label1
+            // lblFreelancerName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(3, 74);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 19);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "John Doe";
+            this.lblFreelancerName.AutoSize = true;
+            this.lblFreelancerName.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFreelancerName.ForeColor = System.Drawing.Color.White;
+            this.lblFreelancerName.Location = new System.Drawing.Point(3, 74);
+            this.lblFreelancerName.Name = "lblFreelancerName";
+            this.lblFreelancerName.Size = new System.Drawing.Size(61, 19);
+            this.lblFreelancerName.TabIndex = 1;
+            this.lblFreelancerName.Text = "John Doe";
             // 
             // label2
             // 
@@ -140,7 +140,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblFreelancerName);
             this.Controls.Add(this.guna2PictureBox1);
             this.Margin = new System.Windows.Forms.Padding(10);
             this.Name = "FreelancerCard";
@@ -154,7 +154,7 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblFreelancerName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
