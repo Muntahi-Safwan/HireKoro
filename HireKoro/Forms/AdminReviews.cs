@@ -19,11 +19,11 @@ namespace HireKoro.Forms
 
         }
 
-        internal void LoadReviews()
+        internal void LoadReviews(string query = "SELECT R.ReviewID,U.Name, P.Title,R.Rating,R.Comment FROM REVIEWS AS R,PROJECTS AS P,Users as U WHERE R.ProjectID= P.ProjectID AND R.ReviewerID=U.UserID")
         {
             try
             {
-                string query = "SELECTS * FROM REVIEWS";
+
                 var response = Main.DB.ExecuteQueryTable(query);
                 dgvReviews.DataSource = response;
             }

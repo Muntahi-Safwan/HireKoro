@@ -33,6 +33,7 @@ namespace HireKoro
         internal static UserControl AdminUsersPage { get; set; }
         internal static UserControl AdminReviewsPage { get; set; }
         internal static UserControl AdminInvoicesPage { get; set; }
+        
 
         // Data Access Object
         internal static DataAccess DB { get; set; }
@@ -95,6 +96,13 @@ namespace HireKoro
             AdminTasksPage = new AdminTasksPage();
             ChangeWindow(AdminTasksPage);
             Main.TopLabelText.Text = "Admin - Tasks";
+        }
+
+        private void btnReviews_Click(object sender, EventArgs e)
+        {
+            AdminReviewsPage = new AdminReviews();
+            ChangeWindow(AdminReviewsPage);
+            Main.TopLabelText.Text = " Admin - Reviews";
         }
     }
 }

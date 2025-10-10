@@ -39,7 +39,7 @@
             this.guna2Panel12 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel11 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnReviews = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel10 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnProfile = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
@@ -213,31 +213,32 @@
             // 
             // guna2Panel11
             // 
-            this.guna2Panel11.Controls.Add(this.guna2Button8);
+            this.guna2Panel11.Controls.Add(this.btnReviews);
             this.guna2Panel11.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel11.Location = new System.Drawing.Point(0, 336);
             this.guna2Panel11.Name = "guna2Panel11";
             this.guna2Panel11.Size = new System.Drawing.Size(197, 48);
             this.guna2Panel11.TabIndex = 7;
             // 
-            // guna2Button8
+            // btnReviews
             // 
-            this.guna2Button8.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button8.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button8.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button8.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button8.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Button8.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button8.Font = new System.Drawing.Font("Poppins Medium", 14.25F, System.Drawing.FontStyle.Bold);
-            this.guna2Button8.ForeColor = System.Drawing.Color.White;
-            this.guna2Button8.Location = new System.Drawing.Point(0, 0);
-            this.guna2Button8.Name = "guna2Button8";
-            this.guna2Button8.Size = new System.Drawing.Size(197, 48);
-            this.guna2Button8.TabIndex = 0;
-            this.guna2Button8.Text = "Reviews";
-            this.guna2Button8.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button8.UseTransparentBackground = true;
+            this.btnReviews.BackColor = System.Drawing.Color.Transparent;
+            this.btnReviews.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnReviews.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnReviews.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnReviews.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnReviews.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnReviews.FillColor = System.Drawing.Color.Transparent;
+            this.btnReviews.Font = new System.Drawing.Font("Poppins Medium", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnReviews.ForeColor = System.Drawing.Color.White;
+            this.btnReviews.Location = new System.Drawing.Point(0, 0);
+            this.btnReviews.Name = "btnReviews";
+            this.btnReviews.Size = new System.Drawing.Size(197, 48);
+            this.btnReviews.TabIndex = 0;
+            this.btnReviews.Text = "Reviews";
+            this.btnReviews.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnReviews.UseTransparentBackground = true;
+            this.btnReviews.Click += new System.EventHandler(this.btnReviews_Click);
             // 
             // guna2Panel10
             // 
@@ -624,7 +625,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel12;
         private Guna.UI2.WinForms.Guna2Button guna2Button9;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel11;
-        private Guna.UI2.WinForms.Guna2Button guna2Button8;
+        private Guna.UI2.WinForms.Guna2Button btnReviews;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel10;
         private Guna.UI2.WinForms.Guna2Button btnProfile;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel9;
