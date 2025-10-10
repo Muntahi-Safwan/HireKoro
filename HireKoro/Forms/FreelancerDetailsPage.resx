@@ -117,9 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Dr. Ahmad Yusuf is a renowned Islamic scholar with over 20 years of experience in teaching and research. He holds a
-Ph.D. in Islamic Theology from Al-Azhar University, one of the oldest and most prestigious institutions in the Islamic 
-world. Dr. Yusuf has specialized in Quranic exegesis (Tafsir), Hadith studies, and Islamic jurisprudence (Fiqh).</value>
-  </data>
 </root>

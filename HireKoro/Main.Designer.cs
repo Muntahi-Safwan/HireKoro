@@ -57,7 +57,7 @@
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnProjects = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnHome = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
@@ -199,9 +199,9 @@
             // 
             this.guna2Panel15.Controls.Add(this.btnMyProjects);
             this.guna2Panel15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel15.Location = new System.Drawing.Point(0, 528);
+            this.guna2Panel15.Location = new System.Drawing.Point(0, 385);
             this.guna2Panel15.Name = "guna2Panel15";
-            this.guna2Panel15.Size = new System.Drawing.Size(197, 48);
+            this.guna2Panel15.Size = new System.Drawing.Size(197, 35);
             this.guna2Panel15.TabIndex = 11;
             // 
             // btnMyProjects
@@ -217,7 +217,7 @@
             this.btnMyProjects.ForeColor = System.Drawing.Color.White;
             this.btnMyProjects.Location = new System.Drawing.Point(0, 0);
             this.btnMyProjects.Name = "btnMyProjects";
-            this.btnMyProjects.Size = new System.Drawing.Size(197, 48);
+            this.btnMyProjects.Size = new System.Drawing.Size(197, 35);
             this.btnMyProjects.TabIndex = 0;
             this.btnMyProjects.Text = "My Projects";
             this.btnMyProjects.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -227,9 +227,9 @@
             // 
             this.guna2Panel14.Controls.Add(this.btnAdminTasks);
             this.guna2Panel14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel14.Location = new System.Drawing.Point(0, 480);
+            this.guna2Panel14.Location = new System.Drawing.Point(0, 350);
             this.guna2Panel14.Name = "guna2Panel14";
-            this.guna2Panel14.Size = new System.Drawing.Size(197, 48);
+            this.guna2Panel14.Size = new System.Drawing.Size(197, 35);
             this.guna2Panel14.TabIndex = 10;
             // 
             // btnAdminTasks
@@ -245,7 +245,7 @@
             this.btnAdminTasks.ForeColor = System.Drawing.Color.White;
             this.btnAdminTasks.Location = new System.Drawing.Point(0, 0);
             this.btnAdminTasks.Name = "btnAdminTasks";
-            this.btnAdminTasks.Size = new System.Drawing.Size(197, 48);
+            this.btnAdminTasks.Size = new System.Drawing.Size(197, 35);
             this.btnAdminTasks.TabIndex = 0;
             this.btnAdminTasks.Text = "Manage Tasks";
             this.btnAdminTasks.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -256,9 +256,9 @@
             // 
             this.guna2Panel13.Controls.Add(this.btnUsers);
             this.guna2Panel13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel13.Location = new System.Drawing.Point(0, 432);
+            this.guna2Panel13.Location = new System.Drawing.Point(0, 315);
             this.guna2Panel13.Name = "guna2Panel13";
-            this.guna2Panel13.Size = new System.Drawing.Size(197, 48);
+            this.guna2Panel13.Size = new System.Drawing.Size(197, 35);
             this.guna2Panel13.TabIndex = 9;
             // 
             // btnUsers
@@ -274,7 +274,7 @@
             this.btnUsers.ForeColor = System.Drawing.Color.White;
             this.btnUsers.Location = new System.Drawing.Point(0, 0);
             this.btnUsers.Name = "btnUsers";
-            this.btnUsers.Size = new System.Drawing.Size(197, 48);
+            this.btnUsers.Size = new System.Drawing.Size(197, 35);
             this.btnUsers.TabIndex = 0;
             this.btnUsers.Text = "Users";
             this.btnUsers.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -285,9 +285,9 @@
             // 
             this.guna2Panel12.Controls.Add(this.guna2Button9);
             this.guna2Panel12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel12.Location = new System.Drawing.Point(0, 384);
+            this.guna2Panel12.Location = new System.Drawing.Point(0, 280);
             this.guna2Panel12.Name = "guna2Panel12";
-            this.guna2Panel12.Size = new System.Drawing.Size(197, 48);
+            this.guna2Panel12.Size = new System.Drawing.Size(197, 35);
             this.guna2Panel12.TabIndex = 8;
             // 
             // guna2Button9
@@ -303,7 +303,7 @@
             this.guna2Button9.ForeColor = System.Drawing.Color.White;
             this.guna2Button9.Location = new System.Drawing.Point(0, 0);
             this.guna2Button9.Name = "guna2Button9";
-            this.guna2Button9.Size = new System.Drawing.Size(197, 48);
+            this.guna2Button9.Size = new System.Drawing.Size(197, 35);
             this.guna2Button9.TabIndex = 0;
             this.guna2Button9.Text = "Logs";
             this.guna2Button9.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -313,9 +313,9 @@
             // 
             this.guna2Panel11.Controls.Add(this.btnReviews);
             this.guna2Panel11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel11.Location = new System.Drawing.Point(0, 336);
+            this.guna2Panel11.Location = new System.Drawing.Point(0, 245);
             this.guna2Panel11.Name = "guna2Panel11";
-            this.guna2Panel11.Size = new System.Drawing.Size(197, 48);
+            this.guna2Panel11.Size = new System.Drawing.Size(197, 35);
             this.guna2Panel11.TabIndex = 7;
             // 
             // btnReviews
@@ -331,7 +331,7 @@
             this.btnReviews.ForeColor = System.Drawing.Color.White;
             this.btnReviews.Location = new System.Drawing.Point(0, 0);
             this.btnReviews.Name = "btnReviews";
-            this.btnReviews.Size = new System.Drawing.Size(197, 48);
+            this.btnReviews.Size = new System.Drawing.Size(197, 35);
             this.btnReviews.TabIndex = 0;
             this.btnReviews.Text = "Reviews";
             this.btnReviews.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -342,9 +342,9 @@
             // 
             this.guna2Panel10.Controls.Add(this.btnProfile);
             this.guna2Panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel10.Location = new System.Drawing.Point(0, 288);
+            this.guna2Panel10.Location = new System.Drawing.Point(0, 210);
             this.guna2Panel10.Name = "guna2Panel10";
-            this.guna2Panel10.Size = new System.Drawing.Size(197, 48);
+            this.guna2Panel10.Size = new System.Drawing.Size(197, 35);
             this.guna2Panel10.TabIndex = 6;
             // 
             // btnProfile
@@ -360,7 +360,7 @@
             this.btnProfile.ForeColor = System.Drawing.Color.White;
             this.btnProfile.Location = new System.Drawing.Point(0, 0);
             this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(197, 48);
+            this.btnProfile.Size = new System.Drawing.Size(197, 35);
             this.btnProfile.TabIndex = 0;
             this.btnProfile.Text = "My Profile";
             this.btnProfile.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -371,9 +371,9 @@
             // 
             this.guna2Panel9.Controls.Add(this.btnInvoices);
             this.guna2Panel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel9.Location = new System.Drawing.Point(0, 240);
+            this.guna2Panel9.Location = new System.Drawing.Point(0, 175);
             this.guna2Panel9.Name = "guna2Panel9";
-            this.guna2Panel9.Size = new System.Drawing.Size(197, 48);
+            this.guna2Panel9.Size = new System.Drawing.Size(197, 35);
             this.guna2Panel9.TabIndex = 5;
             // 
             // btnInvoices
@@ -389,7 +389,7 @@
             this.btnInvoices.ForeColor = System.Drawing.Color.White;
             this.btnInvoices.Location = new System.Drawing.Point(0, 0);
             this.btnInvoices.Name = "btnInvoices";
-            this.btnInvoices.Size = new System.Drawing.Size(197, 48);
+            this.btnInvoices.Size = new System.Drawing.Size(197, 35);
             this.btnInvoices.TabIndex = 0;
             this.btnInvoices.Text = "Invoices";
             this.btnInvoices.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -400,9 +400,9 @@
             // 
             this.guna2Panel8.Controls.Add(this.guna2Button5);
             this.guna2Panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel8.Location = new System.Drawing.Point(0, 192);
+            this.guna2Panel8.Location = new System.Drawing.Point(0, 140);
             this.guna2Panel8.Name = "guna2Panel8";
-            this.guna2Panel8.Size = new System.Drawing.Size(197, 48);
+            this.guna2Panel8.Size = new System.Drawing.Size(197, 35);
             this.guna2Panel8.TabIndex = 4;
             // 
             // guna2Button5
@@ -418,7 +418,7 @@
             this.guna2Button5.ForeColor = System.Drawing.Color.White;
             this.guna2Button5.Location = new System.Drawing.Point(0, 0);
             this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.Size = new System.Drawing.Size(197, 48);
+            this.guna2Button5.Size = new System.Drawing.Size(197, 35);
             this.guna2Button5.TabIndex = 0;
             this.guna2Button5.Text = "Messages";
             this.guna2Button5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -428,9 +428,9 @@
             // 
             this.guna2Panel7.Controls.Add(this.btnTask);
             this.guna2Panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel7.Location = new System.Drawing.Point(0, 144);
+            this.guna2Panel7.Location = new System.Drawing.Point(0, 105);
             this.guna2Panel7.Name = "guna2Panel7";
-            this.guna2Panel7.Size = new System.Drawing.Size(197, 48);
+            this.guna2Panel7.Size = new System.Drawing.Size(197, 35);
             this.guna2Panel7.TabIndex = 3;
             // 
             // btnTask
@@ -446,7 +446,7 @@
             this.btnTask.ForeColor = System.Drawing.Color.White;
             this.btnTask.Location = new System.Drawing.Point(0, 0);
             this.btnTask.Name = "btnTask";
-            this.btnTask.Size = new System.Drawing.Size(197, 48);
+            this.btnTask.Size = new System.Drawing.Size(197, 35);
             this.btnTask.TabIndex = 0;
             this.btnTask.Text = "My Tasks";
             this.btnTask.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -457,9 +457,9 @@
             // 
             this.guna2Panel6.Controls.Add(this.btnProjects);
             this.guna2Panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel6.Location = new System.Drawing.Point(0, 96);
+            this.guna2Panel6.Location = new System.Drawing.Point(0, 70);
             this.guna2Panel6.Name = "guna2Panel6";
-            this.guna2Panel6.Size = new System.Drawing.Size(197, 48);
+            this.guna2Panel6.Size = new System.Drawing.Size(197, 35);
             this.guna2Panel6.TabIndex = 2;
             // 
             // btnProjects
@@ -476,7 +476,7 @@
             this.btnProjects.ImeMode = System.Windows.Forms.ImeMode.On;
             this.btnProjects.Location = new System.Drawing.Point(0, 0);
             this.btnProjects.Name = "btnProjects";
-            this.btnProjects.Size = new System.Drawing.Size(197, 48);
+            this.btnProjects.Size = new System.Drawing.Size(197, 35);
             this.btnProjects.TabIndex = 0;
             this.btnProjects.Text = "Manage Project";
             this.btnProjects.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -485,31 +485,32 @@
             // 
             // guna2Panel5
             // 
-            this.guna2Panel5.Controls.Add(this.guna2Button2);
+            this.guna2Panel5.Controls.Add(this.btnHome);
             this.guna2Panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel5.Location = new System.Drawing.Point(0, 48);
+            this.guna2Panel5.Location = new System.Drawing.Point(0, 35);
             this.guna2Panel5.Name = "guna2Panel5";
-            this.guna2Panel5.Size = new System.Drawing.Size(197, 48);
+            this.guna2Panel5.Size = new System.Drawing.Size(197, 35);
             this.guna2Panel5.TabIndex = 1;
             // 
-            // guna2Button2
+            // btnHome
             // 
-            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Button2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.Font = new System.Drawing.Font("Poppins Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(0, 0);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(197, 48);
-            this.guna2Button2.TabIndex = 0;
-            this.guna2Button2.Text = "Home";
-            this.guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button2.UseTransparentBackground = true;
+            this.btnHome.BackColor = System.Drawing.Color.Transparent;
+            this.btnHome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnHome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnHome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnHome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnHome.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnHome.FillColor = System.Drawing.Color.Transparent;
+            this.btnHome.Font = new System.Drawing.Font("Poppins Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.ForeColor = System.Drawing.Color.White;
+            this.btnHome.Location = new System.Drawing.Point(0, 0);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(197, 35);
+            this.btnHome.TabIndex = 0;
+            this.btnHome.Text = "Home";
+            this.btnHome.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnHome.UseTransparentBackground = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // guna2Panel4
             // 
@@ -517,7 +518,7 @@
             this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel4.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(197, 48);
+            this.guna2Panel4.Size = new System.Drawing.Size(197, 35);
             this.guna2Panel4.TabIndex = 0;
             // 
             // guna2Button1
@@ -533,7 +534,7 @@
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.Location = new System.Drawing.Point(0, 0);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(197, 48);
+            this.guna2Button1.Size = new System.Drawing.Size(197, 35);
             this.guna2Button1.TabIndex = 0;
             this.guna2Button1.Text = "Dashboard";
             this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -720,7 +721,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button btnHome;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
         private Guna.UI2.WinForms.Guna2Button btnProjects;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel7;

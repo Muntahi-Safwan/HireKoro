@@ -16,5 +16,10 @@ namespace HireKoro.Forms
         {
             InitializeComponent();
         }
+        public ReviewCard(string id, string reviewerName, string reviewText, String profileImg) : this()
+        {
+            this.lblName.Text = reviewerName;
+            this.lblComment.Text = reviewText;
+        }
     }
 }
