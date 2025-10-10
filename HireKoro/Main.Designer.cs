@@ -36,6 +36,12 @@
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel15 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnMyProjects = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel14 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnAdminTasks = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel13 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnUsers = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel12 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel11 = new Guna.UI2.WinForms.Guna2Panel();
@@ -43,7 +49,7 @@
             this.guna2Panel10 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnProfile = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnInvoices = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
@@ -68,6 +74,9 @@
             this.tableLayoutPanel3.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
+            this.guna2Panel15.SuspendLayout();
+            this.guna2Panel14.SuspendLayout();
+            this.guna2Panel13.SuspendLayout();
             this.guna2Panel12.SuspendLayout();
             this.guna2Panel11.SuspendLayout();
             this.guna2Panel10.SuspendLayout();
@@ -167,6 +176,9 @@
             // 
             // guna2Panel2
             // 
+            this.guna2Panel2.Controls.Add(this.guna2Panel15);
+            this.guna2Panel2.Controls.Add(this.guna2Panel14);
+            this.guna2Panel2.Controls.Add(this.guna2Panel13);
             this.guna2Panel2.Controls.Add(this.guna2Panel12);
             this.guna2Panel2.Controls.Add(this.guna2Panel11);
             this.guna2Panel2.Controls.Add(this.guna2Panel10);
@@ -182,6 +194,92 @@
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(197, 583);
             this.guna2Panel2.TabIndex = 1;
+            // 
+            // guna2Panel15
+            // 
+            this.guna2Panel15.Controls.Add(this.btnMyProjects);
+            this.guna2Panel15.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel15.Location = new System.Drawing.Point(0, 528);
+            this.guna2Panel15.Name = "guna2Panel15";
+            this.guna2Panel15.Size = new System.Drawing.Size(197, 48);
+            this.guna2Panel15.TabIndex = 11;
+            // 
+            // btnMyProjects
+            // 
+            this.btnMyProjects.BackColor = System.Drawing.Color.Transparent;
+            this.btnMyProjects.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMyProjects.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnMyProjects.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMyProjects.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnMyProjects.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMyProjects.FillColor = System.Drawing.Color.Transparent;
+            this.btnMyProjects.Font = new System.Drawing.Font("Poppins Medium", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnMyProjects.ForeColor = System.Drawing.Color.White;
+            this.btnMyProjects.Location = new System.Drawing.Point(0, 0);
+            this.btnMyProjects.Name = "btnMyProjects";
+            this.btnMyProjects.Size = new System.Drawing.Size(197, 48);
+            this.btnMyProjects.TabIndex = 0;
+            this.btnMyProjects.Text = "My Projects";
+            this.btnMyProjects.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnMyProjects.UseTransparentBackground = true;
+            // 
+            // guna2Panel14
+            // 
+            this.guna2Panel14.Controls.Add(this.btnAdminTasks);
+            this.guna2Panel14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel14.Location = new System.Drawing.Point(0, 480);
+            this.guna2Panel14.Name = "guna2Panel14";
+            this.guna2Panel14.Size = new System.Drawing.Size(197, 48);
+            this.guna2Panel14.TabIndex = 10;
+            // 
+            // btnAdminTasks
+            // 
+            this.btnAdminTasks.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdminTasks.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdminTasks.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdminTasks.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAdminTasks.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAdminTasks.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAdminTasks.FillColor = System.Drawing.Color.Transparent;
+            this.btnAdminTasks.Font = new System.Drawing.Font("Poppins Medium", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnAdminTasks.ForeColor = System.Drawing.Color.White;
+            this.btnAdminTasks.Location = new System.Drawing.Point(0, 0);
+            this.btnAdminTasks.Name = "btnAdminTasks";
+            this.btnAdminTasks.Size = new System.Drawing.Size(197, 48);
+            this.btnAdminTasks.TabIndex = 0;
+            this.btnAdminTasks.Text = "Manage Tasks";
+            this.btnAdminTasks.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAdminTasks.UseTransparentBackground = true;
+            this.btnAdminTasks.Click += new System.EventHandler(this.btnAdminTasks_Click);
+            // 
+            // guna2Panel13
+            // 
+            this.guna2Panel13.Controls.Add(this.btnUsers);
+            this.guna2Panel13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel13.Location = new System.Drawing.Point(0, 432);
+            this.guna2Panel13.Name = "guna2Panel13";
+            this.guna2Panel13.Size = new System.Drawing.Size(197, 48);
+            this.guna2Panel13.TabIndex = 9;
+            // 
+            // btnUsers
+            // 
+            this.btnUsers.BackColor = System.Drawing.Color.Transparent;
+            this.btnUsers.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUsers.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUsers.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUsers.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUsers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnUsers.FillColor = System.Drawing.Color.Transparent;
+            this.btnUsers.Font = new System.Drawing.Font("Poppins Medium", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnUsers.ForeColor = System.Drawing.Color.White;
+            this.btnUsers.Location = new System.Drawing.Point(0, 0);
+            this.btnUsers.Name = "btnUsers";
+            this.btnUsers.Size = new System.Drawing.Size(197, 48);
+            this.btnUsers.TabIndex = 0;
+            this.btnUsers.Text = "Users";
+            this.btnUsers.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnUsers.UseTransparentBackground = true;
+            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
             // guna2Panel12
             // 
@@ -271,31 +369,32 @@
             // 
             // guna2Panel9
             // 
-            this.guna2Panel9.Controls.Add(this.guna2Button6);
+            this.guna2Panel9.Controls.Add(this.btnInvoices);
             this.guna2Panel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel9.Location = new System.Drawing.Point(0, 240);
             this.guna2Panel9.Name = "guna2Panel9";
             this.guna2Panel9.Size = new System.Drawing.Size(197, 48);
             this.guna2Panel9.TabIndex = 5;
             // 
-            // guna2Button6
+            // btnInvoices
             // 
-            this.guna2Button6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Button6.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button6.Font = new System.Drawing.Font("Poppins Medium", 14.25F, System.Drawing.FontStyle.Bold);
-            this.guna2Button6.ForeColor = System.Drawing.Color.White;
-            this.guna2Button6.Location = new System.Drawing.Point(0, 0);
-            this.guna2Button6.Name = "guna2Button6";
-            this.guna2Button6.Size = new System.Drawing.Size(197, 48);
-            this.guna2Button6.TabIndex = 0;
-            this.guna2Button6.Text = "Payments";
-            this.guna2Button6.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button6.UseTransparentBackground = true;
+            this.btnInvoices.BackColor = System.Drawing.Color.Transparent;
+            this.btnInvoices.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnInvoices.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnInvoices.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnInvoices.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnInvoices.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnInvoices.FillColor = System.Drawing.Color.Transparent;
+            this.btnInvoices.Font = new System.Drawing.Font("Poppins Medium", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnInvoices.ForeColor = System.Drawing.Color.White;
+            this.btnInvoices.Location = new System.Drawing.Point(0, 0);
+            this.btnInvoices.Name = "btnInvoices";
+            this.btnInvoices.Size = new System.Drawing.Size(197, 48);
+            this.btnInvoices.TabIndex = 0;
+            this.btnInvoices.Text = "Invoices";
+            this.btnInvoices.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnInvoices.UseTransparentBackground = true;
+            this.btnInvoices.Click += new System.EventHandler(this.btnInvoices_Click);
             // 
             // guna2Panel8
             // 
@@ -349,7 +448,7 @@
             this.btnTask.Name = "btnTask";
             this.btnTask.Size = new System.Drawing.Size(197, 48);
             this.btnTask.TabIndex = 0;
-            this.btnTask.Text = "Tasks";
+            this.btnTask.Text = "My Tasks";
             this.btnTask.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnTask.UseTransparentBackground = true;
             this.btnTask.Click += new System.EventHandler(this.btnTask_Click);
@@ -372,13 +471,14 @@
             this.btnProjects.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnProjects.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnProjects.FillColor = System.Drawing.Color.Transparent;
-            this.btnProjects.Font = new System.Drawing.Font("Poppins Medium", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnProjects.Font = new System.Drawing.Font("Poppins Medium", 13F, System.Drawing.FontStyle.Bold);
             this.btnProjects.ForeColor = System.Drawing.Color.White;
+            this.btnProjects.ImeMode = System.Windows.Forms.ImeMode.On;
             this.btnProjects.Location = new System.Drawing.Point(0, 0);
             this.btnProjects.Name = "btnProjects";
             this.btnProjects.Size = new System.Drawing.Size(197, 48);
             this.btnProjects.TabIndex = 0;
-            this.btnProjects.Text = "Projects";
+            this.btnProjects.Text = "Manage Project";
             this.btnProjects.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnProjects.UseTransparentBackground = true;
             this.btnProjects.Click += new System.EventHandler(this.btnProjects_Click);
@@ -580,6 +680,9 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel15.ResumeLayout(false);
+            this.guna2Panel14.ResumeLayout(false);
+            this.guna2Panel13.ResumeLayout(false);
             this.guna2Panel12.ResumeLayout(false);
             this.guna2Panel11.ResumeLayout(false);
             this.guna2Panel10.ResumeLayout(false);
@@ -629,9 +732,15 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel10;
         private Guna.UI2.WinForms.Guna2Button btnProfile;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel9;
-        private Guna.UI2.WinForms.Guna2Button guna2Button6;
+        private Guna.UI2.WinForms.Guna2Button btnInvoices;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel8;
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTopText;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel13;
+        private Guna.UI2.WinForms.Guna2Button btnUsers;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel14;
+        private Guna.UI2.WinForms.Guna2Button btnAdminTasks;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel15;
+        private Guna.UI2.WinForms.Guna2Button btnMyProjects;
     }
 }

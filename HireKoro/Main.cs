@@ -25,6 +25,7 @@ namespace HireKoro
         internal static UserControl SignInPage { get; set; }
         internal static UserControl SignUpPage { get; set; }
         internal static UserControl FreelancerRegisterPage { get; set; }
+        internal static UserControl FreelancerTaskPage { get; set; }
         internal static UserControl ClientRegisterPage { get; set; }
         internal static UserControl ClientHomePage { get; set; }
         internal static UserControl ProfilePage { get; set;  }
@@ -91,18 +92,41 @@ namespace HireKoro
             Main.TopLabelText.Text = "Admin - Projects";
         }
 
-        private void btnTask_Click(object sender, EventArgs e)
-        {
-            AdminTasksPage = new AdminTasksPage();
-            ChangeWindow(AdminTasksPage);
-            Main.TopLabelText.Text = "Admin - Tasks";
-        }
+       
 
         private void btnReviews_Click(object sender, EventArgs e)
         {
             AdminReviewsPage = new AdminReviews();
             ChangeWindow(AdminReviewsPage);
             Main.TopLabelText.Text = " Admin - Reviews";
+        }
+
+        private void btnInvoices_Click(object sender, EventArgs e)
+        {
+            AdminInvoicesPage = new AdminInvoices();
+            ChangeWindow(AdminInvoicesPage);
+            Main.TopLabelText.Text = " Admin - Invoices";
+        }
+
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+            AdminUsersPage = new AdminUsers();
+            ChangeWindow(AdminUsersPage);
+            Main.TopLabelText.Text = " Admin - Users";
+        }
+
+        private void btnAdminTasks_Click(object sender, EventArgs e)
+        {
+            AdminTasksPage = new AdminTasksPage();
+            ChangeWindow(AdminTasksPage);
+            Main.TopLabelText.Text = "Admin - Tasks";
+        }
+
+        private void btnTask_Click(object sender, EventArgs e)
+        {
+            FreelancerTaskPage = new FreelancerTaskPage();
+            ChangeWindow(FreelancerTaskPage);
+            Main.TopLabelText.Text = "My Tasks";
         }
     }
 }
