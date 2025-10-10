@@ -28,16 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             this.btnClear = new Guna.UI2.WinForms.Guna2Button();
             this.btnCreate = new Guna.UI2.WinForms.Guna2Button();
-            this.txtProjectID = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtStatus = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtAmount = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtDueDate = new Guna.UI2.WinForms.Guna2TextBox();
@@ -55,12 +54,13 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvInvoices = new Guna.UI2.WinForms.Guna2DataGridView();
             this.InvoiceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProjectID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IssueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cmbprojectn = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
@@ -100,10 +100,10 @@
             // 
             // guna2GradientPanel3
             // 
+            this.guna2GradientPanel3.Controls.Add(this.cmbprojectn);
             this.guna2GradientPanel3.Controls.Add(this.btnDelete);
             this.guna2GradientPanel3.Controls.Add(this.btnClear);
             this.guna2GradientPanel3.Controls.Add(this.btnCreate);
-            this.guna2GradientPanel3.Controls.Add(this.txtProjectID);
             this.guna2GradientPanel3.Controls.Add(this.txtStatus);
             this.guna2GradientPanel3.Controls.Add(this.txtAmount);
             this.guna2GradientPanel3.Controls.Add(this.txtDueDate);
@@ -145,6 +145,7 @@
             this.btnDelete.TabIndex = 16;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseTransparentBackground = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnClear
             // 
@@ -166,6 +167,7 @@
             this.btnClear.TabIndex = 15;
             this.btnClear.Text = "Clear";
             this.btnClear.UseTransparentBackground = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnCreate
             // 
@@ -186,28 +188,7 @@
             this.btnCreate.TabIndex = 14;
             this.btnCreate.Text = "Create / Update";
             this.btnCreate.UseTransparentBackground = true;
-            // 
-            // txtProjectID
-            // 
-            this.txtProjectID.BackColor = System.Drawing.Color.Transparent;
-            this.txtProjectID.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(213)))), ((int)(((byte)(224)))));
-            this.txtProjectID.BorderRadius = 12;
-            this.txtProjectID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtProjectID.DefaultText = "";
-            this.txtProjectID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtProjectID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtProjectID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtProjectID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtProjectID.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
-            this.txtProjectID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtProjectID.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtProjectID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtProjectID.Location = new System.Drawing.Point(16, 123);
-            this.txtProjectID.Name = "txtProjectID";
-            this.txtProjectID.PlaceholderText = "";
-            this.txtProjectID.SelectedText = "";
-            this.txtProjectID.Size = new System.Drawing.Size(193, 28);
-            this.txtProjectID.TabIndex = 13;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // txtStatus
             // 
@@ -315,6 +296,7 @@
             this.txtInvoiceID.Location = new System.Drawing.Point(16, 58);
             this.txtInvoiceID.Name = "txtInvoiceID";
             this.txtInvoiceID.PlaceholderText = "";
+            this.txtInvoiceID.ReadOnly = true;
             this.txtInvoiceID.SelectedText = "";
             this.txtInvoiceID.Size = new System.Drawing.Size(193, 28);
             this.txtInvoiceID.TabIndex = 8;
@@ -327,9 +309,9 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
             this.label8.Location = new System.Drawing.Point(12, 98);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(64, 22);
+            this.label8.Size = new System.Drawing.Size(88, 22);
             this.label8.TabIndex = 7;
-            this.label8.Text = "Project ID";
+            this.label8.Text = "Project Name";
             // 
             // label7
             // 
@@ -448,34 +430,34 @@
             // 
             this.dgvInvoices.AllowUserToAddRows = false;
             this.dgvInvoices.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvInvoices.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle43.BackColor = System.Drawing.Color.White;
+            this.dgvInvoices.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle43;
             this.dgvInvoices.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvInvoices.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle44.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle44.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle44.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle44.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInvoices.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle44;
             this.dgvInvoices.ColumnHeadersHeight = 15;
             this.dgvInvoices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvInvoices.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.InvoiceID,
-            this.ProjectID,
+            this.Title,
             this.Status,
             this.Amount,
             this.IssueDate,
             this.DueDate});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvInvoices.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle45.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle45.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle45.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle45.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle45.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle45.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvInvoices.DefaultCellStyle = dataGridViewCellStyle45;
             this.dgvInvoices.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvInvoices.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvInvoices.Location = new System.Drawing.Point(3, 70);
@@ -505,6 +487,7 @@
             this.dgvInvoices.ThemeStyle.RowsStyle.Height = 22;
             this.dgvInvoices.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvInvoices.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvInvoices.DoubleClick += new System.EventHandler(this.dgvInvoices_DoubleClick);
             // 
             // InvoiceID
             // 
@@ -513,12 +496,12 @@
             this.InvoiceID.Name = "InvoiceID";
             this.InvoiceID.ReadOnly = true;
             // 
-            // ProjectID
+            // Title
             // 
-            this.ProjectID.DataPropertyName = "ProjectID";
-            this.ProjectID.HeaderText = "ProjectID";
-            this.ProjectID.Name = "ProjectID";
-            this.ProjectID.ReadOnly = true;
+            this.Title.DataPropertyName = "Title";
+            this.Title.HeaderText = "Title";
+            this.Title.Name = "Title";
+            this.Title.ReadOnly = true;
             // 
             // Status
             // 
@@ -571,6 +554,19 @@
             this.txtSearch.Size = new System.Drawing.Size(703, 36);
             this.txtSearch.TabIndex = 1;
             this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            // 
+            // cmbprojectn
+            // 
+            this.cmbprojectn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
+            this.cmbprojectn.ForeColor = System.Drawing.SystemColors.Window;
+            this.cmbprojectn.FormattingEnabled = true;
+            this.cmbprojectn.Location = new System.Drawing.Point(16, 123);
+            this.cmbprojectn.Name = "cmbprojectn";
+            this.cmbprojectn.Size = new System.Drawing.Size(193, 21);
+            this.cmbprojectn.TabIndex = 18;
+            this.cmbprojectn.TextChanged += new System.EventHandler(this.cmbprojectn_TextChanged);
+            this.cmbprojectn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbprojectn_KeyPress);
             // 
             // AdminInvoices
             // 
@@ -605,7 +601,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2TextBox txtProjectID;
         private Guna.UI2.WinForms.Guna2TextBox txtStatus;
         private Guna.UI2.WinForms.Guna2TextBox txtAmount;
         private Guna.UI2.WinForms.Guna2TextBox txtDueDate;
@@ -616,12 +611,13 @@
         private Guna.UI2.WinForms.Guna2Button btnClear;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private Guna.UI2.WinForms.Guna2DataGridView dgvInvoices;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn InvoiceID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProjectID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Title;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn IssueDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn DueDate;
-        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
+        private System.Windows.Forms.ComboBox cmbprojectn;
     }
 }
