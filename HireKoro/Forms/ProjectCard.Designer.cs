@@ -28,92 +28,80 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblProjectName = new System.Windows.Forms.Label();
+            this.lblStatus = new System.Windows.Forms.Label();
+            this.lblStartDate = new System.Windows.Forms.Label();
+            this.lblHours = new System.Windows.Forms.Label();
+            this.lblDescription = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // lblProjectName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Poppins Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(-5, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 26);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Project Title";
+            this.lblProjectName.AutoSize = true;
+            this.lblProjectName.Font = new System.Drawing.Font("Poppins Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProjectName.ForeColor = System.Drawing.Color.White;
+            this.lblProjectName.Location = new System.Drawing.Point(7, 2);
+            this.lblProjectName.Name = "lblProjectName";
+            this.lblProjectName.Size = new System.Drawing.Size(138, 34);
+            this.lblProjectName.TabIndex = 0;
+            this.lblProjectName.Text = "Project Title";
             // 
-            // label2
+            // lblStatus
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
-            this.label2.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(294, 4);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 22);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Completed";
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
+            this.lblStatus.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.ForeColor = System.Drawing.Color.White;
+            this.lblStatus.Location = new System.Drawing.Point(294, 4);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(76, 22);
+            this.lblStatus.TabIndex = 1;
+            this.lblStatus.Text = "Completed";
             // 
-            // label3
+            // lblStartDate
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(-4, 72);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(141, 22);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Start Date: 4/10/2025 ";
+            this.lblStartDate.AutoSize = true;
+            this.lblStartDate.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStartDate.ForeColor = System.Drawing.Color.White;
+            this.lblStartDate.Location = new System.Drawing.Point(8, 70);
+            this.lblStartDate.Name = "lblStartDate";
+            this.lblStartDate.Size = new System.Drawing.Size(141, 22);
+            this.lblStartDate.TabIndex = 3;
+            this.lblStartDate.Text = "Start Date: 4/10/2025 ";
             // 
-            // label4
+            // lblHours
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(-4, 94);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(140, 22);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "End Date: 14/10/2025 ";
+            this.lblHours.AutoSize = true;
+            this.lblHours.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHours.ForeColor = System.Drawing.Color.White;
+            this.lblHours.Location = new System.Drawing.Point(8, 92);
+            this.lblHours.Name = "lblHours";
+            this.lblHours.Size = new System.Drawing.Size(83, 22);
+            this.lblHours.TabIndex = 4;
+            this.lblHours.Text = "Hours: 45 hr";
             // 
-            // label5
+            // lblDescription
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Poppins ExtraLight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(-4, 34);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(328, 19);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "This is a demo project description just kept as a placeholder ";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Poppins ExtraLight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(-4, 53);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(135, 19);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "for dummy design card";
+            this.lblDescription.AutoSize = true;
+            this.lblDescription.Font = new System.Drawing.Font("Poppins ExtraLight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescription.ForeColor = System.Drawing.Color.White;
+            this.lblDescription.Location = new System.Drawing.Point(8, 43);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new System.Drawing.Size(328, 19);
+            this.lblDescription.TabIndex = 5;
+            this.lblDescription.Text = "This is a demo project description just kept as a placeholder ";
             // 
             // ProjectCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(83)))));
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblDescription);
+            this.Controls.Add(this.lblHours);
+            this.Controls.Add(this.lblStartDate);
+            this.Controls.Add(this.lblStatus);
+            this.Controls.Add(this.lblProjectName);
+            this.Margin = new System.Windows.Forms.Padding(10);
             this.Name = "ProjectCard";
             this.Size = new System.Drawing.Size(385, 128);
             this.ResumeLayout(false);
@@ -123,11 +111,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblProjectName;
+        private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.Label lblStartDate;
+        private System.Windows.Forms.Label lblHours;
+        private System.Windows.Forms.Label lblDescription;
     }
 }

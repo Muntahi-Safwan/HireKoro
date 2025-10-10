@@ -30,12 +30,11 @@
         {
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblFreelancerName = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblRating = new System.Windows.Forms.Label();
+            this.lblDescription = new System.Windows.Forms.Label();
+            this.lblSkills = new System.Windows.Forms.Label();
+            this.lblDetails = new System.Windows.Forms.Label();
+            this.lblHourlyRate = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,87 +58,75 @@
             this.lblFreelancerName.TabIndex = 1;
             this.lblFreelancerName.Text = "John Doe";
             // 
-            // label2
+            // lblRating
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(53)))));
-            this.label2.Font = new System.Drawing.Font("Poppins", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(85, 74);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(21, 14);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "4/5";
+            this.lblRating.AutoSize = true;
+            this.lblRating.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(53)))));
+            this.lblRating.Font = new System.Drawing.Font("Poppins", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRating.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
+            this.lblRating.Location = new System.Drawing.Point(7, 129);
+            this.lblRating.Name = "lblRating";
+            this.lblRating.Size = new System.Drawing.Size(50, 14);
+            this.lblRating.TabIndex = 2;
+            this.lblRating.Text = "Rating: 4/5";
             // 
-            // label3
+            // lblDescription
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Poppins Thin", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(6, 93);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 14);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "I am a Professional UI/UX ";
+            this.lblDescription.AutoSize = true;
+            this.lblDescription.Font = new System.Drawing.Font("Poppins Thin", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescription.ForeColor = System.Drawing.Color.White;
+            this.lblDescription.Location = new System.Drawing.Point(6, 90);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new System.Drawing.Size(103, 14);
+            this.lblDescription.TabIndex = 3;
+            this.lblDescription.Text = "I am a Professional UI/UX ";
             // 
-            // label4
+            // lblSkills
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Poppins Thin", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(5, 107);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(104, 14);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Designer who will create..";
+            this.lblSkills.AutoSize = true;
+            this.lblSkills.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(53)))));
+            this.lblSkills.Font = new System.Drawing.Font("Poppins Medium", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSkills.ForeColor = System.Drawing.Color.White;
+            this.lblSkills.Location = new System.Drawing.Point(6, 108);
+            this.lblSkills.Name = "lblSkills";
+            this.lblSkills.Size = new System.Drawing.Size(66, 14);
+            this.lblSkills.TabIndex = 5;
+            this.lblSkills.Text = "Skills: UI/UX";
             // 
-            // label5
+            // lblDetails
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(53)))));
-            this.label5.Font = new System.Drawing.Font("Poppins Medium", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(6, 121);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 14);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "UI/UX";
+            this.lblDetails.AutoSize = true;
+            this.lblDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
+            this.lblDetails.Font = new System.Drawing.Font("Poppins", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
+            this.lblDetails.Location = new System.Drawing.Point(49, 152);
+            this.lblDetails.Name = "lblDetails";
+            this.lblDetails.Size = new System.Drawing.Size(55, 14);
+            this.lblDetails.TabIndex = 7;
+            this.lblDetails.Text = "View Details";
+            this.lblDetails.Click += new System.EventHandler(this.lblDetails_Click);
             // 
-            // label6
+            // lblHourlyRate
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(53)))));
-            this.label6.Font = new System.Drawing.Font("Poppins Medium", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(56, 121);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 14);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Graphics";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
-            this.label7.Font = new System.Drawing.Font("Poppins", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
-            this.label7.Location = new System.Drawing.Point(6, 146);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(55, 14);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "View Details";
+            this.lblHourlyRate.BackColor = System.Drawing.Color.Transparent;
+            this.lblHourlyRate.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHourlyRate.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblHourlyRate.Location = new System.Drawing.Point(9, 147);
+            this.lblHourlyRate.Name = "lblHourlyRate";
+            this.lblHourlyRate.Size = new System.Drawing.Size(29, 25);
+            this.lblHourlyRate.TabIndex = 8;
+            this.lblHourlyRate.Text = "$40";
             // 
             // FreelancerCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(13)))), ((int)(((byte)(9)))), ((int)(((byte)(54)))));
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblHourlyRate);
+            this.Controls.Add(this.lblDetails);
+            this.Controls.Add(this.lblSkills);
+            this.Controls.Add(this.lblDescription);
+            this.Controls.Add(this.lblRating);
             this.Controls.Add(this.lblFreelancerName);
             this.Controls.Add(this.guna2PictureBox1);
             this.Margin = new System.Windows.Forms.Padding(10);
@@ -155,11 +142,10 @@
 
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Label lblFreelancerName;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblRating;
+        private System.Windows.Forms.Label lblDescription;
+        private System.Windows.Forms.Label lblSkills;
+        private System.Windows.Forms.Label lblDetails;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblHourlyRate;
     }
 }

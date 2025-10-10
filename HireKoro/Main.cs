@@ -15,6 +15,7 @@ namespace HireKoro
 {
     public partial class Main : Form
     {
+        internal static string CurrentUserId { get; set; }
         internal static Panel MainPanel { get;  set; }
         internal static Panel SidePanel { get; set; }
         internal static Guna2HtmlLabel TopLabelText { get; set; }
@@ -26,6 +27,8 @@ namespace HireKoro
         internal static UserControl SignUpPage { get; set; }
         internal static UserControl FreelancerRegisterPage { get; set; }
         internal static UserControl FreelancerTaskPage { get; set; }
+        internal static UserControl FreelancerDetailsPage { get; set; }
+        internal static UserControl FreelancerHiringPage { get; set; }
         internal static UserControl ClientRegisterPage { get; set; }
         internal static UserControl ClientHomePage { get; set; }
         internal static UserControl ProfilePage { get; set;  }
@@ -44,6 +47,7 @@ namespace HireKoro
             InitializeComponent();
             DraggableWindow.MakePanelDraggable(this.TopPanel, this);
             DB = new DataAccess();
+            CurrentUserId = "1";
             MainPanel = this.pnlMainPanel;
             SidePanel = this.pnlSidePanel;
             TopLabelText = this.lblTopText;
@@ -92,8 +96,6 @@ namespace HireKoro
             Main.TopLabelText.Text = "Admin - Projects";
         }
 
-       
-
         private void btnReviews_Click(object sender, EventArgs e)
         {
             AdminReviewsPage = new AdminReviews();
@@ -127,6 +129,13 @@ namespace HireKoro
             FreelancerTaskPage = new FreelancerTaskPage();
             ChangeWindow(FreelancerTaskPage);
             Main.TopLabelText.Text = "My Tasks";
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            ClientHomePage = new ClientHomePage();
+            ChangeWindow(ClientHomePage);
+            Main.TopLabelText.Text = "Home";
         }
     }
 }
