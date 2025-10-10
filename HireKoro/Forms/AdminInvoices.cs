@@ -18,11 +18,10 @@ namespace HireKoro.Forms
             this.LoadInvoices();
         }
 
-        internal void LoadInvoices()
+        internal void LoadInvoices(string query = "select I.InvoiceID , P.Title , I.Status , I.Amount , I.IssueDate , I.DueDate  from INVOICES AS I , PROJECTS AS P WHERE I.ProjectID = P.ProjectID ")
         {
             try
             {
-                string query = "SELECT * FROM INVOICES";
                 var response = Main.DB.ExecuteQueryTable(query);
                 dgvInvoices.DataSource = response;
             }
@@ -31,9 +30,5 @@ namespace HireKoro.Forms
                 MessageBox.Show("Error loading projects: " + ex.Message);
             }
         }
-
-
-
-
     }
 }
