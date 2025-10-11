@@ -16,5 +16,10 @@ namespace HireKoro.Forms
         {
             InitializeComponent();
         }
+
+        private void txtProjectDescription_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
