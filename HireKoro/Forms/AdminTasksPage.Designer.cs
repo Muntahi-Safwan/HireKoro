@@ -31,11 +31,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.txtProjectID = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtStatus = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtDescription = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtPriority = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtDeadline = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTaskID = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -44,12 +41,21 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cmbPriority = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cmbStatus = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cmbProject = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
+            this.btnClear = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCreate = new Guna.UI2.WinForms.Guna2Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgvTasks = new Guna.UI2.WinForms.Guna2DataGridView();
             this.TaskID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TaskName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,10 +65,8 @@
             this.taskDeadline = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Priority = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isCompleted = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnCreate = new Guna.UI2.WinForms.Guna2Button();
-            this.btnClear = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
+            this.cmbisCompleated = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.dtpDeadline = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2GradientPanel3.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -70,50 +74,6 @@
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTasks)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtProjectID
-            // 
-            this.txtProjectID.BackColor = System.Drawing.Color.Transparent;
-            this.txtProjectID.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(213)))), ((int)(((byte)(224)))));
-            this.txtProjectID.BorderRadius = 12;
-            this.txtProjectID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtProjectID.DefaultText = "";
-            this.txtProjectID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtProjectID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtProjectID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtProjectID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtProjectID.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
-            this.txtProjectID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtProjectID.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtProjectID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtProjectID.Location = new System.Drawing.Point(16, 123);
-            this.txtProjectID.Name = "txtProjectID";
-            this.txtProjectID.PlaceholderText = "";
-            this.txtProjectID.SelectedText = "";
-            this.txtProjectID.Size = new System.Drawing.Size(193, 28);
-            this.txtProjectID.TabIndex = 13;
-            // 
-            // txtStatus
-            // 
-            this.txtStatus.BackColor = System.Drawing.Color.Transparent;
-            this.txtStatus.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(213)))), ((int)(((byte)(224)))));
-            this.txtStatus.BorderRadius = 12;
-            this.txtStatus.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtStatus.DefaultText = "";
-            this.txtStatus.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtStatus.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtStatus.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtStatus.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtStatus.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
-            this.txtStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtStatus.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtStatus.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtStatus.Location = new System.Drawing.Point(16, 189);
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.PlaceholderText = "";
-            this.txtStatus.SelectedText = "";
-            this.txtStatus.Size = new System.Drawing.Size(193, 28);
-            this.txtStatus.TabIndex = 12;
             // 
             // txtDescription
             // 
@@ -130,56 +90,34 @@
             this.txtDescription.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDescription.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDescription.Location = new System.Drawing.Point(16, 254);
+            this.txtDescription.Location = new System.Drawing.Point(17, 182);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.PlaceholderText = "";
             this.txtDescription.SelectedText = "";
-            this.txtDescription.Size = new System.Drawing.Size(193, 28);
+            this.txtDescription.Size = new System.Drawing.Size(193, 37);
             this.txtDescription.TabIndex = 11;
             // 
-            // txtPriority
+            // txtName
             // 
-            this.txtPriority.BackColor = System.Drawing.Color.Transparent;
-            this.txtPriority.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(213)))), ((int)(((byte)(224)))));
-            this.txtPriority.BorderRadius = 12;
-            this.txtPriority.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPriority.DefaultText = "";
-            this.txtPriority.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPriority.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPriority.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPriority.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPriority.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
-            this.txtPriority.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPriority.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtPriority.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPriority.Location = new System.Drawing.Point(16, 386);
-            this.txtPriority.Name = "txtPriority";
-            this.txtPriority.PlaceholderText = "";
-            this.txtPriority.SelectedText = "";
-            this.txtPriority.Size = new System.Drawing.Size(193, 28);
-            this.txtPriority.TabIndex = 10;
-            // 
-            // txtDeadline
-            // 
-            this.txtDeadline.BackColor = System.Drawing.Color.Transparent;
-            this.txtDeadline.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(213)))), ((int)(((byte)(224)))));
-            this.txtDeadline.BorderRadius = 12;
-            this.txtDeadline.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDeadline.DefaultText = "";
-            this.txtDeadline.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtDeadline.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtDeadline.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDeadline.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDeadline.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
-            this.txtDeadline.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDeadline.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtDeadline.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDeadline.Location = new System.Drawing.Point(16, 319);
-            this.txtDeadline.Name = "txtDeadline";
-            this.txtDeadline.PlaceholderText = "";
-            this.txtDeadline.SelectedText = "";
-            this.txtDeadline.Size = new System.Drawing.Size(193, 28);
-            this.txtDeadline.TabIndex = 9;
+            this.txtName.BackColor = System.Drawing.Color.Transparent;
+            this.txtName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(213)))), ((int)(((byte)(224)))));
+            this.txtName.BorderRadius = 12;
+            this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtName.DefaultText = "";
+            this.txtName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtName.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
+            this.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtName.Location = new System.Drawing.Point(16, 118);
+            this.txtName.Name = "txtName";
+            this.txtName.PlaceholderText = "";
+            this.txtName.SelectedText = "";
+            this.txtName.Size = new System.Drawing.Size(193, 39);
+            this.txtName.TabIndex = 9;
             // 
             // txtTaskID
             // 
@@ -200,7 +138,7 @@
             this.txtTaskID.Name = "txtTaskID";
             this.txtTaskID.PlaceholderText = "";
             this.txtTaskID.SelectedText = "";
-            this.txtTaskID.Size = new System.Drawing.Size(193, 28);
+            this.txtTaskID.Size = new System.Drawing.Size(193, 32);
             this.txtTaskID.TabIndex = 8;
             // 
             // label8
@@ -209,11 +147,11 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
-            this.label8.Location = new System.Drawing.Point(12, 98);
+            this.label8.Location = new System.Drawing.Point(15, 93);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(64, 22);
+            this.label8.Size = new System.Drawing.Size(45, 22);
             this.label8.TabIndex = 7;
-            this.label8.Text = "Project ID";
+            this.label8.Text = "Name";
             // 
             // label7
             // 
@@ -221,11 +159,11 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
-            this.label7.Location = new System.Drawing.Point(12, 164);
+            this.label7.Location = new System.Drawing.Point(15, 157);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 22);
+            this.label7.Size = new System.Drawing.Size(76, 22);
             this.label7.TabIndex = 6;
-            this.label7.Text = "Status";
+            this.label7.Text = "Description";
             // 
             // label5
             // 
@@ -233,11 +171,11 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
-            this.label5.Location = new System.Drawing.Point(12, 294);
+            this.label5.Location = new System.Drawing.Point(13, 289);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 22);
+            this.label5.Size = new System.Drawing.Size(47, 22);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Deadline";
+            this.label5.Text = "Status";
             // 
             // label4
             // 
@@ -245,7 +183,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
-            this.label4.Location = new System.Drawing.Point(12, 361);
+            this.label4.Location = new System.Drawing.Point(15, 413);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 22);
             this.label4.TabIndex = 3;
@@ -257,7 +195,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
-            this.label3.Location = new System.Drawing.Point(12, 33);
+            this.label3.Location = new System.Drawing.Point(18, 33);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 22);
             this.label3.TabIndex = 2;
@@ -277,14 +215,18 @@
             // 
             // guna2GradientPanel3
             // 
+            this.guna2GradientPanel3.Controls.Add(this.dtpDeadline);
+            this.guna2GradientPanel3.Controls.Add(this.cmbisCompleated);
+            this.guna2GradientPanel3.Controls.Add(this.label10);
+            this.guna2GradientPanel3.Controls.Add(this.label9);
+            this.guna2GradientPanel3.Controls.Add(this.cmbPriority);
+            this.guna2GradientPanel3.Controls.Add(this.cmbStatus);
+            this.guna2GradientPanel3.Controls.Add(this.cmbProject);
             this.guna2GradientPanel3.Controls.Add(this.btnDelete);
             this.guna2GradientPanel3.Controls.Add(this.btnClear);
             this.guna2GradientPanel3.Controls.Add(this.btnCreate);
-            this.guna2GradientPanel3.Controls.Add(this.txtProjectID);
-            this.guna2GradientPanel3.Controls.Add(this.txtStatus);
             this.guna2GradientPanel3.Controls.Add(this.txtDescription);
-            this.guna2GradientPanel3.Controls.Add(this.txtPriority);
-            this.guna2GradientPanel3.Controls.Add(this.txtDeadline);
+            this.guna2GradientPanel3.Controls.Add(this.txtName);
             this.guna2GradientPanel3.Controls.Add(this.txtTaskID);
             this.guna2GradientPanel3.Controls.Add(this.label8);
             this.guna2GradientPanel3.Controls.Add(this.label7);
@@ -303,17 +245,161 @@
             this.guna2GradientPanel3.Size = new System.Drawing.Size(220, 661);
             this.guna2GradientPanel3.TabIndex = 4;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
+            this.label10.Location = new System.Drawing.Point(15, 353);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(62, 22);
+            this.label10.TabIndex = 34;
+            this.label10.Text = "Deadline";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
+            this.label9.Location = new System.Drawing.Point(13, 477);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(85, 22);
+            this.label9.TabIndex = 33;
+            this.label9.Text = "isCompleted";
+            // 
+            // cmbPriority
+            // 
+            this.cmbPriority.BackColor = System.Drawing.Color.Transparent;
+            this.cmbPriority.BorderRadius = 12;
+            this.cmbPriority.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbPriority.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPriority.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
+            this.cmbPriority.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbPriority.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbPriority.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbPriority.ForeColor = System.Drawing.Color.White;
+            this.cmbPriority.ItemHeight = 30;
+            this.cmbPriority.Items.AddRange(new object[] {
+            "High",
+            "Medium",
+            "Low"});
+            this.cmbPriority.Location = new System.Drawing.Point(16, 438);
+            this.cmbPriority.Name = "cmbPriority";
+            this.cmbPriority.Size = new System.Drawing.Size(192, 36);
+            this.cmbPriority.TabIndex = 31;
+            // 
+            // cmbStatus
+            // 
+            this.cmbStatus.BackColor = System.Drawing.Color.Transparent;
+            this.cmbStatus.BorderRadius = 12;
+            this.cmbStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbStatus.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
+            this.cmbStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbStatus.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbStatus.ForeColor = System.Drawing.Color.White;
+            this.cmbStatus.ItemHeight = 30;
+            this.cmbStatus.Items.AddRange(new object[] {
+            "In Progress",
+            "Completed"});
+            this.cmbStatus.Location = new System.Drawing.Point(19, 314);
+            this.cmbStatus.Name = "cmbStatus";
+            this.cmbStatus.Size = new System.Drawing.Size(192, 36);
+            this.cmbStatus.TabIndex = 30;
+            // 
+            // cmbProject
+            // 
+            this.cmbProject.BackColor = System.Drawing.Color.Transparent;
+            this.cmbProject.BorderRadius = 12;
+            this.cmbProject.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbProject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbProject.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
+            this.cmbProject.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbProject.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbProject.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbProject.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbProject.ItemHeight = 30;
+            this.cmbProject.Location = new System.Drawing.Point(19, 247);
+            this.cmbProject.Name = "cmbProject";
+            this.cmbProject.Size = new System.Drawing.Size(192, 36);
+            this.cmbProject.TabIndex = 29;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
+            this.btnDelete.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
+            this.btnDelete.BorderRadius = 9;
+            this.btnDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(121)))), ((int)(((byte)(121)))));
+            this.btnDelete.Font = new System.Drawing.Font("Poppins", 9F);
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(19, 622);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(181, 30);
+            this.btnDelete.TabIndex = 28;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseTransparentBackground = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.Color.Transparent;
+            this.btnClear.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
+            this.btnClear.BorderRadius = 9;
+            this.btnClear.BorderThickness = 1;
+            this.btnClear.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnClear.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnClear.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnClear.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnClear.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
+            this.btnClear.Font = new System.Drawing.Font("Poppins", 9F);
+            this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
+            this.btnClear.Location = new System.Drawing.Point(19, 586);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(181, 30);
+            this.btnClear.TabIndex = 27;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseTransparentBackground = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // btnCreate
+            // 
+            this.btnCreate.BackColor = System.Drawing.Color.Transparent;
+            this.btnCreate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
+            this.btnCreate.BorderRadius = 9;
+            this.btnCreate.BorderThickness = 1;
+            this.btnCreate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCreate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCreate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCreate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCreate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
+            this.btnCreate.Font = new System.Drawing.Font("Poppins", 9F);
+            this.btnCreate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
+            this.btnCreate.Location = new System.Drawing.Point(19, 550);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(181, 30);
+            this.btnCreate.TabIndex = 26;
+            this.btnCreate.Text = "Create / Update";
+            this.btnCreate.UseTransparentBackground = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click_1);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
-            this.label6.Location = new System.Drawing.Point(12, 229);
+            this.label6.Location = new System.Drawing.Point(12, 222);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 22);
+            this.label6.Size = new System.Drawing.Size(50, 22);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Description";
+            this.label6.Text = "Project";
             // 
             // label2
             // 
@@ -385,6 +471,30 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(709, 661);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
+            // txtSearch
+            // 
+            this.txtSearch.BorderRadius = 8;
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch.DefaultText = "";
+            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(58)))), ((int)(((byte)(82)))));
+            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSearch.ForeColor = System.Drawing.Color.White;
+            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.Location = new System.Drawing.Point(3, 3);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PlaceholderText = "Search";
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.Size = new System.Drawing.Size(703, 36);
+            this.txtSearch.TabIndex = 3;
+            this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            // 
             // dgvTasks
             // 
             this.dgvTasks.AllowUserToAddRows = false;
@@ -448,6 +558,7 @@
             this.dgvTasks.ThemeStyle.RowsStyle.Height = 22;
             this.dgvTasks.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvTasks.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvTasks.DoubleClick += new System.EventHandler(this.dgvTasks_DoubleClick);
             // 
             // TaskID
             // 
@@ -505,87 +616,43 @@
             this.isCompleted.Name = "isCompleted";
             this.isCompleted.ReadOnly = true;
             // 
-            // txtSearch
+            // cmbisCompleated
             // 
-            this.txtSearch.BorderRadius = 8;
-            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearch.DefaultText = "";
-            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(58)))), ((int)(((byte)(82)))));
-            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtSearch.ForeColor = System.Drawing.Color.White;
-            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Location = new System.Drawing.Point(3, 3);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.PlaceholderText = "Search";
-            this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(703, 36);
-            this.txtSearch.TabIndex = 3;
-            this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cmbisCompleated.BackColor = System.Drawing.Color.Transparent;
+            this.cmbisCompleated.BorderRadius = 12;
+            this.cmbisCompleated.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbisCompleated.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbisCompleated.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
+            this.cmbisCompleated.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbisCompleated.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbisCompleated.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbisCompleated.ForeColor = System.Drawing.Color.White;
+            this.cmbisCompleated.ItemHeight = 30;
+            this.cmbisCompleated.Items.AddRange(new object[] {
+            "True",
+            "False"});
+            this.cmbisCompleated.Location = new System.Drawing.Point(19, 502);
+            this.cmbisCompleated.Name = "cmbisCompleated";
+            this.cmbisCompleated.Size = new System.Drawing.Size(192, 36);
+            this.cmbisCompleated.TabIndex = 36;
             // 
-            // btnCreate
+            // dtpDeadline
             // 
-            this.btnCreate.BackColor = System.Drawing.Color.Transparent;
-            this.btnCreate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
-            this.btnCreate.BorderRadius = 9;
-            this.btnCreate.BorderThickness = 1;
-            this.btnCreate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCreate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCreate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCreate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCreate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
-            this.btnCreate.Font = new System.Drawing.Font("Poppins", 9F);
-            this.btnCreate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
-            this.btnCreate.Location = new System.Drawing.Point(16, 486);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(181, 30);
-            this.btnCreate.TabIndex = 26;
-            this.btnCreate.Text = "Create / Update";
-            this.btnCreate.UseTransparentBackground = true;
-            // 
-            // btnClear
-            // 
-            this.btnClear.BackColor = System.Drawing.Color.Transparent;
-            this.btnClear.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
-            this.btnClear.BorderRadius = 9;
-            this.btnClear.BorderThickness = 1;
-            this.btnClear.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnClear.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnClear.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnClear.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnClear.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
-            this.btnClear.Font = new System.Drawing.Font("Poppins", 9F);
-            this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
-            this.btnClear.Location = new System.Drawing.Point(16, 522);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(181, 30);
-            this.btnClear.TabIndex = 27;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseTransparentBackground = true;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
-            this.btnDelete.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
-            this.btnDelete.BorderRadius = 9;
-            this.btnDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(121)))), ((int)(((byte)(121)))));
-            this.btnDelete.Font = new System.Drawing.Font("Poppins", 9F);
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(16, 558);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(181, 30);
-            this.btnDelete.TabIndex = 28;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseTransparentBackground = true;
+            this.dtpDeadline.BorderColor = System.Drawing.Color.White;
+            this.dtpDeadline.BorderRadius = 8;
+            this.dtpDeadline.BorderThickness = 1;
+            this.dtpDeadline.Checked = true;
+            this.dtpDeadline.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
+            this.dtpDeadline.Font = new System.Drawing.Font("Poppins", 6F);
+            this.dtpDeadline.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
+            this.dtpDeadline.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpDeadline.Location = new System.Drawing.Point(19, 378);
+            this.dtpDeadline.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpDeadline.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpDeadline.Name = "dtpDeadline";
+            this.dtpDeadline.Size = new System.Drawing.Size(184, 32);
+            this.dtpDeadline.TabIndex = 37;
+            this.dtpDeadline.Value = new System.DateTime(2025, 10, 8, 17, 11, 36, 69);
             // 
             // AdminTasksPage
             // 
@@ -607,11 +674,8 @@
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2TextBox txtProjectID;
-        private Guna.UI2.WinForms.Guna2TextBox txtStatus;
         private Guna.UI2.WinForms.Guna2TextBox txtDescription;
-        private Guna.UI2.WinForms.Guna2TextBox txtPriority;
-        private Guna.UI2.WinForms.Guna2TextBox txtDeadline;
+        private Guna.UI2.WinForms.Guna2TextBox txtName;
         private Guna.UI2.WinForms.Guna2TextBox txtTaskID;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -639,5 +703,12 @@
         private Guna.UI2.WinForms.Guna2Button btnCreate;
         private Guna.UI2.WinForms.Guna2Button btnClear;
         private Guna.UI2.WinForms.Guna2Button btnDelete;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbProject;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbPriority;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbStatus;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbisCompleated;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpDeadline;
     }
 }
