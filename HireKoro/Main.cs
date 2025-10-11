@@ -41,7 +41,8 @@ namespace HireKoro
         internal static UserControl AdminProjectLogPage { get; set; }
         internal static UserControl AdminPaymentLogPage { get; set; }
         internal static UserControl ForgotPasswordPage { get; set; }
-        
+        internal static UserControl MyProjectPage { get; set; }
+
 
         // Data Access Object
         internal static DataAccess DB { get; set; }
@@ -94,7 +95,8 @@ namespace HireKoro
         {
             ProfilePage = new FreelancerProfilePage();
             ChangeWindow(ProfilePage);
-            btnProfile.ForeColor = Color.FromArgb(121, 208, 2532);
+            sidebarBtnReset();
+            btnProfile.ForeColor = Color.FromArgb(121, 208, 253);
             SidePanel.Visible = true;
         }
 
@@ -102,7 +104,8 @@ namespace HireKoro
         {
             AdminProjectsPage = new AdminProjects();
             ChangeWindow(AdminProjectsPage);
-            btnProjects.ForeColor = Color.FromArgb(121, 208, 2532);
+            sidebarBtnReset();
+            btnProjects.ForeColor = Color.FromArgb(121, 208, 253);
             Main.TopLabelText.Text = "Admin - Projects";
         }
 
@@ -110,7 +113,8 @@ namespace HireKoro
         {
             AdminReviewsPage = new AdminReviews();
             ChangeWindow(AdminReviewsPage);
-            btnReviews.ForeColor = Color.FromArgb(121, 208, 2532);
+            sidebarBtnReset();
+            btnReviews.ForeColor = Color.FromArgb(121, 208, 253);
             Main.TopLabelText.Text = " Admin - Reviews";
         }
 
@@ -118,7 +122,8 @@ namespace HireKoro
         {
             AdminInvoicesPage = new AdminInvoices();
             ChangeWindow(AdminInvoicesPage);
-            btnInvoices.ForeColor = Color.FromArgb(121, 208, 2532);
+            sidebarBtnReset();
+            btnInvoices.ForeColor = Color.FromArgb(121, 208, 253);
             Main.TopLabelText.Text = " Admin - Invoices";
         }
 
@@ -126,7 +131,8 @@ namespace HireKoro
         {
             AdminUsersPage = new AdminUsers();
             ChangeWindow(AdminUsersPage);
-            btnUsers.ForeColor = Color.FromArgb(121, 208, 2532);
+            sidebarBtnReset();
+            btnUsers.ForeColor = Color.FromArgb(121, 208, 253);
             Main.TopLabelText.Text = " Admin - Users";
         }
 
@@ -134,7 +140,8 @@ namespace HireKoro
         {
             AdminTasksPage = new AdminTasksPage();
             ChangeWindow(AdminTasksPage);
-            btnAdminTasks.ForeColor = Color.FromArgb(121, 208, 2532);
+            sidebarBtnReset();
+            btnAdminTasks.ForeColor = Color.FromArgb(121, 208, 253);
             Main.TopLabelText.Text = "Admin - Tasks";
         }
 
@@ -142,7 +149,8 @@ namespace HireKoro
         {
             FreelancerTaskPage = new FreelancerTaskPage();
             ChangeWindow(FreelancerTaskPage);
-            btnTask.ForeColor = Color.FromArgb(121, 208, 2532);
+            sidebarBtnReset();
+            btnTask.ForeColor = Color.FromArgb(121, 208, 253);
             Main.TopLabelText.Text = "My Tasks";
         }
 
@@ -150,7 +158,8 @@ namespace HireKoro
         {
             ClientHomePage = new ClientHomePage();
             ChangeWindow(ClientHomePage);
-            btnHome.ForeColor = Color.FromArgb(121, 208, 2532);
+            sidebarBtnReset();
+            btnHome.ForeColor = Color.FromArgb(121, 208, 253);
             Main.TopLabelText.Text = "Home";
         }
 
@@ -164,14 +173,19 @@ namespace HireKoro
 
         private void btnMyProjects_Click(object sender, EventArgs e)
         {
-            btnMyProjects.ForeColor = Color.FromArgb(121, 208, 2532);
+            MyProjectPage = new MyProjects();
+            ChangeWindow(MyProjectPage);
+            sidebarBtnReset();
+            btnMyProjects.ForeColor = Color.FromArgb(121, 208, 253);
+            Main.TopLabelText.Text = " My Projects";
         }
 
         private void btnLogs_Click(object sender, EventArgs e)
         {
             AdminProjectLogPage = new AdminProjectLogs();
             ChangeWindow(AdminProjectLogPage);
-            btnLogs.ForeColor = Color.FromArgb(121, 208, 2532);
+            sidebarBtnReset();
+            btnLogs.ForeColor = Color.FromArgb(121, 208, 253);
             Main.TopLabelText.Text = " Admin - Project Logs";
         }
     }
