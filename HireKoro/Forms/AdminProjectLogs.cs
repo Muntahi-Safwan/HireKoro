@@ -16,5 +16,12 @@ namespace HireKoro.Forms
         {
             InitializeComponent();
         }
+
+        private void btnChat_Click(object sender, EventArgs e)
+        {
+            Main.AdminPaymentLogPage = new AdminPaymentLogs();
+            Main.ChangeWindow(Main.AdminPaymentLogPage);
+            Main.TopLabelText.Text = "Admin - Payment Logs";
+        }
     }
 }
