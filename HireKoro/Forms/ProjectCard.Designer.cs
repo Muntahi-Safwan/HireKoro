@@ -33,6 +33,7 @@
             this.lblStartDate = new System.Windows.Forms.Label();
             this.lblHours = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
+            this.btnDetails = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // lblProjectName
@@ -91,11 +92,32 @@
             this.lblDescription.TabIndex = 5;
             this.lblDescription.Text = "This is a demo project description just kept as a placeholder ";
             // 
+            // btnDetails
+            // 
+            this.btnDetails.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
+            this.btnDetails.BorderRadius = 2;
+            this.btnDetails.BorderThickness = 2;
+            this.btnDetails.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDetails.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDetails.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDetails.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDetails.FillColor = System.Drawing.Color.Transparent;
+            this.btnDetails.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDetails.ForeColor = System.Drawing.Color.White;
+            this.btnDetails.Location = new System.Drawing.Point(256, 80);
+            this.btnDetails.Name = "btnDetails";
+            this.btnDetails.Size = new System.Drawing.Size(119, 33);
+            this.btnDetails.TabIndex = 6;
+            this.btnDetails.Text = "View Details";
+            this.btnDetails.Visible = false;
+            this.btnDetails.Click += new System.EventHandler(this.btnDetails_Click);
+            // 
             // ProjectCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(58)))), ((int)(((byte)(82)))));
+            this.Controls.Add(this.btnDetails);
             this.Controls.Add(this.lblDescription);
             this.Controls.Add(this.lblHours);
             this.Controls.Add(this.lblStartDate);
@@ -116,5 +138,6 @@
         private System.Windows.Forms.Label lblStartDate;
         private System.Windows.Forms.Label lblHours;
         private System.Windows.Forms.Label lblDescription;
+        private Guna.UI2.WinForms.Guna2Button btnDetails;
     }
 }

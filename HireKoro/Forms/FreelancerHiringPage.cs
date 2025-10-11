@@ -75,6 +75,8 @@ namespace HireKoro.Forms
             {
                 HireFreelancer(clientId, freelancerId, projectTitle, projectDescription, startDate, hours, cost);
             }
+            Main.FreelancerHiredSuccesfully = new FreelancerHiredSuccesfullyPage();
+            Main.ChangeWindow(Main.FreelancerHiredSuccesfully);
         }
 
         private void txtHours_TextChanged(object sender, EventArgs e)

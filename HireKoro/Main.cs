@@ -30,6 +30,7 @@ namespace HireKoro
         internal static UserControl FreelancerTaskPage { get; set; }
         internal static UserControl FreelancerDetailsPage { get; set; }
         internal static UserControl FreelancerHiringPage { get; set; }
+        internal static UserControl FreelancerHiredSuccesfully { get; set; }
         internal static UserControl ClientRegisterPage { get; set; }
         internal static UserControl ClientHomePage { get; set; }
         internal static UserControl ProfilePage { get; set;  }
