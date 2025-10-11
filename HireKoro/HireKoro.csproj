@@ -225,6 +225,12 @@
     <Compile Include="Forms\MyProjects.Designer.cs">
       <DependentUpon>MyProjects.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\PaymentPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\PaymentPage.Designer.cs">
+      <DependentUpon>PaymentPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ProjectCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -338,6 +344,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MyProjects.resx">
       <DependentUpon>MyProjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PaymentPage.resx">
+      <DependentUpon>PaymentPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ProjectCard.resx">
       <DependentUpon>ProjectCard.cs</DependentUpon>

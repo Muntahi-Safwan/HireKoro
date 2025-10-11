@@ -38,6 +38,8 @@ namespace HireKoro
         internal static UserControl AdminUsersPage { get; set; }
         internal static UserControl AdminReviewsPage { get; set; }
         internal static UserControl AdminInvoicesPage { get; set; }
+        internal static UserControl AdminProjectLogPage { get; set; }
+        internal static UserControl AdminPaymentLogPage { get; set; }
         internal static UserControl ForgotPasswordPage { get; set; }
         
 
@@ -167,7 +169,10 @@ namespace HireKoro
 
         private void btnLogs_Click(object sender, EventArgs e)
         {
-
+            AdminProjectLogPage = new AdminProjectLogs();
+            ChangeWindow(AdminProjectLogPage);
+            btnLogs.ForeColor = Color.FromArgb(121, 208, 2532);
+            Main.TopLabelText.Text = " Admin - Project Logs";
         }
     }
 }
