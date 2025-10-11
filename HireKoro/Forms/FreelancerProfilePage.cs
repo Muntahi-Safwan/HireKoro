@@ -15,6 +15,7 @@ namespace HireKoro.Forms
         public FreelancerProfilePage()
         {
             InitializeComponent();
+            this.loadUserInfo(Main.CurrentUserId);  
         }
 
         public void loadUserInfo(string userId)
@@ -29,11 +30,12 @@ namespace HireKoro.Forms
                     return;
                 }
 
-                this.txtName.Text = response.Rows[0]["Name"].ToString();
+                this.txtName.Text = response.Rows[0]["Name"].ToString() ;
                 this.txtDescription.Text = response.Rows[0]["Description"].ToString();
                 this.txtUsername.Text = response.Rows[0]["username"].ToString();
-                this.txtDescription.Text = response.Rows[0]["Description"].ToString();
-                this.txtDescription.Text = response.Rows[0]["Description"].ToString();
+                this.txtEmail.Text = response.Rows[0]["Email"].ToString();
+                this.txtSkills.Text = response.Rows[0]["Skills"].ToString();
+                this.txtHourlyRate.Text = response.Rows[0]["HourlyRate"].ToString();
 
 
             } catch (Exception e)
@@ -42,6 +44,29 @@ namespace HireKoro.Forms
             }
         }
 
-        
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            string name = this.txtName.Text;
+            string description = this.txtDescription.Text;
+            string email = this.txtEmail.Text;
+            string skills = this.txtSkills.Text;
+            string hourlyRate = this.txtHourlyRate.Text;
+            string userId = Main.CurrentUserId;
+            try
+            {
+                string query = $"UPDATE USERS SET Name='{name}', Description='{description}', Email={email}, Skills='{skills}', HourlyRate={hourlyRate} WHERE UserID={userId}";
+                int response = Main.DB.ExecuteDMLQuery(query);
+                if(response == 1)
+                {
+                    MessageBox.Show("Profile Updated Successfully", "Success");
+                } else
+                {
+                    MessageBox.Show("Profile Update Failed", "Failed");
+                }
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
