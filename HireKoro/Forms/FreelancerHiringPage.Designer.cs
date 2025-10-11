@@ -30,6 +30,7 @@
         {
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtHours = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.dtpStartDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.txtCost = new Guna.UI2.WinForms.Guna2TextBox();
@@ -47,7 +48,6 @@
             this.btnChat = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.lblName = new System.Windows.Forms.Label();
-            this.txtHours = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -92,6 +92,29 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(821, 619);
             this.guna2Panel1.TabIndex = 1;
+            // 
+            // txtHours
+            // 
+            this.txtHours.BackColor = System.Drawing.Color.Transparent;
+            this.txtHours.BorderRadius = 12;
+            this.txtHours.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtHours.DefaultText = "";
+            this.txtHours.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtHours.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtHours.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtHours.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtHours.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
+            this.txtHours.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtHours.Font = new System.Drawing.Font("Poppins", 12F);
+            this.txtHours.ForeColor = System.Drawing.Color.White;
+            this.txtHours.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtHours.Location = new System.Drawing.Point(356, 460);
+            this.txtHours.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtHours.Name = "txtHours";
+            this.txtHours.PlaceholderText = "Number Of Hours";
+            this.txtHours.SelectedText = "";
+            this.txtHours.Size = new System.Drawing.Size(256, 56);
+            this.txtHours.TabIndex = 65;
             // 
             // guna2Panel2
             // 
@@ -345,29 +368,6 @@
             this.lblName.Size = new System.Drawing.Size(189, 34);
             this.lblName.TabIndex = 20;
             this.lblName.Text = "Masud Rana Miya";
-            // 
-            // txtHours
-            // 
-            this.txtHours.BackColor = System.Drawing.Color.Transparent;
-            this.txtHours.BorderRadius = 12;
-            this.txtHours.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtHours.DefaultText = "";
-            this.txtHours.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtHours.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtHours.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtHours.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtHours.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
-            this.txtHours.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtHours.Font = new System.Drawing.Font("Poppins", 12F);
-            this.txtHours.ForeColor = System.Drawing.Color.White;
-            this.txtHours.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtHours.Location = new System.Drawing.Point(356, 460);
-            this.txtHours.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.txtHours.Name = "txtHours";
-            this.txtHours.PlaceholderText = "Number Of Hours";
-            this.txtHours.SelectedText = "";
-            this.txtHours.Size = new System.Drawing.Size(256, 56);
-            this.txtHours.TabIndex = 65;
             // 
             // FreelancerHiringPage
             // 

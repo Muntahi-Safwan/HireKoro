@@ -41,5 +41,7 @@ namespace HireKoro.Forms
             Main.ChangeWindow(Main.FreelancerDetailsPage);
 
         }
+
+        
     }
 }
