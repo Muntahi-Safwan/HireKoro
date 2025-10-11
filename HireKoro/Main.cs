@@ -15,6 +15,7 @@ namespace HireKoro
 {
     public partial class Main : Form
     {
+        internal static string CurrentUserId { get; set; }
         internal static Panel MainPanel { get;  set; }
         internal static Panel SidePanel { get; set; }
         internal static Guna2HtmlLabel TopLabelText { get; set; }
@@ -25,6 +26,9 @@ namespace HireKoro
         internal static UserControl SignInPage { get; set; }
         internal static UserControl SignUpPage { get; set; }
         internal static UserControl FreelancerRegisterPage { get; set; }
+        internal static UserControl FreelancerTaskPage { get; set; }
+        internal static UserControl FreelancerDetailsPage { get; set; }
+        internal static UserControl FreelancerHiringPage { get; set; }
         internal static UserControl ClientRegisterPage { get; set; }
         internal static UserControl ClientHomePage { get; set; }
         internal static UserControl ProfilePage { get; set;  }
@@ -43,6 +47,7 @@ namespace HireKoro
             InitializeComponent();
             DraggableWindow.MakePanelDraggable(this.TopPanel, this);
             DB = new DataAccess();
+            CurrentUserId = "1";
             MainPanel = this.pnlMainPanel;
             SidePanel = this.pnlSidePanel;
             TopLabelText = this.lblTopText;
@@ -91,18 +96,46 @@ namespace HireKoro
             Main.TopLabelText.Text = "Admin - Projects";
         }
 
-        private void btnTask_Click(object sender, EventArgs e)
+        private void btnReviews_Click(object sender, EventArgs e)
+        {
+            AdminReviewsPage = new AdminReviews();
+            ChangeWindow(AdminReviewsPage);
+            Main.TopLabelText.Text = " Admin - Reviews";
+        }
+
+        private void btnInvoices_Click(object sender, EventArgs e)
+        {
+            AdminInvoicesPage = new AdminInvoices();
+            ChangeWindow(AdminInvoicesPage);
+            Main.TopLabelText.Text = " Admin - Invoices";
+        }
+
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+            AdminUsersPage = new AdminUsers();
+            ChangeWindow(AdminUsersPage);
+            Main.TopLabelText.Text = " Admin - Users";
+        }
+
+        private void btnAdminTasks_Click(object sender, EventArgs e)
         {
             AdminTasksPage = new AdminTasksPage();
             ChangeWindow(AdminTasksPage);
             Main.TopLabelText.Text = "Admin - Tasks";
         }
 
-        private void btnReviews_Click(object sender, EventArgs e)
+        private void btnTask_Click(object sender, EventArgs e)
         {
-            AdminReviewsPage = new AdminReviews();
-            ChangeWindow(AdminReviewsPage);
-            Main.TopLabelText.Text = " Admin - Reviews";
+            FreelancerTaskPage = new FreelancerTaskPage();
+            ChangeWindow(FreelancerTaskPage);
+            Main.TopLabelText.Text = "My Tasks";
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            ClientHomePage = new ClientHomePage();
+            ChangeWindow(ClientHomePage);
+            Main.TopLabelText.Text = "Home";
         }
     }
 }

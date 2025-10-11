@@ -21,13 +21,20 @@ namespace HireKoro.Forms
         {
             try
             {
-                string query = "Select * FROM USERS WHERE UserTypeID=2\r\n";
+                string query = "Select * FROM USERS WHERE UserTypeID=2";
                 var response = Main.DB.ExecuteQueryTable(query);
                 int count = 0;
                 while(count < response.Rows.Count)
                 {
                     count++;
-                    FreelancerCard freelancerCard = new FreelancerCard();
+                    FreelancerCard freelancerCard = new FreelancerCard(
+                        response.Rows[count - 1]["UserID"].ToString(),
+                        response.Rows[count - 1]["Name"].ToString(),
+                        response.Rows[count - 1]["Description"].ToString(),
+                        response.Rows[count - 1]["Skills"].ToString(),
+                        //response.Rows[count - 1]["Rating"].ToString(),
+                        float.Parse(response.Rows[count - 1]["HourlyRate"].ToString())
+                    ); 
                     flowPanel.Controls.Add(freelancerCard);
                 }
             }

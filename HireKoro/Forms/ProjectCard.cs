@@ -16,5 +16,13 @@ namespace HireKoro.Forms
         {
             InitializeComponent();
         }
+        public ProjectCard(string id, string title,string status, string description, DateTime startDate, float hours): this()
+        {
+            this.lblProjectName.Text = title;
+            this.lblStatus.Text = status;
+            this.lblDescription.Text = description;
+            this.lblHours.Text = $"Hours: {hours} hr";
+            this.lblStartDate.Text = $"Start Date: {startDate.ToShortDateString()}";
+        }
     }
 }
