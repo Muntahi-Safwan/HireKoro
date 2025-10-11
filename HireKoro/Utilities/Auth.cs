@@ -26,8 +26,7 @@ namespace HireKoro.Utilities
                     return false;
                 }
 
-                // Insert new client (UserTypeID = 1 for clients based on the pattern where UserTypeID = 2 for freelancers)
-                string insertQuery = $@"INSERT INTO USERS (Name, Username, Email, Password, UserTypeID) 
+                string insertQuery = $@"INSERT INTO USERS (Name, Username, Email, PasswordHash, UserTypeID) 
                                        VALUES ('{name.Replace("'", "''")}', '{username.Replace("'", "''")}', 
                                               '{email.Replace("'", "''")}', '{hashPassword}', 1)";
 
@@ -35,7 +34,7 @@ namespace HireKoro.Utilities
 
                 if (result > 0)
                 {
-                    MessageBox.Show("Client registration successful! Please login to continue.", "Registration Successful");
+                    MessageBox.Show("Registration Successful! Welcome to HireKoro.", "Your One Stop Solution for freelance works");
                     return true;
                 }
                 else
@@ -52,12 +51,12 @@ namespace HireKoro.Utilities
         }
 
         // Register New Freelancer
-        internal bool signUpFreelancer(string email, string password, string name, string username, string skills, string description, float HourlyRate, string profileImg="dummyUrl")
+        internal bool signUpFreelancer(string email, string password, string name, string username, string skills, string description, float HourlyRate)
         {
             string hashPassword = PasswordHelper.HashPassword(password);
             try
             {
-                // First check if email or username already exists
+                // Email or username already exists
                 string checkQuery = $"SELECT COUNT(*) FROM USERS WHERE Email='{email.Replace("'", "''")}' OR Username='{username.Replace("'", "''")}'";
                 var checkResult = Main.DB.ExecuteQueryTable(checkQuery);
 
@@ -67,17 +66,17 @@ namespace HireKoro.Utilities
                     return false;
                 }
 
-                // Insert new freelancer (UserTypeID = 2 for freelancers)
-                string insertQuery = $@"INSERT INTO USERS (Name, Username, Email, Password, UserTypeID, Skills, Description, HourlyRate, ProfileImg) 
+                // Insert new freelancer
+                string insertQuery = $@"INSERT INTO USERS (Name, Username, Email, PasswordHash, UserTypeID, Skills, Description, HourlyRate, ProfileImg) 
                                        VALUES ('{name.Replace("'", "''")}', '{username.Replace("'", "''")}', 
                                               '{email.Replace("'", "''")}', '{hashPassword}', 2, 
-                                              '{skills.Replace("'", "''")}', '{description.Replace("'", "''")}', {HourlyRate}, {profileImg})";
+                                              '{skills.Replace("'", "''")}', '{description.Replace("'", "''")}', {HourlyRate}, 'dummyUrl')";
 
                 int result = Main.DB.ExecuteDMLQuery(insertQuery);
 
                 if (result > 0)
                 {
-                    MessageBox.Show("Freelancer registration successful! Please login to continue.", "Registration Successful");
+                    MessageBox.Show("Registration successful! Welcome to HireKoro.", "Complete Task and Easily Manage Everything");
                     return true;
                 }
                 else
@@ -106,7 +105,7 @@ namespace HireKoro.Utilities
                 }
 
                 // Query to get user by email
-                string query = $"SELECT UserID, Password, UserTypeID, Name FROM USERS WHERE Email='{email.Replace("'", "''")}'";
+                string query = $"SELECT UserID, PasswordHash, UserTypeID, Name FROM USERS WHERE Email='{email.Replace("'", "''")}'";
                 var response = Main.DB.ExecuteQueryTable(query);
 
                 if (response.Rows.Count == 0)
@@ -117,7 +116,7 @@ namespace HireKoro.Utilities
 
                 // Get user data
                 var userRow = response.Rows[0];
-                string hashedPassword = userRow["Password"].ToString();
+                string hashedPassword = userRow["PasswordHash"].ToString();
                 string userId = userRow["UserID"].ToString();
                 int userTypeId = Convert.ToInt32(userRow["UserTypeID"]);
                 string userName = userRow["Name"].ToString();
@@ -144,12 +143,14 @@ namespace HireKoro.Utilities
             }
         }
 
+        // Individual User Dashboard 
         private void NavigateToUserDashboard(int userTypeId, string userName)
         {
             switch (userTypeId)
             {
                 case 1: // Client
                     Main.ClientHomePage = new ClientHomePage();
+                    Main.userRole = "Client";
                     Main.ChangeWindow(Main.ClientHomePage);
                     Main.TopLabelText.Text = $"Welcome, {userName}";
                     Main.SidePanel.Visible = true;
@@ -157,6 +158,7 @@ namespace HireKoro.Utilities
 
                 case 2: // Freelancer
                     Main.FreelancerTaskPage = new FreelancerTaskPage();
+                    Main.userRole = "Freelancer";
                     Main.ChangeWindow(Main.FreelancerTaskPage);
                     Main.TopLabelText.Text = $"Welcome, {userName}";
                     Main.SidePanel.Visible = true;
@@ -165,11 +167,13 @@ namespace HireKoro.Utilities
                 case 3: // Admin 
                     Main.AdminProjectsPage = new AdminProjects();
                     Main.ChangeWindow(Main.AdminProjectsPage);
+                    Main.userRole = "Admin";
                     Main.TopLabelText.Text = $"Admin Dashboard - {userName}";
                     Main.SidePanel.Visible = true;
                     break;
             }
         }
+        // User Logout
         internal void Logout()
         {
             Main.CurrentUserId = null;
