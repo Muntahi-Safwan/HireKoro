@@ -16,6 +16,7 @@ namespace HireKoro
     public partial class Main : Form
     {
         internal static string CurrentUserId { get; set; }
+        internal static string userRole { get; set; }
         internal static Panel MainPanel { get;  set; }
         internal static Panel SidePanel { get; set; }
         internal static Guna2HtmlLabel TopLabelText { get; set; }
@@ -43,11 +44,15 @@ namespace HireKoro
         // Data Access Object
         internal static DataAccess DB { get; set; }
 
+        // Auth Object
+        internal static Auth auth { get; set; }
+
         public Main()
         {
             InitializeComponent();
             DraggableWindow.MakePanelDraggable(this.TopPanel, this);
             DB = new DataAccess();
+            auth = new Auth();
             CurrentUserId = "1";
             MainPanel = this.pnlMainPanel;
             SidePanel = this.pnlSidePanel;

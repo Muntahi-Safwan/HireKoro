@@ -17,22 +17,29 @@ namespace HireKoro.Forms
             InitializeComponent();
         }
 
-        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Main.ClientHomePage = new ClientHomePage();
-            Main.ChangeWindow(Main.ClientHomePage);
-            Main.SidePanel.Visible = true;
+            string email = txtEmail.Text;
+            string password = txtPassword.Text;
+            Main.auth.Login(email, password);
+            
         }
 
         private void lblForgot_Click(object sender, EventArgs e)
         {
             Main.ForgotPasswordPage = new ForgotPassword();
             Main.ChangeWindow(Main.ForgotPasswordPage);
+        }
+
+        private void btnLogo_Click(object sender, EventArgs e)
+        {
+            Main.ChangeWindow(Main.WelcomePage);
+        }
+
+        private void btnSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Main.ChangeWindow(Main.SignUpPage);
         }
     }
 }

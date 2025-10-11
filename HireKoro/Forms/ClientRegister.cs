@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HireKoro.Utilities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,9 +20,27 @@ namespace HireKoro.Forms
 
         private void btnClientCreate_Click(object sender, EventArgs e)
         {
-            Main.ClientHomePage = new ClientHomePage();
-            Main.ChangeWindow(Main.ClientHomePage);
-            Main.SidePanel.Visible = true;
+            string name = txtName.Text;
+            string email = txtEmail.Text;
+            string password = txtPassword.Text;
+            string username = txtUserName.Text;
+            bool registerClient = Main.auth.signUpClient(email, password, name, username);  
+            if (!registerClient)
+            {
+                MessageBox.Show("Registration failed. Please try again.", "Error");
+            } else
+            {
+                MessageBox.Show("Registration successful! Welcome to HireKoro.", "Success");
+                Main.ClientHomePage = new ClientHomePage();
+                Main.ChangeWindow(Main.ClientHomePage);
+                Main.SidePanel.Visible = true;
+            }
+        }
+
+        private void btnsignIn_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Main.SignInPage = new Login();
+            Main.ChangeWindow(Main.SignInPage);
         }
     }
 }
