@@ -47,7 +47,7 @@ namespace HireKoro
             InitializeComponent();
             DraggableWindow.MakePanelDraggable(this.TopPanel, this);
             DB = new DataAccess();
-            CurrentUserId = "1";
+            CurrentUserId = "2";
             MainPanel = this.pnlMainPanel;
             SidePanel = this.pnlSidePanel;
             TopLabelText = this.lblTopText;
