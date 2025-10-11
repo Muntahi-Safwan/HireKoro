@@ -164,5 +164,10 @@ namespace HireKoro
         {
             btnMyProjects.ForeColor = Color.FromArgb(121, 208, 2532);
         }
+
+        private void btnLogs_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
