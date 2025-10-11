@@ -282,6 +282,12 @@
     <EmbeddedResource Include="Forms\AdminInvoices.resx">
       <DependentUpon>AdminInvoices.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminPaymentLogs.resx">
+      <DependentUpon>AdminPaymentLogs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminProjectLogs.resx">
+      <DependentUpon>AdminProjectLogs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminProjects.resx">
       <DependentUpon>AdminProjects.cs</DependentUpon>
     </EmbeddedResource>
