@@ -28,83 +28,69 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblDescription = new System.Windows.Forms.Label();
+            this.lblDeadline = new System.Windows.Forms.Label();
+            this.btnStatus = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
-            // label1
+            // lblName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(11, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Design the Hero Section";
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.White;
+            this.lblName.Location = new System.Drawing.Point(11, 8);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(162, 23);
+            this.lblName.TabIndex = 0;
+            this.lblName.Text = "Design the Hero Section";
             // 
-            // label2
+            // lblDescription
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Poppins Thin", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(12, 31);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(253, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Hero Section should be Modern themed with beautiful";
+            this.lblDescription.Font = new System.Drawing.Font("Poppins Thin", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescription.ForeColor = System.Drawing.Color.White;
+            this.lblDescription.Location = new System.Drawing.Point(12, 31);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new System.Drawing.Size(253, 28);
+            this.lblDescription.TabIndex = 1;
+            this.lblDescription.Text = "Hero Section should be Modern themed with beautiful";
             // 
-            // label3
+            // lblDeadline
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Poppins Thin", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(12, 47);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(214, 16);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "hero image  comprising the SaaS Dashboard ";
+            this.lblDeadline.AutoSize = true;
+            this.lblDeadline.Font = new System.Drawing.Font("Poppins ExtraLight", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDeadline.ForeColor = System.Drawing.Color.White;
+            this.lblDeadline.Location = new System.Drawing.Point(12, 64);
+            this.lblDeadline.Name = "lblDeadline";
+            this.lblDeadline.Size = new System.Drawing.Size(93, 16);
+            this.lblDeadline.TabIndex = 3;
+            this.lblDeadline.Text = "Deadline: 10/10/2025";
             // 
-            // label4
+            // btnStatus
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Poppins ExtraLight", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(12, 64);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 16);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Deadline: 10/10/2025";
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.BorderRadius = 2;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Poppins SemiBold", 5.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Location = new System.Drawing.Point(190, 62);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(65, 15);
-            this.guna2Button1.TabIndex = 4;
-            this.guna2Button1.Text = "Completed";
+            this.btnStatus.BorderRadius = 2;
+            this.btnStatus.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnStatus.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnStatus.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnStatus.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnStatus.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
+            this.btnStatus.Font = new System.Drawing.Font("Poppins SemiBold", 5.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStatus.ForeColor = System.Drawing.Color.Black;
+            this.btnStatus.Location = new System.Drawing.Point(190, 62);
+            this.btnStatus.Name = "btnStatus";
+            this.btnStatus.Size = new System.Drawing.Size(65, 15);
+            this.btnStatus.TabIndex = 4;
+            this.btnStatus.Text = "Completed";
             // 
             // TaskCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
-            this.Controls.Add(this.guna2Button1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnStatus);
+            this.Controls.Add(this.lblDeadline);
+            this.Controls.Add(this.lblDescription);
+            this.Controls.Add(this.lblName);
             this.Name = "TaskCard";
             this.Size = new System.Drawing.Size(272, 80);
             this.ResumeLayout(false);
@@ -114,10 +100,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblDescription;
+        private System.Windows.Forms.Label lblDeadline;
+        private Guna.UI2.WinForms.Guna2Button btnStatus;
     }
 }
