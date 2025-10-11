@@ -97,9 +97,9 @@
             // flowPanel
             // 
             this.flowPanel.BackColor = System.Drawing.Color.Transparent;
-            this.flowPanel.Location = new System.Drawing.Point(76, 376);
+            this.flowPanel.Location = new System.Drawing.Point(76, 274);
             this.flowPanel.Name = "flowPanel";
-            this.flowPanel.Size = new System.Drawing.Size(749, 285);
+            this.flowPanel.Size = new System.Drawing.Size(796, 387);
             this.flowPanel.TabIndex = 20;
             // 
             // guna2TextBox1

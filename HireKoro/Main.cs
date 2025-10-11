@@ -58,6 +58,7 @@ namespace HireKoro
             SidePanel = this.pnlSidePanel;
             TopLabelText = this.lblTopText;
             WelcomePage = new Welcome();
+            this.sidebarBtnReset();
             ChangeWindow(WelcomePage);
 
         }
@@ -84,14 +85,14 @@ namespace HireKoro
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            ChangeWindow(WelcomePage);
-            SidePanel.Visible = false;
+            auth.Logout();
         }
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
             ProfilePage = new FreelancerProfilePage();
             ChangeWindow(ProfilePage);
+            btnProfile.ForeColor = Color.FromArgb(121, 208, 2532);
             SidePanel.Visible = true;
         }
 
@@ -99,6 +100,7 @@ namespace HireKoro
         {
             AdminProjectsPage = new AdminProjects();
             ChangeWindow(AdminProjectsPage);
+            btnProjects.ForeColor = Color.FromArgb(121, 208, 2532);
             Main.TopLabelText.Text = "Admin - Projects";
         }
 
@@ -106,6 +108,7 @@ namespace HireKoro
         {
             AdminReviewsPage = new AdminReviews();
             ChangeWindow(AdminReviewsPage);
+            btnReviews.ForeColor = Color.FromArgb(121, 208, 2532);
             Main.TopLabelText.Text = " Admin - Reviews";
         }
 
@@ -113,6 +116,7 @@ namespace HireKoro
         {
             AdminInvoicesPage = new AdminInvoices();
             ChangeWindow(AdminInvoicesPage);
+            btnInvoices.ForeColor = Color.FromArgb(121, 208, 2532);
             Main.TopLabelText.Text = " Admin - Invoices";
         }
 
@@ -120,6 +124,7 @@ namespace HireKoro
         {
             AdminUsersPage = new AdminUsers();
             ChangeWindow(AdminUsersPage);
+            btnUsers.ForeColor = Color.FromArgb(121, 208, 2532);
             Main.TopLabelText.Text = " Admin - Users";
         }
 
@@ -127,6 +132,7 @@ namespace HireKoro
         {
             AdminTasksPage = new AdminTasksPage();
             ChangeWindow(AdminTasksPage);
+            btnAdminTasks.ForeColor = Color.FromArgb(121, 208, 2532);
             Main.TopLabelText.Text = "Admin - Tasks";
         }
 
@@ -134,6 +140,7 @@ namespace HireKoro
         {
             FreelancerTaskPage = new FreelancerTaskPage();
             ChangeWindow(FreelancerTaskPage);
+            btnTask.ForeColor = Color.FromArgb(121, 208, 2532);
             Main.TopLabelText.Text = "My Tasks";
         }
 
@@ -141,7 +148,21 @@ namespace HireKoro
         {
             ClientHomePage = new ClientHomePage();
             ChangeWindow(ClientHomePage);
+            btnHome.ForeColor = Color.FromArgb(121, 208, 2532);
             Main.TopLabelText.Text = "Home";
+        }
+
+        public void sidebarBtnReset()
+        {
+            this.btnAdminTasks.ForeColor = this.btnHome.ForeColor = this.btnInvoices.ForeColor = Color.White;
+            this.btnMyProjects.ForeColor = this.btnProfile.ForeColor = this.btnMessages.ForeColor = Color.White;
+            this.btnDashboard.ForeColor = this.btnProjects.ForeColor = this.btnUsers.ForeColor = Color.White;
+            this.btnLogs.ForeColor = this.btnReviews.ForeColor = this.btnTask.ForeColor = Color.White;
+        }
+
+        private void btnMyProjects_Click(object sender, EventArgs e)
+        {
+            btnMyProjects.ForeColor = Color.FromArgb(121, 208, 2532);
         }
     }
 }
