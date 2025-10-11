@@ -270,6 +270,9 @@
     <EmbeddedResource Include="Forms\FreelancerDetailsPage.resx">
       <DependentUpon>FreelancerDetailsPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FreelancerHiredSuccesfullyPage.resx">
+      <DependentUpon>FreelancerHiredSuccesfullyPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FreelancerHiringPage.resx">
       <DependentUpon>FreelancerHiringPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -293,6 +296,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ProjectCard.resx">
       <DependentUpon>ProjectCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProjectDetailsPage.resx">
+      <DependentUpon>ProjectDetailsPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ReviewCard.resx">
       <DependentUpon>ReviewCard.cs</DependentUpon>
