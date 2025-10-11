@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace HireKoro.Forms
 {
-    public partial class MessageBox : UserControl
+    public partial class MessageContainer : UserControl
     {
-        public MessageBox()
+        public MessageContainer()
         {
             InitializeComponent();
         }
