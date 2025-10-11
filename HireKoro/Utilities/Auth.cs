@@ -177,6 +177,7 @@ namespace HireKoro.Utilities
         internal void Logout()
         {
             Main.CurrentUserId = null;
+            Main.userRole = null;
             Main.SidePanel.Visible = false;
             Main.ChangeWindow(Main.WelcomePage);
             Main.TopLabelText.Text = "HireKoro";

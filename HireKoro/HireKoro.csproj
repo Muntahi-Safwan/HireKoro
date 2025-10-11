@@ -75,6 +75,18 @@
     <Compile Include="Forms\AdminInvoices.Designer.cs">
       <DependentUpon>AdminInvoices.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AdminPaymentLogs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminPaymentLogs.Designer.cs">
+      <DependentUpon>AdminPaymentLogs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminProjectLogs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminProjectLogs.Designer.cs">
+      <DependentUpon>AdminProjectLogs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AdminProjects.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -141,6 +153,12 @@
     <Compile Include="Forms\FreelancerDetailsPage.Designer.cs">
       <DependentUpon>FreelancerDetailsPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FreelancerHiredSuccesfullyPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\FreelancerHiredSuccesfullyPage.Designer.cs">
+      <DependentUpon>FreelancerHiredSuccesfullyPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FreelancerHiringPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -165,6 +183,12 @@
     <Compile Include="Forms\FreelancerTaskPage.Designer.cs">
       <DependentUpon>FreelancerTaskPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\InvoiceCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\InvoiceCard.Designer.cs">
+      <DependentUpon>InvoiceCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Login.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -177,11 +201,29 @@
     <Compile Include="Forms\MessagesPage.Designer.cs">
       <DependentUpon>MessagesPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MyInvoices.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\MyInvoices.Designer.cs">
+      <DependentUpon>MyInvoices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MyProjects.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\MyProjects.Designer.cs">
+      <DependentUpon>MyProjects.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ProjectCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Forms\ProjectCard.Designer.cs">
       <DependentUpon>ProjectCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ProjectDetailsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ProjectDetailsPage.Designer.cs">
+      <DependentUpon>ProjectDetailsPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ReviewCard.cs">
       <SubType>UserControl</SubType>
@@ -269,6 +311,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MyProjects.resx">
+      <DependentUpon>MyProjects.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ProjectCard.resx">
       <DependentUpon>ProjectCard.cs</DependentUpon>

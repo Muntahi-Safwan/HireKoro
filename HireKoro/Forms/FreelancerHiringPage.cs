@@ -81,5 +81,7 @@ namespace HireKoro.Forms
         {
             this.txtCost.Text = (float.Parse(this.txtHours.Text) * float.Parse(this.lblHour.Text.Replace("$", "").Replace("/hr", ""))).ToString();
         }
+
+        
     }
 }
