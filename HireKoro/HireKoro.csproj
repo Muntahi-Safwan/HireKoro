@@ -201,11 +201,11 @@
     <Compile Include="Forms\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MessageBox.cs">
+    <Compile Include="Forms\MessageContainer.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\MessageBox.Designer.cs">
-      <DependentUpon>MessageBox.cs</DependentUpon>
+    <Compile Include="Forms\MessageContainer.Designer.cs">
+      <DependentUpon>MessageContainer.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MessagesPage.cs">
       <SubType>UserControl</SubType>
@@ -327,8 +327,8 @@
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MessageBox.resx">
-      <DependentUpon>MessageBox.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\MessageContainer.resx">
+      <DependentUpon>MessageContainer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MessagesPage.resx">
       <DependentUpon>MessagesPage.cs</DependentUpon>

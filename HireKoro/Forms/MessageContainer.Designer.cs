@@ -1,6 +1,6 @@
 ﻿namespace HireKoro.Forms
 {
-    partial class MessageBox
+    partial class MessageContainer
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,12 +30,12 @@
         {
             this.SuspendLayout();
             // 
-            // MessageBox
+            // MessageContainer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "MessageBox";
-            this.Size = new System.Drawing.Size(609, 590);
+            this.Name = "MessageContainer";
+            this.Size = new System.Drawing.Size(540, 277);
             this.ResumeLayout(false);
 
         }
