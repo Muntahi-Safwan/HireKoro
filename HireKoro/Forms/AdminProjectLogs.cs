@@ -15,6 +15,22 @@ namespace HireKoro.Forms
         public AdminProjectLogs()
         {
             InitializeComponent();
+            LoadProjectLogs();
+
+        }
+
+        internal void LoadProjectLogs(string query = "select * from ProjectLog")
+        {
+            try
+            {
+
+                var response = Main.DB.ExecuteQueryTable(query);
+                dgvProject.DataSource = response;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading projects: " + ex.Message);
+            }
         }
 
         private void btnChat_Click(object sender, EventArgs e)
