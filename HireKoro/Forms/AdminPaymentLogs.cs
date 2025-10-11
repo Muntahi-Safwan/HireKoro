@@ -14,7 +14,23 @@ namespace HireKoro.Forms
     {
         public AdminPaymentLogs()
         {
+            
             InitializeComponent();
+            LoadPaymentLogs();
+        }
+
+        internal void LoadPaymentLogs(string query = "select * from PaymentLog")
+        {
+            try
+            {
+                
+                var response = Main.DB.ExecuteQueryTable(query);
+                dgvPayment.DataSource = response;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading projects: " + ex.Message);
+            }
         }
     }
 }
