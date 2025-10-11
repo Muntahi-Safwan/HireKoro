@@ -111,6 +111,12 @@
     <Compile Include="Forms\AdminUsers.Designer.cs">
       <DependentUpon>AdminUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ChatBubble.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ChatBubble.Designer.cs">
+      <DependentUpon>ChatBubble.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ClientHomePage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -194,6 +200,12 @@
     </Compile>
     <Compile Include="Forms\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MessageBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\MessageBox.Designer.cs">
+      <DependentUpon>MessageBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MessagesPage.cs">
       <SubType>UserControl</SubType>
@@ -282,6 +294,9 @@
     <EmbeddedResource Include="Forms\AdminUsers.resx">
       <DependentUpon>AdminUsers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ChatBubble.resx">
+      <DependentUpon>ChatBubble.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ClientRegister.resx">
       <DependentUpon>ClientRegister.cs</DependentUpon>
     </EmbeddedResource>
@@ -311,6 +326,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MessageBox.resx">
+      <DependentUpon>MessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MessagesPage.resx">
+      <DependentUpon>MessagesPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MyProjects.resx">
       <DependentUpon>MyProjects.cs</DependentUpon>
