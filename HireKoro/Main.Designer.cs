@@ -309,6 +309,7 @@
             this.btnLogs.Text = "Logs";
             this.btnLogs.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLogs.UseTransparentBackground = true;
+            this.btnLogs.Click += new System.EventHandler(this.btnLogs_Click);
             // 
             // guna2Panel11
             // 

@@ -75,6 +75,18 @@
     <Compile Include="Forms\AdminInvoices.Designer.cs">
       <DependentUpon>AdminInvoices.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AdminPaymentLogs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminPaymentLogs.Designer.cs">
+      <DependentUpon>AdminPaymentLogs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminProjectLogs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminProjectLogs.Designer.cs">
+      <DependentUpon>AdminProjectLogs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AdminProjects.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -98,6 +110,12 @@
     </Compile>
     <Compile Include="Forms\AdminUsers.Designer.cs">
       <DependentUpon>AdminUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ChatBubble.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ChatBubble.Designer.cs">
+      <DependentUpon>ChatBubble.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ClientHomePage.cs">
       <SubType>UserControl</SubType>
@@ -171,17 +189,35 @@
     <Compile Include="Forms\FreelancerTaskPage.Designer.cs">
       <DependentUpon>FreelancerTaskPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\InvoiceCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\InvoiceCard.Designer.cs">
+      <DependentUpon>InvoiceCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Login.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Forms\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MessageBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\MessageBox.Designer.cs">
+      <DependentUpon>MessageBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MessagesPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Forms\MessagesPage.Designer.cs">
       <DependentUpon>MessagesPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MyInvoices.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\MyInvoices.Designer.cs">
+      <DependentUpon>MyInvoices.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MyProjects.cs">
       <SubType>UserControl</SubType>
@@ -258,6 +294,9 @@
     <EmbeddedResource Include="Forms\AdminUsers.resx">
       <DependentUpon>AdminUsers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ChatBubble.resx">
+      <DependentUpon>ChatBubble.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ClientRegister.resx">
       <DependentUpon>ClientRegister.cs</DependentUpon>
     </EmbeddedResource>
@@ -290,6 +329,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MessageBox.resx">
+      <DependentUpon>MessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MessagesPage.resx">
+      <DependentUpon>MessagesPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MyProjects.resx">
       <DependentUpon>MyProjects.cs</DependentUpon>
