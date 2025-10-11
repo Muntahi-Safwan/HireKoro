@@ -16,5 +16,11 @@ namespace HireKoro.Forms
         {
             InitializeComponent();
         }
+        public MessageContainer(String Name , String Message, String Time) :this()
+        {
+            this.lblName.Text = Name;
+            this.lblMessage.Text = Message;
+            this.lblTime.Text = Time;
+        }
     }
 }
