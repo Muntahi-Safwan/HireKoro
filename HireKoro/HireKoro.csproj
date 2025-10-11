@@ -339,6 +339,9 @@
     <EmbeddedResource Include="Forms\FreelancerTaskPage.resx">
       <DependentUpon>FreelancerTaskPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InvoiceCard.resx">
+      <DependentUpon>InvoiceCard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -347,6 +350,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MessagesPage.resx">
       <DependentUpon>MessagesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MyInvoices.resx">
+      <DependentUpon>MyInvoices.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MyProjects.resx">
       <DependentUpon>MyProjects.cs</DependentUpon>
