@@ -107,6 +107,12 @@
     <Compile Include="Forms\CreateProjectPage.Designer.cs">
       <DependentUpon>CreateProjectPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ForgotPassword.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ForgotPassword.Designer.cs">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FreelancerCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
