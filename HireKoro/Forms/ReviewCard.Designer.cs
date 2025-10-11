@@ -68,7 +68,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(58)))), ((int)(((byte)(82)))));
             this.Controls.Add(this.lblComment);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.guna2PictureBox1);
