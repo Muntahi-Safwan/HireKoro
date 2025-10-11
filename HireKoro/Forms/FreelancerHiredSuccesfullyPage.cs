@@ -16,5 +16,12 @@ namespace HireKoro.Forms
         {
             InitializeComponent();
         }
+
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+            Main.ClientHomePage = new ClientHomePage();
+            Main.ChangeWindow(Main.ClientHomePage);
+            Main.TopLabelText.Text = "Client - Home";
+        }
     }
 }

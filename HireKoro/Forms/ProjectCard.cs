@@ -16,13 +16,22 @@ namespace HireKoro.Forms
         {
             InitializeComponent();
         }
-        public ProjectCard(string id, string title,string status, string description, DateTime startDate, float hours): this()
+        public ProjectCard(string id, string title,string status, string description, DateTime startDate, float hours, bool details=false): this()
         {
             this.lblProjectName.Text = title;
             this.lblStatus.Text = status;
             this.lblDescription.Text = description;
             this.lblHours.Text = $"Hours: {hours} hr";
             this.lblStartDate.Text = $"Start Date: {startDate.ToShortDateString()}";
+            if (details)
+            {
+                btnDetails.Visible = true;
+            }
+        }
+
+        private void btnDetails_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

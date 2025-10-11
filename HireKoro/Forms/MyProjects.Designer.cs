@@ -31,8 +31,6 @@
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.flpProjects = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnConfirm = new Guna.UI2.WinForms.Guna2Button();
-            this.btnChat = new Guna.UI2.WinForms.Guna2Button();
             this.lblName = new System.Windows.Forms.Label();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -56,8 +54,6 @@
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
             this.guna2Panel1.BorderRadius = 12;
             this.guna2Panel1.Controls.Add(this.flpProjects);
-            this.guna2Panel1.Controls.Add(this.btnConfirm);
-            this.guna2Panel1.Controls.Add(this.btnChat);
             this.guna2Panel1.Controls.Add(this.lblName);
             this.guna2Panel1.Location = new System.Drawing.Point(54, 21);
             this.guna2Panel1.Name = "guna2Panel1";
@@ -66,44 +62,10 @@
             // 
             // flpProjects
             // 
-            this.flpProjects.Location = new System.Drawing.Point(60, 114);
+            this.flpProjects.Location = new System.Drawing.Point(60, 110);
             this.flpProjects.Name = "flpProjects";
-            this.flpProjects.Size = new System.Drawing.Size(496, 505);
+            this.flpProjects.Size = new System.Drawing.Size(692, 509);
             this.flpProjects.TabIndex = 53;
-            // 
-            // btnConfirm
-            // 
-            this.btnConfirm.BorderRadius = 12;
-            this.btnConfirm.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnConfirm.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnConfirm.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnConfirm.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnConfirm.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
-            this.btnConfirm.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirm.ForeColor = System.Drawing.Color.Black;
-            this.btnConfirm.Location = new System.Drawing.Point(643, 150);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(148, 44);
-            this.btnConfirm.TabIndex = 52;
-            this.btnConfirm.Text = "Confirm Hire";
-            // 
-            // btnChat
-            // 
-            this.btnChat.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
-            this.btnChat.BorderRadius = 3;
-            this.btnChat.BorderThickness = 1;
-            this.btnChat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnChat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnChat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnChat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnChat.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
-            this.btnChat.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
-            this.btnChat.Location = new System.Drawing.Point(674, 81);
-            this.btnChat.Name = "btnChat";
-            this.btnChat.Size = new System.Drawing.Size(93, 30);
-            this.btnChat.TabIndex = 46;
-            this.btnChat.Text = "Chat";
             // 
             // lblName
             // 
@@ -136,8 +98,6 @@
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.FlowLayoutPanel flpProjects;
-        private Guna.UI2.WinForms.Guna2Button btnConfirm;
-        private Guna.UI2.WinForms.Guna2Button btnChat;
         private System.Windows.Forms.Label lblName;
     }
 }
