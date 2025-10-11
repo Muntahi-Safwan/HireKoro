@@ -36,7 +36,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtHours = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtProjectDescription = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,6 +47,7 @@
             this.btnChat = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.lblName = new System.Windows.Forms.Label();
+            this.txtHours = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -71,12 +71,12 @@
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
             this.guna2Panel1.BorderRadius = 12;
+            this.guna2Panel1.Controls.Add(this.txtHours);
             this.guna2Panel1.Controls.Add(this.guna2Panel2);
             this.guna2Panel1.Controls.Add(this.txtCost);
             this.guna2Panel1.Controls.Add(this.label9);
             this.guna2Panel1.Controls.Add(this.label8);
             this.guna2Panel1.Controls.Add(this.label7);
-            this.guna2Panel1.Controls.Add(this.txtHours);
             this.guna2Panel1.Controls.Add(this.label6);
             this.guna2Panel1.Controls.Add(this.txtProjectDescription);
             this.guna2Panel1.Controls.Add(this.label4);
@@ -183,29 +183,6 @@
             this.label7.TabIndex = 59;
             this.label7.Text = "Project Start Date";
             // 
-            // txtHours
-            // 
-            this.txtHours.BackColor = System.Drawing.Color.Transparent;
-            this.txtHours.BorderRadius = 12;
-            this.txtHours.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtHours.DefaultText = "\r\n  10";
-            this.txtHours.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtHours.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtHours.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtHours.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtHours.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
-            this.txtHours.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtHours.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHours.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtHours.Location = new System.Drawing.Point(356, 460);
-            this.txtHours.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.txtHours.Name = "txtHours";
-            this.txtHours.PlaceholderText = "";
-            this.txtHours.SelectedText = "";
-            this.txtHours.Size = new System.Drawing.Size(256, 56);
-            this.txtHours.TabIndex = 58;
-            this.txtHours.TextChanged += new System.EventHandler(this.txtHours_TextChanged);
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -223,20 +200,20 @@
             this.txtProjectDescription.BackColor = System.Drawing.Color.Transparent;
             this.txtProjectDescription.BorderRadius = 12;
             this.txtProjectDescription.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtProjectDescription.DefaultText = "Stephen";
+            this.txtProjectDescription.DefaultText = "";
             this.txtProjectDescription.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtProjectDescription.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtProjectDescription.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtProjectDescription.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtProjectDescription.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
             this.txtProjectDescription.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtProjectDescription.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProjectDescription.Font = new System.Drawing.Font("Poppins", 12F);
             this.txtProjectDescription.ForeColor = System.Drawing.Color.White;
             this.txtProjectDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtProjectDescription.Location = new System.Drawing.Point(76, 343);
             this.txtProjectDescription.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtProjectDescription.Name = "txtProjectDescription";
-            this.txtProjectDescription.PlaceholderText = "";
+            this.txtProjectDescription.PlaceholderText = "Short Project Description";
             this.txtProjectDescription.SelectedText = "";
             this.txtProjectDescription.Size = new System.Drawing.Size(536, 70);
             this.txtProjectDescription.TabIndex = 55;
@@ -275,20 +252,20 @@
             this.txtProjectName.BackColor = System.Drawing.Color.Transparent;
             this.txtProjectName.BorderRadius = 12;
             this.txtProjectName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtProjectName.DefaultText = "Modern Day SaaS Application UI Design";
+            this.txtProjectName.DefaultText = "";
             this.txtProjectName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtProjectName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtProjectName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtProjectName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtProjectName.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
             this.txtProjectName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtProjectName.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProjectName.Font = new System.Drawing.Font("Poppins", 12F);
             this.txtProjectName.ForeColor = System.Drawing.Color.White;
             this.txtProjectName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtProjectName.Location = new System.Drawing.Point(76, 240);
             this.txtProjectName.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtProjectName.Name = "txtProjectName";
-            this.txtProjectName.PlaceholderText = "";
+            this.txtProjectName.PlaceholderText = "Name Of The Project";
             this.txtProjectName.SelectedText = "";
             this.txtProjectName.Size = new System.Drawing.Size(536, 56);
             this.txtProjectName.TabIndex = 51;
@@ -369,6 +346,29 @@
             this.lblName.TabIndex = 20;
             this.lblName.Text = "Masud Rana Miya";
             // 
+            // txtHours
+            // 
+            this.txtHours.BackColor = System.Drawing.Color.Transparent;
+            this.txtHours.BorderRadius = 12;
+            this.txtHours.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtHours.DefaultText = "";
+            this.txtHours.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtHours.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtHours.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtHours.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtHours.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
+            this.txtHours.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtHours.Font = new System.Drawing.Font("Poppins", 12F);
+            this.txtHours.ForeColor = System.Drawing.Color.White;
+            this.txtHours.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtHours.Location = new System.Drawing.Point(356, 460);
+            this.txtHours.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtHours.Name = "txtHours";
+            this.txtHours.PlaceholderText = "Number Of Hours";
+            this.txtHours.SelectedText = "";
+            this.txtHours.Size = new System.Drawing.Size(256, 56);
+            this.txtHours.TabIndex = 65;
+            // 
             // FreelancerHiringPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -400,12 +400,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private Guna.UI2.WinForms.Guna2TextBox txtHours;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2TextBox txtProjectDescription;
         private Guna.UI2.WinForms.Guna2TextBox txtCost;
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpStartDate;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2TextBox txtHours;
     }
 }
