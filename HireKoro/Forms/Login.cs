@@ -28,5 +28,11 @@ namespace HireKoro.Forms
             Main.ChangeWindow(Main.ClientHomePage);
             Main.SidePanel.Visible = true;
         }
+
+        private void lblForgot_Click(object sender, EventArgs e)
+        {
+            Main.ForgotPasswordPage = new ForgotPassword();
+            Main.ChangeWindow(Main.ForgotPasswordPage);
+        }
     }
 }

@@ -16,5 +16,16 @@ namespace HireKoro.Forms
         {
             InitializeComponent();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Main.SignInPage = new Login();
+            Main.ChangeWindow(Main.SignInPage);
+        }
     }
 }

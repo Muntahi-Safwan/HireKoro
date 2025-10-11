@@ -226,6 +226,9 @@
     <EmbeddedResource Include="Forms\ClientRegister.resx">
       <DependentUpon>ClientRegister.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ForgotPassword.resx">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FreelancerCard.resx">
       <DependentUpon>FreelancerCard.cs</DependentUpon>
     </EmbeddedResource>

@@ -37,6 +37,7 @@ namespace HireKoro
         internal static UserControl AdminUsersPage { get; set; }
         internal static UserControl AdminReviewsPage { get; set; }
         internal static UserControl AdminInvoicesPage { get; set; }
+        internal static UserControl ForgotPasswordPage { get; set; }
         
 
         // Data Access Object
