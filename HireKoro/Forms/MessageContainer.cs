@@ -12,15 +12,24 @@ namespace HireKoro.Forms
 {
     public partial class MessageContainer : UserControl
     {
+        internal string receverID {  get; set; }
         public MessageContainer()
         {
             InitializeComponent();
         }
-        public MessageContainer(String Name , String Message, String Time) :this()
+        public MessageContainer(String ReceverID, String Name , String Message, String Time) :this()
         {
             this.lblName.Text = Name;
             this.lblMessage.Text = Message;
             this.lblTime.Text = Time;
+            this.receverID = ReceverID;
+        }
+
+        private void pnlMessages_Click(object sender, EventArgs e)
+        {
+            MessagesPage.ReceverID = receverID;
+            MessagesPage.ReceverName.Text = this.lblName.Text;
+            MessagesPage.Chats();
         }
     }
 }
