@@ -69,6 +69,8 @@
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.pnlMainPanel = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.guna2Panel16 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnMyInvoices = new Guna.UI2.WinForms.Guna2Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.pnlSidePanel.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -90,6 +92,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.TopPanel.SuspendLayout();
+            this.guna2Panel16.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -176,6 +179,7 @@
             // 
             // guna2Panel2
             // 
+            this.guna2Panel2.Controls.Add(this.guna2Panel16);
             this.guna2Panel2.Controls.Add(this.guna2Panel15);
             this.guna2Panel2.Controls.Add(this.guna2Panel14);
             this.guna2Panel2.Controls.Add(this.guna2Panel13);
@@ -669,6 +673,35 @@
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
+            // guna2Panel16
+            // 
+            this.guna2Panel16.Controls.Add(this.btnMyInvoices);
+            this.guna2Panel16.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel16.Location = new System.Drawing.Point(0, 420);
+            this.guna2Panel16.Name = "guna2Panel16";
+            this.guna2Panel16.Size = new System.Drawing.Size(197, 35);
+            this.guna2Panel16.TabIndex = 12;
+            // 
+            // btnMyInvoices
+            // 
+            this.btnMyInvoices.BackColor = System.Drawing.Color.Transparent;
+            this.btnMyInvoices.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMyInvoices.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnMyInvoices.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMyInvoices.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnMyInvoices.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMyInvoices.FillColor = System.Drawing.Color.Transparent;
+            this.btnMyInvoices.Font = new System.Drawing.Font("Poppins Medium", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnMyInvoices.ForeColor = System.Drawing.Color.White;
+            this.btnMyInvoices.Location = new System.Drawing.Point(0, 0);
+            this.btnMyInvoices.Name = "btnMyInvoices";
+            this.btnMyInvoices.Size = new System.Drawing.Size(197, 35);
+            this.btnMyInvoices.TabIndex = 0;
+            this.btnMyInvoices.Text = "My Invoices";
+            this.btnMyInvoices.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnMyInvoices.UseTransparentBackground = true;
+            this.btnMyInvoices.Click += new System.EventHandler(this.btnMyInvoices_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -700,6 +733,7 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.TopPanel.ResumeLayout(false);
             this.TopPanel.PerformLayout();
+            this.guna2Panel16.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -745,5 +779,7 @@
         private Guna.UI2.WinForms.Guna2Button btnAdminTasks;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel15;
         private Guna.UI2.WinForms.Guna2Button btnMyProjects;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel16;
+        private Guna.UI2.WinForms.Guna2Button btnMyInvoices;
     }
 }
