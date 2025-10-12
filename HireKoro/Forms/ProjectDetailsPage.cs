@@ -19,25 +19,26 @@ namespace HireKoro.Forms
         DateTime startDate { get; set; }
         float hours { get; set; }
         float cost { get; set; }
-        public ProjectDetailsPage()
+        public ProjectDetailsPage(string id)
         {
             InitializeComponent();
+            this.projectId = id;
+            this.loadProject(id);
         }
         internal void loadProject(string projectId)
         {
             try
             {
-                string query = $"SELECT * FROM Projects WHERE id = {projectId}";
+                string query = $"SELECT * FROM Projects WHERE ProjectID = {projectId}";
                 var response = Main.DB.ExecuteQueryTable(query);
                 if (response != null)
                 {
                     txtProjectName.Text = response.Rows[0]["title"].ToString();
                     cmbStatus.Text = response.Rows[0]["ProjectStatus"].ToString();
                     txtProjectDescription.Text = response.Rows[0]["ProjectDescription"].ToString();
-                    txtHours.Text = response.Rows[0]["hours"].ToString();
                     dtpStartDate.Value = DateTime.Parse(response.Rows[0]["StartDate"].ToString());
                     txtCost.Text = response.Rows[0]["cost"].ToString();
-                    txtHours.Text = response.Rows[0]["hours"].ToString();
+                    txtHours.Text = response.Rows[0]["ProjectHours"].ToString();
                 }
             }
             catch (Exception ex)
@@ -45,28 +46,64 @@ namespace HireKoro.Forms
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        internal void LoadProjects(string id)
+
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
+            this.title = txtProjectName.Text;
+            this.description = txtProjectDescription.Text;
+            this.hours = float.Parse(txtHours.Text);
+            this.status = cmbStatus.Text;
+            this.startDate = dtpStartDate.Value;
+            this.cost = float.Parse(txtCost.Text);
             try
             {
-                string query = $"Select * FROM PROJECTS WHERE FreelancerID={id}";
-                var response = Main.DB.ExecuteQueryTable(query);
-                int count = 0;
-                while (count < response.Rows.Count)
-                {
-                    string projectId = response.Rows[count]["ProjectID"].ToString();
-                    string title = response.Rows[count]["Title"].ToString();
-                    string status = response.Rows[count]["ProjectStatus"].ToString();
-                    string description = response.Rows[count]["ProjectDescription"].ToString();
 
-                    DateTime startDate = DateTime.Parse(response.Rows[count]["StartDate"].ToString());
-                    float hours = float.Parse(response.Rows[count]["ProjectHours"].ToString());
-                    count++;
+                string query = $@"UPDATE PROJECTS SET 
+                                 Title = '{this.title}',
+                                 ProjectDescription = '{this.description}',
+                                 ProjectStatus = '{this.status}',
+                                 ProjectHours = {this.hours},
+                                 Cost = {this.cost}
+                                 WHERE ProjectID = {this.projectId}";
+                var response = Main.DB.ExecuteDMLQuery(query);
+                if (response > 0)
+                {
+                    MessageBox.Show("Project Updated Successfully!");
+                    loadProject(this.projectId);
                 }
-            }
-            catch (Exception ex)
+                else
+                {
+                    MessageBox.Show("Failed to update project.");
+                }
+            } catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Are you sure you want to delete this project?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                try
+                {
+                    string query = $"DELETE FROM PROJECTS WHERE ProjectID = {this.projectId}";
+                    var response = Main.DB.ExecuteDMLQuery(query);
+                    if (response > 0)
+                    {
+                        MessageBox.Show("Project Deleted Successfully!");
+                        Main.MyProjectPage = new MyProjects();
+                        Main.ChangeWindow(Main.MyProjectPage);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to delete project.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }
