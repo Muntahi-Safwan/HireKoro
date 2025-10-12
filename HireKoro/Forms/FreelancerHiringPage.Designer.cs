@@ -115,6 +115,7 @@
             this.txtHours.SelectedText = "";
             this.txtHours.Size = new System.Drawing.Size(256, 56);
             this.txtHours.TabIndex = 65;
+            this.txtHours.TextChanged += new System.EventHandler(this.txtHours_TextChanged_1);
             // 
             // guna2Panel2
             // 

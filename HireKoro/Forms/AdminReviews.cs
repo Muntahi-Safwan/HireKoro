@@ -16,7 +16,7 @@ namespace HireKoro.Forms
         {
             InitializeComponent();
             this.LoadReviews();
-
+            this.load_ProjectName();
         }
 
         internal void LoadReviews(string query = "SELECT R.ReviewID,U.Name, P.Title,R.Rating,R.Comment FROM REVIEWS AS R,PROJECTS AS P,Users as U WHERE R.ProjectID= P.ProjectID AND R.ReviewerID=U.UserID")
@@ -35,8 +35,8 @@ namespace HireKoro.Forms
         internal void Clearall()
         {
             this.txtReviewID.Clear();
-            this.txtProjectName.Clear();
-            this.txtReviewTitle.Clear();
+            this.cmbProject.SelectedIndex = -1;
+          
             this.txtRating.Clear();
             this.txtComment.Clear();
         }
@@ -49,8 +49,7 @@ namespace HireKoro.Forms
         private void dgvReviews_DoubleClick(object sender, EventArgs e)
         {
             this.txtReviewID.Text = this.dgvReviews.CurrentRow.Cells["ReviewID"].Value.ToString();
-            this.txtProjectName.Text = this.dgvReviews.CurrentRow.Cells["ProjectID"].Value.ToString();
-            this.txtReviewTitle.Text = this.dgvReviews.CurrentRow.Cells["Title"].Value.ToString();
+            this.cmbProject.Text = this.dgvReviews.CurrentRow.Cells["ProjectID"].Value.ToString();
             this.txtRating.Text = this.dgvReviews.CurrentRow.Cells["Rating"].Value.ToString();
             this.txtComment.Text = this.dgvReviews.CurrentRow.Cells["Comment"].Value.ToString();
 
@@ -72,11 +71,27 @@ namespace HireKoro.Forms
             }
         }
 
+
+        private void load_ProjectName(string query = "select  * from PROJECTS")
+        {
+
+            try
+            {
+                var DT = Main.DB.ExecuteQueryTable(query);
+                this.cmbProject.DataSource = DT;
+                this.cmbProject.DisplayMember = "Title";
+                this.cmbProject.ValueMember = "ProjectID";
+
+
+            }
+            catch (Exception ex) { MessageBox.Show($"ERROR {ex.Message}"); }
+        }
+
         private void CreateReview()
         {
             try
             {
-                string query = $@"insert into REVIEWS (ProjectID,ReviewerID,Rating,Comment)VALUES ( '{txtProjectName.Text}', '{txtReviewTitle.Text}', 
+                string query = $@"insert into REVIEWS (ProjectID,ReviewerID,Rating,Comment)VALUES ( '{cmbProject.SelectedValue.ToString()}','{Main.CurrentUserId}',  
                                  '{txtRating.Text}', '{txtComment.Text}')";
 
                 Main.DB.ExecuteDMLQuery(query);
@@ -96,8 +111,7 @@ namespace HireKoro.Forms
             {
                 string query = $@"UPDATE Reviews SET 
                                 
-                                 Name = '{txtProjectName.Text}',
-                                 Title = '{txtReviewTitle.Text}',
+                                 ProjectID = '{cmbProject.SelectedValue.ToString()}',
                                  Rating = '{txtRating.Text}',
                                  Comment = '{txtComment.Text}'
                                  WHERE ReviewID = {txtReviewID.Text}";
@@ -120,7 +134,7 @@ namespace HireKoro.Forms
             {
                 try
                 {
-                    string query = $"DELETE FROM PROJECTS WHERE ReviewID = {this.txtReviewID.Text};";
+                    string query = $"DELETE FROM REVIEWS WHERE ReviewID = {this.txtReviewID.Text};";
                     var response = Main.DB.ExecuteDMLQuery(query);
                     dgvReviews.DataSource = response;
                     this.LoadReviews();

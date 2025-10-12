@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -84,6 +85,18 @@ namespace HireKoro.Forms
             this.txtCost.Text = (float.Parse(this.txtHours.Text) * float.Parse(this.lblHour.Text.Replace("$", "").Replace("/hr", ""))).ToString();
         }
 
+        private void txtHours_TextChanged_1(object sender, EventArgs e)
+        {
+            
         
+            if (txtHours.Text != "")
+            {
+                this.txtCost.Text = (float.Parse(this.txtHours.Text) * float.Parse(this.lblHour.Text.Replace("$", "").Replace("/hr", ""))).ToString();
+               
+            }
+            else { txtCost = null; }
+            this.txtCost.Text +=  txtCost;
+        }
     }
-}
+    }
+
