@@ -31,6 +31,7 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblName = new System.Windows.Forms.Label();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.flpInvoices = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel1.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -39,6 +40,7 @@
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
             this.guna2Panel1.BorderRadius = 12;
+            this.guna2Panel1.Controls.Add(this.flpInvoices);
             this.guna2Panel1.Controls.Add(this.lblName);
             this.guna2Panel1.Location = new System.Drawing.Point(54, 21);
             this.guna2Panel1.Name = "guna2Panel1";
@@ -51,7 +53,7 @@
             this.lblName.BackColor = System.Drawing.Color.Transparent;
             this.lblName.Font = new System.Drawing.Font("Poppins", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.Color.White;
-            this.lblName.Location = new System.Drawing.Point(50, 37);
+            this.lblName.Location = new System.Drawing.Point(53, 17);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(217, 56);
             this.lblName.TabIndex = 20;
@@ -69,6 +71,13 @@
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(929, 661);
             this.guna2GradientPanel1.TabIndex = 6;
+            // 
+            // flpInvoices
+            // 
+            this.flpInvoices.Location = new System.Drawing.Point(63, 96);
+            this.flpInvoices.Name = "flpInvoices";
+            this.flpInvoices.Size = new System.Drawing.Size(669, 523);
+            this.flpInvoices.TabIndex = 21;
             // 
             // MyInvoices
             // 
@@ -89,5 +98,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label lblName;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flpInvoices;
     }
 }

@@ -30,20 +30,20 @@
         {
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblName = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtHours = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnPayment = new Guna.UI2.WinForms.Guna2Button();
+            this.txtExpiry = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtCVC = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtProjectDescription = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtCardNumber = new Guna.UI2.WinForms.Guna2TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtProjectName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnConfirm = new Guna.UI2.WinForms.Guna2Button();
+            this.txtHolderName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblDueDate = new System.Windows.Forms.Label();
+            this.lblIssueDate = new System.Windows.Forms.Label();
+            this.lblAmount = new System.Windows.Forms.Label();
+            this.lblProjectName = new System.Windows.Forms.Label();
+            this.lblInvoiceID = new System.Windows.Forms.Label();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -65,107 +65,87 @@
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
             this.guna2Panel1.BorderRadius = 12;
-            this.guna2Panel1.Controls.Add(this.btnConfirm);
-            this.guna2Panel1.Controls.Add(this.guna2TextBox1);
-            this.guna2Panel1.Controls.Add(this.txtHours);
+            this.guna2Panel1.Controls.Add(this.btnPayment);
+            this.guna2Panel1.Controls.Add(this.txtExpiry);
+            this.guna2Panel1.Controls.Add(this.txtCVC);
             this.guna2Panel1.Controls.Add(this.label8);
             this.guna2Panel1.Controls.Add(this.label7);
             this.guna2Panel1.Controls.Add(this.label6);
-            this.guna2Panel1.Controls.Add(this.txtProjectDescription);
+            this.guna2Panel1.Controls.Add(this.txtCardNumber);
             this.guna2Panel1.Controls.Add(this.label9);
-            this.guna2Panel1.Controls.Add(this.txtProjectName);
-            this.guna2Panel1.Controls.Add(this.label4);
-            this.guna2Panel1.Controls.Add(this.label3);
-            this.guna2Panel1.Controls.Add(this.label2);
-            this.guna2Panel1.Controls.Add(this.label1);
-            this.guna2Panel1.Controls.Add(this.lblName);
+            this.guna2Panel1.Controls.Add(this.txtHolderName);
+            this.guna2Panel1.Controls.Add(this.lblDueDate);
+            this.guna2Panel1.Controls.Add(this.lblIssueDate);
+            this.guna2Panel1.Controls.Add(this.lblAmount);
+            this.guna2Panel1.Controls.Add(this.lblProjectName);
+            this.guna2Panel1.Controls.Add(this.lblInvoiceID);
             this.guna2Panel1.Location = new System.Drawing.Point(54, 21);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(821, 619);
             this.guna2Panel1.TabIndex = 1;
             // 
-            // lblName
+            // btnPayment
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.BackColor = System.Drawing.Color.Transparent;
-            this.lblName.Font = new System.Drawing.Font("Poppins", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.ForeColor = System.Drawing.Color.White;
-            this.lblName.Location = new System.Drawing.Point(50, 37);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(198, 56);
-            this.lblName.TabIndex = 20;
-            this.lblName.Text = "Invoice ID: ";
+            this.btnPayment.BorderRadius = 12;
+            this.btnPayment.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPayment.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPayment.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPayment.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPayment.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
+            this.btnPayment.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold);
+            this.btnPayment.ForeColor = System.Drawing.Color.Black;
+            this.btnPayment.Location = new System.Drawing.Point(60, 526);
+            this.btnPayment.Name = "btnPayment";
+            this.btnPayment.Size = new System.Drawing.Size(160, 44);
+            this.btnPayment.TabIndex = 74;
+            this.btnPayment.Text = "Make Payment";
+            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
             // 
-            // label1
+            // txtExpiry
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Poppins Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(54, 83);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 34);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Project Name:";
+            this.txtExpiry.BackColor = System.Drawing.Color.Transparent;
+            this.txtExpiry.BorderRadius = 12;
+            this.txtExpiry.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtExpiry.DefaultText = "  12/03/25";
+            this.txtExpiry.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtExpiry.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtExpiry.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtExpiry.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtExpiry.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
+            this.txtExpiry.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtExpiry.Font = new System.Drawing.Font("Poppins", 12F);
+            this.txtExpiry.ForeColor = System.Drawing.Color.White;
+            this.txtExpiry.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtExpiry.Location = new System.Drawing.Point(60, 419);
+            this.txtExpiry.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtExpiry.Name = "txtExpiry";
+            this.txtExpiry.PlaceholderText = "Number Of Hours";
+            this.txtExpiry.SelectedText = "";
+            this.txtExpiry.Size = new System.Drawing.Size(256, 56);
+            this.txtExpiry.TabIndex = 73;
             // 
-            // label2
+            // txtCVC
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Poppins Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(54, 117);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(168, 34);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "Amount: $1250";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Poppins Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(551, 83);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(253, 34);
-            this.label3.TabIndex = 23;
-            this.label3.Text = "Issue Date: 12/07/2025";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Poppins Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(565, 117);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(239, 34);
-            this.label4.TabIndex = 24;
-            this.label4.Text = "Due Date: 12/07/2025";
-            // 
-            // txtHours
-            // 
-            this.txtHours.BackColor = System.Drawing.Color.Transparent;
-            this.txtHours.BorderRadius = 12;
-            this.txtHours.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtHours.DefaultText = "  \r\n000";
-            this.txtHours.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtHours.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtHours.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtHours.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtHours.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
-            this.txtHours.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtHours.Font = new System.Drawing.Font("Poppins", 12F);
-            this.txtHours.ForeColor = System.Drawing.Color.White;
-            this.txtHours.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtHours.Location = new System.Drawing.Point(340, 419);
-            this.txtHours.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.txtHours.Name = "txtHours";
-            this.txtHours.PlaceholderText = "Number Of Hours";
-            this.txtHours.SelectedText = "";
-            this.txtHours.Size = new System.Drawing.Size(256, 56);
-            this.txtHours.TabIndex = 72;
+            this.txtCVC.BackColor = System.Drawing.Color.Transparent;
+            this.txtCVC.BorderRadius = 12;
+            this.txtCVC.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCVC.DefaultText = "  \r\n000";
+            this.txtCVC.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCVC.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCVC.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCVC.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCVC.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
+            this.txtCVC.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCVC.Font = new System.Drawing.Font("Poppins", 12F);
+            this.txtCVC.ForeColor = System.Drawing.Color.White;
+            this.txtCVC.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCVC.Location = new System.Drawing.Point(340, 419);
+            this.txtCVC.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtCVC.Name = "txtCVC";
+            this.txtCVC.PlaceholderText = "Number Of Hours";
+            this.txtCVC.SelectedText = "";
+            this.txtCVC.Size = new System.Drawing.Size(256, 56);
+            this.txtCVC.TabIndex = 72;
             // 
             // label8
             // 
@@ -203,29 +183,28 @@
             this.label6.TabIndex = 69;
             this.label6.Text = "VISA / MasterCard Card Number";
             // 
-            // txtProjectDescription
+            // txtCardNumber
             // 
-            this.txtProjectDescription.BackColor = System.Drawing.Color.Transparent;
-            this.txtProjectDescription.BorderRadius = 12;
-            this.txtProjectDescription.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtProjectDescription.DefaultText = "  0000 0000 0000 0000";
-            this.txtProjectDescription.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtProjectDescription.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtProjectDescription.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtProjectDescription.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtProjectDescription.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
-            this.txtProjectDescription.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtProjectDescription.Font = new System.Drawing.Font("Poppins", 12F);
-            this.txtProjectDescription.ForeColor = System.Drawing.Color.White;
-            this.txtProjectDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtProjectDescription.Location = new System.Drawing.Point(60, 314);
-            this.txtProjectDescription.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.txtProjectDescription.Name = "txtProjectDescription";
-            this.txtProjectDescription.PlaceholderText = "Short Project Description";
-            this.txtProjectDescription.SelectedText = "";
-            this.txtProjectDescription.Size = new System.Drawing.Size(536, 70);
-            this.txtProjectDescription.TabIndex = 68;
-            this.txtProjectDescription.TextChanged += new System.EventHandler(this.txtProjectDescription_TextChanged);
+            this.txtCardNumber.BackColor = System.Drawing.Color.Transparent;
+            this.txtCardNumber.BorderRadius = 12;
+            this.txtCardNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCardNumber.DefaultText = "  0000 0000 0000 0000";
+            this.txtCardNumber.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCardNumber.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCardNumber.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCardNumber.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCardNumber.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
+            this.txtCardNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCardNumber.Font = new System.Drawing.Font("Poppins", 12F);
+            this.txtCardNumber.ForeColor = System.Drawing.Color.White;
+            this.txtCardNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCardNumber.Location = new System.Drawing.Point(60, 314);
+            this.txtCardNumber.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtCardNumber.Name = "txtCardNumber";
+            this.txtCardNumber.PlaceholderText = "Short Project Description";
+            this.txtCardNumber.SelectedText = "";
+            this.txtCardNumber.Size = new System.Drawing.Size(536, 70);
+            this.txtCardNumber.TabIndex = 68;
             // 
             // label9
             // 
@@ -239,67 +218,88 @@
             this.label9.TabIndex = 67;
             this.label9.Text = "Card Holder Name";
             // 
-            // txtProjectName
+            // txtHolderName
             // 
-            this.txtProjectName.BackColor = System.Drawing.Color.Transparent;
-            this.txtProjectName.BorderRadius = 12;
-            this.txtProjectName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtProjectName.DefaultText = "   John Doe";
-            this.txtProjectName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtProjectName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtProjectName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtProjectName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtProjectName.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
-            this.txtProjectName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtProjectName.Font = new System.Drawing.Font("Poppins", 12F);
-            this.txtProjectName.ForeColor = System.Drawing.Color.White;
-            this.txtProjectName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtProjectName.Location = new System.Drawing.Point(60, 223);
-            this.txtProjectName.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.txtProjectName.Name = "txtProjectName";
-            this.txtProjectName.PlaceholderText = "Name Of The Project";
-            this.txtProjectName.SelectedText = "";
-            this.txtProjectName.Size = new System.Drawing.Size(536, 56);
-            this.txtProjectName.TabIndex = 66;
+            this.txtHolderName.BackColor = System.Drawing.Color.Transparent;
+            this.txtHolderName.BorderRadius = 12;
+            this.txtHolderName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtHolderName.DefaultText = "   John Doe";
+            this.txtHolderName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtHolderName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtHolderName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtHolderName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtHolderName.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
+            this.txtHolderName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtHolderName.Font = new System.Drawing.Font("Poppins", 12F);
+            this.txtHolderName.ForeColor = System.Drawing.Color.White;
+            this.txtHolderName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtHolderName.Location = new System.Drawing.Point(60, 223);
+            this.txtHolderName.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtHolderName.Name = "txtHolderName";
+            this.txtHolderName.PlaceholderText = "Name Of The Project";
+            this.txtHolderName.SelectedText = "";
+            this.txtHolderName.Size = new System.Drawing.Size(536, 56);
+            this.txtHolderName.TabIndex = 66;
             // 
-            // guna2TextBox1
+            // lblDueDate
             // 
-            this.guna2TextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox1.BorderRadius = 12;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "  12/03/25";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Poppins", 12F);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.White;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(60, 419);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PlaceholderText = "Number Of Hours";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(256, 56);
-            this.guna2TextBox1.TabIndex = 73;
+            this.lblDueDate.AutoSize = true;
+            this.lblDueDate.BackColor = System.Drawing.Color.Transparent;
+            this.lblDueDate.Font = new System.Drawing.Font("Poppins Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDueDate.ForeColor = System.Drawing.Color.White;
+            this.lblDueDate.Location = new System.Drawing.Point(565, 117);
+            this.lblDueDate.Name = "lblDueDate";
+            this.lblDueDate.Size = new System.Drawing.Size(239, 34);
+            this.lblDueDate.TabIndex = 24;
+            this.lblDueDate.Text = "Due Date: 12/07/2025";
             // 
-            // btnConfirm
+            // lblIssueDate
             // 
-            this.btnConfirm.BorderRadius = 12;
-            this.btnConfirm.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnConfirm.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnConfirm.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnConfirm.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnConfirm.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
-            this.btnConfirm.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold);
-            this.btnConfirm.ForeColor = System.Drawing.Color.Black;
-            this.btnConfirm.Location = new System.Drawing.Point(60, 526);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(160, 44);
-            this.btnConfirm.TabIndex = 74;
-            this.btnConfirm.Text = "Make Payment";
+            this.lblIssueDate.AutoSize = true;
+            this.lblIssueDate.BackColor = System.Drawing.Color.Transparent;
+            this.lblIssueDate.Font = new System.Drawing.Font("Poppins Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIssueDate.ForeColor = System.Drawing.Color.White;
+            this.lblIssueDate.Location = new System.Drawing.Point(551, 83);
+            this.lblIssueDate.Name = "lblIssueDate";
+            this.lblIssueDate.Size = new System.Drawing.Size(253, 34);
+            this.lblIssueDate.TabIndex = 23;
+            this.lblIssueDate.Text = "Issue Date: 12/07/2025";
+            // 
+            // lblAmount
+            // 
+            this.lblAmount.AutoSize = true;
+            this.lblAmount.BackColor = System.Drawing.Color.Transparent;
+            this.lblAmount.Font = new System.Drawing.Font("Poppins Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAmount.ForeColor = System.Drawing.Color.White;
+            this.lblAmount.Location = new System.Drawing.Point(54, 117);
+            this.lblAmount.Name = "lblAmount";
+            this.lblAmount.Size = new System.Drawing.Size(168, 34);
+            this.lblAmount.TabIndex = 22;
+            this.lblAmount.Text = "Amount: $1250";
+            // 
+            // lblProjectName
+            // 
+            this.lblProjectName.AutoSize = true;
+            this.lblProjectName.BackColor = System.Drawing.Color.Transparent;
+            this.lblProjectName.Font = new System.Drawing.Font("Poppins Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProjectName.ForeColor = System.Drawing.Color.White;
+            this.lblProjectName.Location = new System.Drawing.Point(54, 83);
+            this.lblProjectName.Name = "lblProjectName";
+            this.lblProjectName.Size = new System.Drawing.Size(162, 34);
+            this.lblProjectName.TabIndex = 21;
+            this.lblProjectName.Text = "Project Name:";
+            // 
+            // lblInvoiceID
+            // 
+            this.lblInvoiceID.AutoSize = true;
+            this.lblInvoiceID.BackColor = System.Drawing.Color.Transparent;
+            this.lblInvoiceID.Font = new System.Drawing.Font("Poppins", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInvoiceID.ForeColor = System.Drawing.Color.White;
+            this.lblInvoiceID.Location = new System.Drawing.Point(50, 37);
+            this.lblInvoiceID.Name = "lblInvoiceID";
+            this.lblInvoiceID.Size = new System.Drawing.Size(198, 56);
+            this.lblInvoiceID.TabIndex = 20;
+            this.lblInvoiceID.Text = "Invoice ID: ";
             // 
             // PaymentPage
             // 
@@ -319,19 +319,19 @@
 
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2TextBox txtHours;
+        private System.Windows.Forms.Label lblProjectName;
+        private System.Windows.Forms.Label lblInvoiceID;
+        private System.Windows.Forms.Label lblDueDate;
+        private System.Windows.Forms.Label lblIssueDate;
+        private System.Windows.Forms.Label lblAmount;
+        private Guna.UI2.WinForms.Guna2TextBox txtExpiry;
+        private Guna.UI2.WinForms.Guna2TextBox txtCVC;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2TextBox txtProjectDescription;
+        private Guna.UI2.WinForms.Guna2TextBox txtCardNumber;
         private System.Windows.Forms.Label label9;
-        private Guna.UI2.WinForms.Guna2TextBox txtProjectName;
-        private Guna.UI2.WinForms.Guna2Button btnConfirm;
+        private Guna.UI2.WinForms.Guna2TextBox txtHolderName;
+        private Guna.UI2.WinForms.Guna2Button btnPayment;
     }
 }
