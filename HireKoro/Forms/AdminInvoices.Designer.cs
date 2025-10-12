@@ -28,19 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.cmbprojectn = new System.Windows.Forms.ComboBox();
             this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             this.btnClear = new Guna.UI2.WinForms.Guna2Button();
             this.btnCreate = new Guna.UI2.WinForms.Guna2Button();
             this.txtAmount = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtDueDate = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtIssueDate = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtInvoiceID = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -60,7 +59,8 @@
             this.IssueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.cmbStatus = new System.Windows.Forms.ComboBox();
+            this.dtpDueDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dptIssueDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.tableLayoutPanel1.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
@@ -100,14 +100,14 @@
             // 
             // guna2GradientPanel3
             // 
+            this.guna2GradientPanel3.Controls.Add(this.dptIssueDate);
+            this.guna2GradientPanel3.Controls.Add(this.dtpDueDate);
             this.guna2GradientPanel3.Controls.Add(this.cmbStatus);
             this.guna2GradientPanel3.Controls.Add(this.cmbprojectn);
             this.guna2GradientPanel3.Controls.Add(this.btnDelete);
             this.guna2GradientPanel3.Controls.Add(this.btnClear);
             this.guna2GradientPanel3.Controls.Add(this.btnCreate);
             this.guna2GradientPanel3.Controls.Add(this.txtAmount);
-            this.guna2GradientPanel3.Controls.Add(this.txtDueDate);
-            this.guna2GradientPanel3.Controls.Add(this.txtIssueDate);
             this.guna2GradientPanel3.Controls.Add(this.txtInvoiceID);
             this.guna2GradientPanel3.Controls.Add(this.label8);
             this.guna2GradientPanel3.Controls.Add(this.label7);
@@ -126,6 +126,19 @@
             this.guna2GradientPanel3.Size = new System.Drawing.Size(220, 661);
             this.guna2GradientPanel3.TabIndex = 4;
             // 
+            // cmbStatus
+            // 
+            this.cmbStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
+            this.cmbStatus.ForeColor = System.Drawing.SystemColors.Window;
+            this.cmbStatus.FormattingEnabled = true;
+            this.cmbStatus.Items.AddRange(new object[] {
+            "In Process",
+            "Completed"});
+            this.cmbStatus.Location = new System.Drawing.Point(16, 189);
+            this.cmbStatus.Name = "cmbStatus";
+            this.cmbStatus.Size = new System.Drawing.Size(184, 21);
+            this.cmbStatus.TabIndex = 19;
+            // 
             // cmbprojectn
             // 
             this.cmbprojectn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
@@ -133,7 +146,7 @@
             this.cmbprojectn.FormattingEnabled = true;
             this.cmbprojectn.Location = new System.Drawing.Point(16, 123);
             this.cmbprojectn.Name = "cmbprojectn";
-            this.cmbprojectn.Size = new System.Drawing.Size(193, 21);
+            this.cmbprojectn.Size = new System.Drawing.Size(184, 21);
             this.cmbprojectn.TabIndex = 18;
             this.cmbprojectn.TextChanged += new System.EventHandler(this.cmbprojectn_TextChanged);
             this.cmbprojectn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbprojectn_KeyPress);
@@ -221,52 +234,8 @@
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.PlaceholderText = "";
             this.txtAmount.SelectedText = "";
-            this.txtAmount.Size = new System.Drawing.Size(193, 28);
+            this.txtAmount.Size = new System.Drawing.Size(184, 28);
             this.txtAmount.TabIndex = 11;
-            // 
-            // txtDueDate
-            // 
-            this.txtDueDate.BackColor = System.Drawing.Color.Transparent;
-            this.txtDueDate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(213)))), ((int)(((byte)(224)))));
-            this.txtDueDate.BorderRadius = 12;
-            this.txtDueDate.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDueDate.DefaultText = "";
-            this.txtDueDate.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtDueDate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtDueDate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDueDate.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDueDate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
-            this.txtDueDate.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDueDate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtDueDate.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDueDate.Location = new System.Drawing.Point(16, 350);
-            this.txtDueDate.Name = "txtDueDate";
-            this.txtDueDate.PlaceholderText = "";
-            this.txtDueDate.SelectedText = "";
-            this.txtDueDate.Size = new System.Drawing.Size(193, 28);
-            this.txtDueDate.TabIndex = 10;
-            // 
-            // txtIssueDate
-            // 
-            this.txtIssueDate.BackColor = System.Drawing.Color.Transparent;
-            this.txtIssueDate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(213)))), ((int)(((byte)(224)))));
-            this.txtIssueDate.BorderRadius = 12;
-            this.txtIssueDate.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtIssueDate.DefaultText = "";
-            this.txtIssueDate.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtIssueDate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtIssueDate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIssueDate.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIssueDate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
-            this.txtIssueDate.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIssueDate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtIssueDate.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIssueDate.Location = new System.Drawing.Point(16, 294);
-            this.txtIssueDate.Name = "txtIssueDate";
-            this.txtIssueDate.PlaceholderText = "";
-            this.txtIssueDate.SelectedText = "";
-            this.txtIssueDate.Size = new System.Drawing.Size(193, 28);
-            this.txtIssueDate.TabIndex = 9;
             // 
             // txtInvoiceID
             // 
@@ -288,7 +257,7 @@
             this.txtInvoiceID.PlaceholderText = "";
             this.txtInvoiceID.ReadOnly = true;
             this.txtInvoiceID.SelectedText = "";
-            this.txtInvoiceID.Size = new System.Drawing.Size(193, 28);
+            this.txtInvoiceID.Size = new System.Drawing.Size(184, 28);
             this.txtInvoiceID.TabIndex = 8;
             // 
             // label8
@@ -420,17 +389,17 @@
             // 
             this.dgvInvoices.AllowUserToAddRows = false;
             this.dgvInvoices.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgvInvoices.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvInvoices.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvInvoices.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvInvoices.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInvoices.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvInvoices.ColumnHeadersHeight = 15;
             this.dgvInvoices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvInvoices.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -440,14 +409,14 @@
             this.Amount,
             this.IssueDate,
             this.DueDate});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvInvoices.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvInvoices.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvInvoices.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvInvoices.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvInvoices.Location = new System.Drawing.Point(3, 70);
@@ -546,18 +515,45 @@
             this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
-            // cmbStatus
+            // dtpDueDate
             // 
-            this.cmbStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
-            this.cmbStatus.ForeColor = System.Drawing.SystemColors.Window;
-            this.cmbStatus.FormattingEnabled = true;
-            this.cmbStatus.Items.AddRange(new object[] {
-            "In Process",
-            "Completed"});
-            this.cmbStatus.Location = new System.Drawing.Point(16, 189);
-            this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(193, 21);
-            this.cmbStatus.TabIndex = 19;
+            this.dtpDueDate.BackColor = System.Drawing.Color.Transparent;
+            this.dtpDueDate.BorderColor = System.Drawing.Color.White;
+            this.dtpDueDate.BorderRadius = 8;
+            this.dtpDueDate.BorderThickness = 1;
+            this.dtpDueDate.Checked = true;
+            this.dtpDueDate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
+            this.dtpDueDate.Font = new System.Drawing.Font("Poppins", 6F);
+            this.dtpDueDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
+            this.dtpDueDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpDueDate.Location = new System.Drawing.Point(16, 350);
+            this.dtpDueDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpDueDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpDueDate.Name = "dtpDueDate";
+            this.dtpDueDate.Size = new System.Drawing.Size(184, 23);
+            this.dtpDueDate.TabIndex = 22;
+            this.dtpDueDate.UseTransparentBackground = true;
+            this.dtpDueDate.Value = new System.DateTime(2025, 10, 8, 17, 25, 52, 474);
+            // 
+            // dptIssueDate
+            // 
+            this.dptIssueDate.BackColor = System.Drawing.Color.Transparent;
+            this.dptIssueDate.BorderColor = System.Drawing.Color.White;
+            this.dptIssueDate.BorderRadius = 8;
+            this.dptIssueDate.BorderThickness = 1;
+            this.dptIssueDate.Checked = true;
+            this.dptIssueDate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
+            this.dptIssueDate.Font = new System.Drawing.Font("Poppins", 6F);
+            this.dptIssueDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
+            this.dptIssueDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dptIssueDate.Location = new System.Drawing.Point(16, 294);
+            this.dptIssueDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dptIssueDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dptIssueDate.Name = "dptIssueDate";
+            this.dptIssueDate.Size = new System.Drawing.Size(184, 28);
+            this.dptIssueDate.TabIndex = 23;
+            this.dptIssueDate.UseTransparentBackground = true;
+            this.dptIssueDate.Value = new System.DateTime(2025, 10, 8, 17, 25, 52, 474);
             // 
             // AdminInvoices
             // 
@@ -593,8 +589,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2TextBox txtAmount;
-        private Guna.UI2.WinForms.Guna2TextBox txtDueDate;
-        private Guna.UI2.WinForms.Guna2TextBox txtIssueDate;
         private Guna.UI2.WinForms.Guna2TextBox txtInvoiceID;
         private Guna.UI2.WinForms.Guna2Button btnCreate;
         private Guna.UI2.WinForms.Guna2Button btnDelete;
@@ -610,5 +604,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DueDate;
         private System.Windows.Forms.ComboBox cmbprojectn;
         private System.Windows.Forms.ComboBox cmbStatus;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dptIssueDate;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpDueDate;
     }
 }
