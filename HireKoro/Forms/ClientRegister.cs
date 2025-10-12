@@ -35,10 +35,8 @@ namespace HireKoro.Forms
                 MessageBox.Show("Registration failed. Please try again.", "Error");
             } else
             {
-                MessageBox.Show("Registration successful! Welcome to HireKoro.", "Success");
-                Main.ClientHomePage = new ClientHomePage();
-                Main.ChangeWindow(Main.ClientHomePage);
-                Main.SidePanel.Visible = true;
+                Main.SignInPage = new Login();
+                Main.ChangeWindow(Main.SignInPage);
             }
         }
 
@@ -46,6 +44,12 @@ namespace HireKoro.Forms
         {
             Main.SignInPage = new Login();
             Main.ChangeWindow(Main.SignInPage);
+        }
+
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+            Main.WelcomePage = new Welcome();
+            Main.ChangeWindow(Main.WelcomePage);
         }
     }
 }

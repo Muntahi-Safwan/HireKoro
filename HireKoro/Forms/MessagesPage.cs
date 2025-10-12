@@ -22,8 +22,7 @@ namespace HireKoro.Forms
         public MessagesPage()
         {
             InitializeComponent();
-            SenderId = "1";
-            ReceverID = "2";
+            SenderId = Main.CurrentUserId;
 
             ReceverName = lblReceverNAME;
 

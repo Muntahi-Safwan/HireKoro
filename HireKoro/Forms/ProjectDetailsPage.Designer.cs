@@ -181,6 +181,7 @@
             this.btnReview.Size = new System.Drawing.Size(203, 44);
             this.btnReview.TabIndex = 70;
             this.btnReview.Text = "Add Review";
+            this.btnReview.Click += new System.EventHandler(this.btnReview_Click);
             // 
             // label3
             // 

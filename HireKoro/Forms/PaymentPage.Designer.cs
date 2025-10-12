@@ -116,7 +116,7 @@
             this.txtExpiry.Font = new System.Drawing.Font("Poppins", 12F);
             this.txtExpiry.ForeColor = System.Drawing.Color.White;
             this.txtExpiry.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtExpiry.Location = new System.Drawing.Point(60, 419);
+            this.txtExpiry.Location = new System.Drawing.Point(60, 435);
             this.txtExpiry.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtExpiry.Name = "txtExpiry";
             this.txtExpiry.PlaceholderText = "Number Of Hours";
@@ -139,7 +139,7 @@
             this.txtCVC.Font = new System.Drawing.Font("Poppins", 12F);
             this.txtCVC.ForeColor = System.Drawing.Color.White;
             this.txtCVC.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCVC.Location = new System.Drawing.Point(340, 419);
+            this.txtCVC.Location = new System.Drawing.Point(340, 435);
             this.txtCVC.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtCVC.Name = "txtCVC";
             this.txtCVC.PlaceholderText = "Number Of Hours";
@@ -153,7 +153,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
-            this.label8.Location = new System.Drawing.Point(336, 390);
+            this.label8.Location = new System.Drawing.Point(336, 406);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(39, 23);
             this.label8.TabIndex = 71;
@@ -165,7 +165,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
-            this.label7.Location = new System.Drawing.Point(59, 390);
+            this.label7.Location = new System.Drawing.Point(59, 406);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(81, 23);
             this.label7.TabIndex = 70;
@@ -177,7 +177,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
-            this.label6.Location = new System.Drawing.Point(59, 285);
+            this.label6.Location = new System.Drawing.Point(59, 301);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(220, 23);
             this.label6.TabIndex = 69;
@@ -198,7 +198,7 @@
             this.txtCardNumber.Font = new System.Drawing.Font("Poppins", 12F);
             this.txtCardNumber.ForeColor = System.Drawing.Color.White;
             this.txtCardNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCardNumber.Location = new System.Drawing.Point(60, 314);
+            this.txtCardNumber.Location = new System.Drawing.Point(60, 330);
             this.txtCardNumber.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtCardNumber.Name = "txtCardNumber";
             this.txtCardNumber.PlaceholderText = "Short Project Description";
@@ -212,7 +212,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
-            this.label9.Location = new System.Drawing.Point(59, 194);
+            this.label9.Location = new System.Drawing.Point(59, 210);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(130, 23);
             this.label9.TabIndex = 67;
@@ -233,7 +233,7 @@
             this.txtHolderName.Font = new System.Drawing.Font("Poppins", 12F);
             this.txtHolderName.ForeColor = System.Drawing.Color.White;
             this.txtHolderName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtHolderName.Location = new System.Drawing.Point(60, 223);
+            this.txtHolderName.Location = new System.Drawing.Point(60, 239);
             this.txtHolderName.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtHolderName.Name = "txtHolderName";
             this.txtHolderName.PlaceholderText = "Name Of The Project";
@@ -247,7 +247,7 @@
             this.lblDueDate.BackColor = System.Drawing.Color.Transparent;
             this.lblDueDate.Font = new System.Drawing.Font("Poppins Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDueDate.ForeColor = System.Drawing.Color.White;
-            this.lblDueDate.Location = new System.Drawing.Point(565, 117);
+            this.lblDueDate.Location = new System.Drawing.Point(56, 163);
             this.lblDueDate.Name = "lblDueDate";
             this.lblDueDate.Size = new System.Drawing.Size(239, 34);
             this.lblDueDate.TabIndex = 24;
@@ -259,7 +259,7 @@
             this.lblIssueDate.BackColor = System.Drawing.Color.Transparent;
             this.lblIssueDate.Font = new System.Drawing.Font("Poppins Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIssueDate.ForeColor = System.Drawing.Color.White;
-            this.lblIssueDate.Location = new System.Drawing.Point(551, 83);
+            this.lblIssueDate.Location = new System.Drawing.Point(55, 129);
             this.lblIssueDate.Name = "lblIssueDate";
             this.lblIssueDate.Size = new System.Drawing.Size(253, 34);
             this.lblIssueDate.TabIndex = 23;
@@ -271,7 +271,7 @@
             this.lblAmount.BackColor = System.Drawing.Color.Transparent;
             this.lblAmount.Font = new System.Drawing.Font("Poppins Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAmount.ForeColor = System.Drawing.Color.White;
-            this.lblAmount.Location = new System.Drawing.Point(54, 117);
+            this.lblAmount.Location = new System.Drawing.Point(56, 97);
             this.lblAmount.Name = "lblAmount";
             this.lblAmount.Size = new System.Drawing.Size(168, 34);
             this.lblAmount.TabIndex = 22;
@@ -283,7 +283,7 @@
             this.lblProjectName.BackColor = System.Drawing.Color.Transparent;
             this.lblProjectName.Font = new System.Drawing.Font("Poppins Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProjectName.ForeColor = System.Drawing.Color.White;
-            this.lblProjectName.Location = new System.Drawing.Point(54, 83);
+            this.lblProjectName.Location = new System.Drawing.Point(56, 66);
             this.lblProjectName.Name = "lblProjectName";
             this.lblProjectName.Size = new System.Drawing.Size(162, 34);
             this.lblProjectName.TabIndex = 21;
@@ -295,7 +295,7 @@
             this.lblInvoiceID.BackColor = System.Drawing.Color.Transparent;
             this.lblInvoiceID.Font = new System.Drawing.Font("Poppins", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInvoiceID.ForeColor = System.Drawing.Color.White;
-            this.lblInvoiceID.Location = new System.Drawing.Point(50, 37);
+            this.lblInvoiceID.Location = new System.Drawing.Point(50, 12);
             this.lblInvoiceID.Name = "lblInvoiceID";
             this.lblInvoiceID.Size = new System.Drawing.Size(198, 56);
             this.lblInvoiceID.TabIndex = 20;

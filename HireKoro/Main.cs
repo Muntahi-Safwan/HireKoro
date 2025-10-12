@@ -46,6 +46,7 @@ namespace HireKoro
         internal static UserControl ProjectDetailsPage { get; set; }
         internal static UserControl PaymentPage { get; set; }
         internal static UserControl MyInvoicesPage { get; set; }
+        internal static UserControl MessagesPage { get; set; }
 
 
         // Data Access Object
@@ -200,6 +201,15 @@ namespace HireKoro
             sidebarBtnReset();
             btnMyInvoices.ForeColor = Color.FromArgb(121, 208, 253);
             Main.TopLabelText.Text = " My Invoices";
+        }
+
+        private void btnMessages_Click(object sender, EventArgs e)
+        {
+            MessagesPage = new MessagesPage();
+            ChangeWindow(MessagesPage);
+            sidebarBtnReset();
+            btnMessages.ForeColor = Color.FromArgb(121, 208, 253);
+            Main.TopLabelText.Text = " Messages";
         }
     }
 }

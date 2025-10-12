@@ -84,7 +84,10 @@ namespace HireKoro.Forms
                     loadProject(this.projectId);
                     if(this.status == "Completed")
                     {
-                        
+                        string queryInvoice = $@"INSERT INTO INVOICES (ProjectID, IssueDate, DueDate, Amount, Status) VALUES
+                                         ({this.projectId}, '{DateTime.Now:yyyy-MM-dd}', '{DateTime.Now.AddDays(30):yyyy-MM-dd}', {this.cost}, 'Pending')";
+                        Main.DB.ExecuteDMLQuery(queryInvoice);
+                        Main.DB.ExecuteDMLQuery($"INSERT INTO PROJECTLOG (ProjectID, Status, Comment) Values ('{this.projectId}', 'Updated', 'Project Updated'); ");
                     }
                 }
                 else
@@ -123,6 +126,30 @@ namespace HireKoro.Forms
             }
         }
 
-        
+        private void btnReview_Click(object sender, EventArgs e)
+        {
+            string comment = txtComment.Text;
+            int rating = Int32.Parse(txtRating.Text);
+            try
+            {
+                string query = $@"INSERT INTO Reviews (ProjectID, ReviewerID, Rating, Comment) VALUES
+                                 ({this.projectId}, {Main.CurrentUserId}, {rating}, '{comment}')";
+                var response = Main.DB.ExecuteDMLQuery(query);
+                if (response > 0)
+                {
+                    MessageBox.Show("Review Submitted Successfully!");
+                    txtComment.Text = "";
+                    txtRating.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Failed to submit review.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
