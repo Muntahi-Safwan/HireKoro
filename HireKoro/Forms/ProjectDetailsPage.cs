@@ -24,6 +24,17 @@ namespace HireKoro.Forms
             InitializeComponent();
             this.projectId = id;
             this.loadProject(id);
+            if(Main.userRole != "Client")
+            {
+                btnDelete.Visible = false;
+                btnUpdate.Visible = false;
+                txtProjectName.ReadOnly = true;
+                txtProjectDescription.ReadOnly = true;
+                txtHours.ReadOnly = true;
+                txtCost.ReadOnly = true;
+                cmbStatus.Enabled = false;
+                dtpStartDate.Enabled = false;
+            }
         }
         internal void loadProject(string projectId)
         {
@@ -63,6 +74,7 @@ namespace HireKoro.Forms
                                  ProjectDescription = '{this.description}',
                                  ProjectStatus = '{this.status}',
                                  ProjectHours = {this.hours},
+                                 StartDate = '{this.startDate:yyyy-MM-dd}',
                                  Cost = {this.cost}
                                  WHERE ProjectID = {this.projectId}";
                 var response = Main.DB.ExecuteDMLQuery(query);
@@ -70,6 +82,10 @@ namespace HireKoro.Forms
                 {
                     MessageBox.Show("Project Updated Successfully!");
                     loadProject(this.projectId);
+                    if(this.status == "Completed")
+                    {
+                        
+                    }
                 }
                 else
                 {
