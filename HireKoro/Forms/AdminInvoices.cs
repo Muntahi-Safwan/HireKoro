@@ -76,20 +76,7 @@ namespace HireKoro.Forms
 
        
 
-        private void dgvInvoices_DoubleClick(object sender, EventArgs e)
-        {
-           
-            this.txtInvoiceID.Text = this.dgvInvoices.CurrentRow.Cells["InvoiceID"].Value.ToString();
-            this.txtStatus.Text = this.dgvInvoices.CurrentRow.Cells["Status"].Value.ToString();
-            this.txtAmount.Text = this.dgvInvoices.CurrentRow.Cells["Amount"].Value.ToString();
-            this.txtIssueDate.Text = this.dgvInvoices.CurrentRow.Cells["IssueDate"].Value.ToString();
-            this.txtDueDate.Text = this.dgvInvoices.CurrentRow.Cells["DueDate"].Value.ToString();
-
-
-
-
-
-        }
+        
 
         private void cmbprojectn_Click(object sender, EventArgs e)
         {
@@ -99,17 +86,21 @@ namespace HireKoro.Forms
         private void btnDelete_Click(object sender, EventArgs e)
         {
             this.txtInvoiceID.Text = this.dgvInvoices.CurrentRow.Cells["InvoiceID"].Value.ToString();
-            try
+            if (MessageBox.Show("Are you sure you want to delete this project?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                string query = $"DELETE FROM INVOICES WHERE InvoiceID = {this.txtInvoiceID.Text};";
-                var response = Main.DB.ExecuteDMLQuery(query);
-                dgvInvoices.DataSource = response;
-                this.LoadInvoices();
-                MessageBox.Show("Project deleted successfully!");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error deleting projects: " + ex.Message);
+                try
+                {
+                    string query = $"DELETE FROM INVOICES WHERE InvoiceID = {this.txtInvoiceID.Text};";
+                    var response = Main.DB.ExecuteDMLQuery(query);
+                    dgvInvoices.DataSource = response;
+                    this.LoadInvoices();
+                    MessageBox.Show("Project deleted successfully!");
+                    this.ClearALL();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error deleting projects: " + ex.Message);
+                }
             }
         }
 
@@ -200,6 +191,15 @@ namespace HireKoro.Forms
                 this.load_ProjectName();
                
             }
+        }
+
+        private void dgvInvoices_DoubleClick(object sender, EventArgs e)
+        {
+            this.txtInvoiceID.Text = this.dgvInvoices.CurrentRow.Cells["InvoiceID"].Value.ToString();
+            this.txtStatus.Text = this.dgvInvoices.CurrentRow.Cells["Status"].Value.ToString();
+            this.txtAmount.Text = this.dgvInvoices.CurrentRow.Cells["Amount"].Value.ToString();
+            this.txtIssueDate.Text = this.dgvInvoices.CurrentRow.Cells["IssueDate"].Value.ToString();
+            this.txtDueDate.Text = this.dgvInvoices.CurrentRow.Cells["DueDate"].Value.ToString();
         }
     }
 }
