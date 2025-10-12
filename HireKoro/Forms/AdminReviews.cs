@@ -99,7 +99,7 @@ namespace HireKoro.Forms
                                  Name = '{txtProjectName.Text}',
                                  Title = '{txtReviewTitle.Text}',
                                  Rating = '{txtRating.Text}',
-                                 Comment = '{txtComment.Text}',
+                                 Comment = '{txtComment.Text}'
                                  WHERE ReviewID = {txtReviewID.Text}";
 
                 Main.DB.ExecuteDMLQuery(query);
@@ -116,17 +116,21 @@ namespace HireKoro.Forms
         private void btnDelete_Click(object sender, EventArgs e)
         {
             this.txtReviewID.Text = this.dgvReviews.CurrentRow.Cells["ReviewID"].Value.ToString();
-            try
+            if (MessageBox.Show("Are you sure you want to delete this project?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                string query = $"DELETE FROM PROJECTS WHERE ReviewID = {this.txtReviewID.Text};";
-                var response = Main.DB.ExecuteDMLQuery(query);
-                dgvReviews.DataSource = response;
-                this.LoadReviews();
-                MessageBox.Show("Review deleted successfully!");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error deleting Reviews: " + ex.Message);
+                try
+                {
+                    string query = $"DELETE FROM PROJECTS WHERE ReviewID = {this.txtReviewID.Text};";
+                    var response = Main.DB.ExecuteDMLQuery(query);
+                    dgvReviews.DataSource = response;
+                    this.LoadReviews();
+                    MessageBox.Show("Review deleted successfully!");
+                    this.Clearall();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error deleting Reviews: " + ex.Message);
+                }
             }
         }
     }
