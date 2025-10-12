@@ -18,6 +18,7 @@ namespace HireKoro.Forms
         public FreelancerHiringPage()
         {
             InitializeComponent();
+            txtCost.Text = "0.00";
         }
         public FreelancerHiringPage(string id) : this()
         {
@@ -67,39 +68,86 @@ namespace HireKoro.Forms
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            string clientId = Main.CurrentUserId;
-            string freelancerId = this.freelancerId;
-            string projectTitle = this.txtProjectName.Text;
-            string projectDescription = this.txtProjectDescription.Text;
-            DateTime startDate = this.dtpStartDate.Value;
-            float hours = float.Parse(this.txtHours.Text);
-            float cost = hours * float.Parse(this.lblHour.Text.Replace("$", "").Replace("/hr", ""));
-            var confirmResult = MessageBox.Show($"Are you sure to hire this freelancer for ${cost}?", "Confirm Hire", MessageBoxButtons.YesNo);
-            if (confirmResult == DialogResult.Yes)
+            try
             {
-                HireFreelancer(clientId, freelancerId, projectTitle, projectDescription, startDate, hours, cost);
+                string clientId = Main.CurrentUserId;
+                string freelancerId = this.freelancerId;
+                string projectTitle = this.txtProjectName.Text;
+                string projectDescription = this.txtProjectDescription.Text;
+                DateTime startDate = this.dtpStartDate.Value;
+                
+                if (!float.TryParse(this.txtHours.Text, out float hours))
+                {
+                    MessageBox.Show("Please enter a valid number of hours.", "Invalid Input");
+                    return;
+                }
+                
+                float cost = hours * float.Parse(this.lblHour.Text.Replace("$", "").Replace("/hr", ""));
+                var confirmResult = MessageBox.Show($"Are you sure to hire this freelancer for ${cost:F2}?", "Confirm Hire", MessageBoxButtons.YesNo);
+                if (confirmResult == DialogResult.Yes)
+                {
+                    HireFreelancer(clientId, freelancerId, projectTitle, projectDescription, startDate, hours, cost);
+                    Main.FreelancerHiredSuccesfully = new FreelancerHiredSuccesfullyPage();
+                    Main.ChangeWindow(Main.FreelancerHiredSuccesfully);
+                }
             }
-            Main.FreelancerHiredSuccesfully = new FreelancerHiredSuccesfullyPage();
-            Main.ChangeWindow(Main.FreelancerHiredSuccesfully);
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
         private void txtHours_TextChanged(object sender, EventArgs e)
         {
-            this.txtCost.Text = (float.Parse(this.txtHours.Text) * float.Parse(this.lblHour.Text.Replace("$", "").Replace("/hr", ""))).ToString();
+            CalculateCost();
         }
 
         private void txtHours_TextChanged_1(object sender, EventArgs e)
         {
-            
-        
-            if (txtHours.Text != "")
+            CalculateCost();
+        }
+
+        private void CalculateCost()
+        {
+            try
             {
-                this.txtCost.Text = (float.Parse(this.txtHours.Text) * float.Parse(this.lblHour.Text.Replace("$", "").Replace("/hr", ""))).ToString();
-               
+                if (!string.IsNullOrWhiteSpace(txtHours.Text))
+                {
+                    if (float.TryParse(txtHours.Text, out float hours))
+                    {
+                        string hourlyRateText = lblHour.Text.Replace("$", "").Replace("/hr", "");
+                        
+                        if (float.TryParse(hourlyRateText, out float hourlyRate))
+                        {
+                            float totalCost = hours * hourlyRate;
+                            txtCost.Text = totalCost.ToString("F2"); 
+                        }
+                        else
+                        {
+                            txtCost.Text = "0.00";
+                        }
+                    }
+                    else
+                    {
+                        txtCost.Text = "0.00";
+                    }
+                }
+                else
+                {
+                    txtCost.Text = "0.00";
+                }
             }
-            else { txtCost = null; }
-            this.txtCost.Text +=  txtCost;
+            catch (Exception)
+            {
+                
+                txtCost.Text = "0.00";
+            }
+        }
+
+        private void txtCost_TextChanged(object sender, EventArgs e)
+        {
+           
         }
     }
-    }
+}
 
