@@ -17,6 +17,8 @@ namespace HireKoro.Forms
         {
             InitializeComponent();
             this.LoadProjects();
+            this.load_Clientname();
+            this.load_Freelancername();
         }
 
         internal void LoadProjects(string query = "SELECT P.ProjectID, P.Title, P.ProjectStatus, P.ProjectHours,  P.StartDate,  P.Cost,   P.ProjectDescription,  C.Name AS ClientName,  F.Name AS FreelancerName FROM PROJECTS P JOIN USERS C ON P.ClientID = C.UserID LEFT JOIN USERS F ON P.FreelancerID = F.UserID;")
@@ -38,12 +40,47 @@ namespace HireKoro.Forms
             this.LoadProjects(query);
         }
 
+        private void load_Clientname(string query = "select * from USERS where UserID = '1';")
+        {
+
+            try
+            {
+                var DT = Main.DB.ExecuteQueryTable(query);
+                this.cmbprojectn.DataSource = DT;
+                this.cmbprojectn.DisplayMember = "Username";
+                this.cmbprojectn.ValueMember = "UserTypeID";
+
+
+            }
+            catch (Exception ex) { MessageBox.Show($"ERROR {ex.Message}"); }
+        }
+
+
+        private void load_Freelancername(string query = "select * from USERS where UserTypeID = '2';")
+        {
+
+            try
+            {
+                var DT = Main.DB.ExecuteQueryTable(query);
+                this.cmbProjectm.DataSource = DT;
+                this.cmbProjectm.DisplayMember = "Username";
+                this.cmbProjectm.ValueMember = "UserTypeID";
+
+
+            }
+            catch (Exception ex) { MessageBox.Show($"ERROR {ex.Message}"); }
+        }
+
+
+
+
+
         internal void Clearall()
         {
             this.txtProjectID.Clear();
-            this.txtClientID.Clear();
-            this.txtFreelancerID.Clear();
-            this.txtStatus.Clear();
+            this.cmbprojectn.SelectedIndex = -1;
+            this.cmbProjectm.SelectedIndex = -1;
+            this.cmbProjectL.SelectedIndex = -1;
             this.txtTitle.Clear();
             this.txtDescription.Clear();
             this.txtHours.Clear();
@@ -58,9 +95,9 @@ namespace HireKoro.Forms
         private void dgvProjects_DoubleClick(object sender, EventArgs e)
         {
             this.txtProjectID.Text = this.dgvProjects.CurrentRow.Cells["ProjectID"].Value.ToString();
-            this.txtClientID.Text = this.dgvProjects.CurrentRow.Cells["ClientID"].Value.ToString();
-            this.txtFreelancerID.Text = this.dgvProjects.CurrentRow.Cells["FreelancerID"].Value.ToString();
-            this.txtStatus.Text = this.dgvProjects.CurrentRow.Cells["ProjectStatus"].Value.ToString();
+            this.cmbprojectn.Text = this.dgvProjects.CurrentRow.Cells["ClientID"].Value.ToString();
+            this.cmbProjectm.Text = this.dgvProjects.CurrentRow.Cells["FreelancerID"].Value.ToString();
+            this.cmbProjectL.Text = this.dgvProjects.CurrentRow.Cells["ProjectStatus"].Value.ToString();
             this.txtTitle.Text = this.dgvProjects.CurrentRow.Cells["Title"].Value.ToString();
             this.txtDescription.Text = this.dgvProjects.CurrentRow.Cells["ProjectDescription"].Value.ToString();
             this.txtHours.Text = this.dgvProjects.CurrentRow.Cells["ProjectHours"].Value.ToString();
@@ -105,10 +142,10 @@ namespace HireKoro.Forms
         {
             try
             {
-                string query = $@"INSERT INTO PROJECTS (ClientID, FreelancerID, Title, ProjectDescription, 
+                string query = $@"INSERT INTO PROJECTS (ClientName, FreelancerName, Title, ProjectDescription, 
                                  ProjectStatus, ProjectHours, StartDate, Cost) 
-                                 VALUES ({txtClientID.Text}, {txtFreelancerID.Text}, '{txtTitle.Text}', 
-                                 '{txtDescription.Text}', '{txtStatus.Text}', {txtHours.Text}, 
+                                 VALUES ({cmbprojectn.SelectedValue.ToString()}, {cmbProjectm.SelectedValue.ToString()}, '{txtTitle.Text}', 
+                                 '{txtDescription.Text}', '{cmbProjectL.Text}', {txtHours.Text}, 
                                  '{DateTime.Now:yyyy-MM-dd}', {txtCost.Text})";
                 
                 Main.DB.ExecuteDMLQuery(query);
@@ -127,11 +164,11 @@ namespace HireKoro.Forms
             try
             {
                 string query = $@"UPDATE PROJECTS SET 
-                                 ClientID = {txtClientID.Text},
-                                 FreelancerID = {txtFreelancerID.Text},
+                                 ClientID = {cmbprojectn.SelectedValue.ToString()},
+                                 FreelancerID = {cmbProjectm.SelectedValue.ToString()},
                                  Title = '{txtTitle.Text}',
                                  ProjectDescription = '{txtDescription.Text}',
-                                 ProjectStatus = '{txtStatus.Text}',
+                                 ProjectStatus = '{cmbProjectL.Text}',
                                  ProjectHours = {txtHours.Text},
                                  Cost = {txtCost.Text}
                                  WHERE ProjectID = {txtProjectID.Text}";
