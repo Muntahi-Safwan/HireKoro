@@ -16,5 +16,11 @@ namespace HireKoro.Forms
         {
             InitializeComponent();
         }
+        public ChatBubble(String Message,String Name, string Time) : this()
+        {
+            this.lblMessage.Text = Message;
+            this.lblName.Text = Name;
+            this.lblTime.Text = Time;
+        }
     }
 }
