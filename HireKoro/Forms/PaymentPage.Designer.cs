@@ -106,7 +106,7 @@
             this.txtExpiry.BackColor = System.Drawing.Color.Transparent;
             this.txtExpiry.BorderRadius = 12;
             this.txtExpiry.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtExpiry.DefaultText = "  12/03/25";
+            this.txtExpiry.DefaultText = "";
             this.txtExpiry.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtExpiry.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtExpiry.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -119,7 +119,7 @@
             this.txtExpiry.Location = new System.Drawing.Point(60, 435);
             this.txtExpiry.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtExpiry.Name = "txtExpiry";
-            this.txtExpiry.PlaceholderText = "Number Of Hours";
+            this.txtExpiry.PlaceholderText = "  12/03/25";
             this.txtExpiry.SelectedText = "";
             this.txtExpiry.Size = new System.Drawing.Size(256, 56);
             this.txtExpiry.TabIndex = 73;
@@ -129,7 +129,7 @@
             this.txtCVC.BackColor = System.Drawing.Color.Transparent;
             this.txtCVC.BorderRadius = 12;
             this.txtCVC.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCVC.DefaultText = "  \r\n000";
+            this.txtCVC.DefaultText = "";
             this.txtCVC.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtCVC.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtCVC.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -142,7 +142,7 @@
             this.txtCVC.Location = new System.Drawing.Point(340, 435);
             this.txtCVC.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtCVC.Name = "txtCVC";
-            this.txtCVC.PlaceholderText = "Number Of Hours";
+            this.txtCVC.PlaceholderText = "000";
             this.txtCVC.SelectedText = "";
             this.txtCVC.Size = new System.Drawing.Size(256, 56);
             this.txtCVC.TabIndex = 72;
@@ -188,7 +188,7 @@
             this.txtCardNumber.BackColor = System.Drawing.Color.Transparent;
             this.txtCardNumber.BorderRadius = 12;
             this.txtCardNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCardNumber.DefaultText = "  0000 0000 0000 0000";
+            this.txtCardNumber.DefaultText = "";
             this.txtCardNumber.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtCardNumber.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtCardNumber.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -201,7 +201,7 @@
             this.txtCardNumber.Location = new System.Drawing.Point(60, 330);
             this.txtCardNumber.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtCardNumber.Name = "txtCardNumber";
-            this.txtCardNumber.PlaceholderText = "Short Project Description";
+            this.txtCardNumber.PlaceholderText = "  0000 0000 0000 0000";
             this.txtCardNumber.SelectedText = "";
             this.txtCardNumber.Size = new System.Drawing.Size(536, 70);
             this.txtCardNumber.TabIndex = 68;
@@ -223,7 +223,7 @@
             this.txtHolderName.BackColor = System.Drawing.Color.Transparent;
             this.txtHolderName.BorderRadius = 12;
             this.txtHolderName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtHolderName.DefaultText = "   John Doe";
+            this.txtHolderName.DefaultText = "";
             this.txtHolderName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtHolderName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtHolderName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -236,7 +236,7 @@
             this.txtHolderName.Location = new System.Drawing.Point(60, 239);
             this.txtHolderName.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtHolderName.Name = "txtHolderName";
-            this.txtHolderName.PlaceholderText = "Name Of The Project";
+            this.txtHolderName.PlaceholderText = "   John Doe";
             this.txtHolderName.SelectedText = "";
             this.txtHolderName.Size = new System.Drawing.Size(536, 56);
             this.txtHolderName.TabIndex = 66;

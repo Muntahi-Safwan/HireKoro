@@ -136,6 +136,7 @@
             // 
             // btnSignUp
             // 
+            this.btnSignUp.ActiveLinkColor = System.Drawing.Color.Turquoise;
             this.btnSignUp.AutoSize = true;
             this.btnSignUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(40)))));
             this.btnSignUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -163,7 +164,7 @@
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(106, 35);
             this.btnLogin.TabIndex = 7;
-            this.btnLogin.Text = "Sign";
+            this.btnLogin.Text = "Log In";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // pnlMainPanel
