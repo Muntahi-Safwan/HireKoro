@@ -50,6 +50,7 @@ namespace HireKoro.Forms
                 if (response > 0)
                 {
                     MessageBox.Show("Freelancer hired successfully!");
+                   // Main.DB.ExecuteDMLQuery($"INSERT INTO PROJECT")
                 }
                 else
                 {
