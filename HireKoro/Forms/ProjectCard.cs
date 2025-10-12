@@ -12,12 +12,14 @@ namespace HireKoro.Forms
 {
     public partial class ProjectCard : UserControl
     {
+        string projectId { get; set; }
         public ProjectCard()
         {
             InitializeComponent();
         }
         public ProjectCard(string id, string title,string status, string description, DateTime startDate, float hours, bool details=false): this()
         {
+            this.projectId = id;
             this.lblProjectName.Text = title;
             this.lblStatus.Text = status;
             this.lblDescription.Text = description;
@@ -31,7 +33,8 @@ namespace HireKoro.Forms
 
         private void btnDetails_Click(object sender, EventArgs e)
         {
-            
+            Main.ProjectDetailsPage = new ProjectDetailsPage(projectId);
+            Main.ChangeWindow(Main.ProjectDetailsPage);
         }
     }
 }

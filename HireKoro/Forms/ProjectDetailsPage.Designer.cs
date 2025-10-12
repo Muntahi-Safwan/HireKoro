@@ -30,7 +30,7 @@
         {
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             this.txtHours = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.dtpStartDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -41,7 +41,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtProjectDescription = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnConfirm = new Guna.UI2.WinForms.Guna2Button();
+            this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
             this.txtProjectName = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -70,7 +70,7 @@
             this.guna2Panel1.BorderRadius = 12;
             this.guna2Panel1.Controls.Add(this.cmbStatus);
             this.guna2Panel1.Controls.Add(this.label1);
-            this.guna2Panel1.Controls.Add(this.guna2Button1);
+            this.guna2Panel1.Controls.Add(this.btnDelete);
             this.guna2Panel1.Controls.Add(this.txtHours);
             this.guna2Panel1.Controls.Add(this.guna2Panel2);
             this.guna2Panel1.Controls.Add(this.txtCost);
@@ -80,7 +80,7 @@
             this.guna2Panel1.Controls.Add(this.label6);
             this.guna2Panel1.Controls.Add(this.txtProjectDescription);
             this.guna2Panel1.Controls.Add(this.label4);
-            this.guna2Panel1.Controls.Add(this.btnConfirm);
+            this.guna2Panel1.Controls.Add(this.btnUpdate);
             this.guna2Panel1.Controls.Add(this.txtProjectName);
             this.guna2Panel1.Controls.Add(this.lblName);
             this.guna2Panel1.Location = new System.Drawing.Point(105, 21);
@@ -88,21 +88,22 @@
             this.guna2Panel1.Size = new System.Drawing.Size(742, 619);
             this.guna2Panel1.TabIndex = 1;
             // 
-            // guna2Button1
+            // btnDelete
             // 
-            this.guna2Button1.BorderRadius = 12;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(121)))), ((int)(((byte)(121)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Location = new System.Drawing.Point(266, 511);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(160, 44);
-            this.guna2Button1.TabIndex = 66;
-            this.guna2Button1.Text = "Delete Project";
+            this.btnDelete.BorderRadius = 12;
+            this.btnDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(121)))), ((int)(((byte)(121)))));
+            this.btnDelete.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold);
+            this.btnDelete.ForeColor = System.Drawing.Color.Black;
+            this.btnDelete.Location = new System.Drawing.Point(266, 511);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(160, 44);
+            this.btnDelete.TabIndex = 66;
+            this.btnDelete.Text = "Delete Project";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // txtHours
             // 
@@ -169,7 +170,7 @@
             this.txtCost.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCost.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
             this.txtCost.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCost.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCost.Font = new System.Drawing.Font("Poppins", 12F);
             this.txtCost.ForeColor = System.Drawing.Color.White;
             this.txtCost.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCost.Location = new System.Drawing.Point(206, 431);
@@ -264,21 +265,22 @@
             this.label4.TabIndex = 53;
             this.label4.Text = "Project Name\r\n";
             // 
-            // btnConfirm
+            // btnUpdate
             // 
-            this.btnConfirm.BorderRadius = 12;
-            this.btnConfirm.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnConfirm.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnConfirm.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnConfirm.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnConfirm.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
-            this.btnConfirm.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold);
-            this.btnConfirm.ForeColor = System.Drawing.Color.Black;
-            this.btnConfirm.Location = new System.Drawing.Point(75, 511);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(160, 44);
-            this.btnConfirm.TabIndex = 52;
-            this.btnConfirm.Text = "Save Project";
+            this.btnUpdate.BorderRadius = 12;
+            this.btnUpdate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUpdate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUpdate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
+            this.btnUpdate.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold);
+            this.btnUpdate.ForeColor = System.Drawing.Color.Black;
+            this.btnUpdate.Location = new System.Drawing.Point(75, 511);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(160, 44);
+            this.btnUpdate.TabIndex = 52;
+            this.btnUpdate.Text = "Save Project";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // txtProjectName
             // 
@@ -321,7 +323,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
-            this.label1.Location = new System.Drawing.Point(354, 412);
+            this.label1.Location = new System.Drawing.Point(354, 406);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 23);
             this.label1.TabIndex = 67;
@@ -340,9 +342,9 @@
             this.cmbStatus.ForeColor = System.Drawing.Color.White;
             this.cmbStatus.ItemHeight = 30;
             this.cmbStatus.Items.AddRange(new object[] {
-            "In Progress",
+            "Ongoing",
             "Completed"});
-            this.cmbStatus.Location = new System.Drawing.Point(358, 437);
+            this.cmbStatus.Location = new System.Drawing.Point(358, 432);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(259, 36);
             this.cmbStatus.TabIndex = 68;
@@ -375,11 +377,11 @@
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2TextBox txtProjectDescription;
         private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2Button btnConfirm;
+        private Guna.UI2.WinForms.Guna2Button btnUpdate;
         private Guna.UI2.WinForms.Guna2TextBox txtProjectName;
         private System.Windows.Forms.Label lblName;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpStartDate;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnDelete;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2ComboBox cmbStatus;
     }
