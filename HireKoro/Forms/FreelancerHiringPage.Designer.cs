@@ -170,6 +170,7 @@
             this.txtCost.SelectedText = "";
             this.txtCost.Size = new System.Drawing.Size(105, 38);
             this.txtCost.TabIndex = 62;
+            this.txtCost.TextChanged += new System.EventHandler(this.txtCost_TextChanged);
             // 
             // label9
             // 
