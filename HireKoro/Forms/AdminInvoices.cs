@@ -47,7 +47,7 @@ namespace HireKoro.Forms
         {
             this.txtInvoiceID.Clear();
             this.cmbprojectn.SelectedIndex = -1;
-            this.txtStatus.Clear();
+            this.cmbStatus.SelectedIndex = -1;
             this.txtAmount.Clear();
             this.txtIssueDate.Clear();
             this.txtDueDate.Clear();
@@ -123,7 +123,7 @@ namespace HireKoro.Forms
             {
                 string query = $@"INSERT INTO INVOICES (ProjectID, Status, Amount, 
                                  IssueDate, DueDate) 
-                                 VALUES ( '{cmbprojectn.SelectedValue.ToString()}', '{txtStatus.Text}', 
+                                 VALUES ( '{cmbprojectn.SelectedValue.ToString()}', '{cmbStatus.Text}', 
                                  '{txtAmount.Text}', '{txtIssueDate.Text}', '{txtDueDate.Text}')";
 
                 Main.DB.ExecuteDMLQuery(query);
@@ -144,7 +144,7 @@ namespace HireKoro.Forms
                 string query = $@"UPDATE INVOICES SET 
                                 
                                  ProjectID = '{cmbprojectn.SelectedValue.ToString()}',
-                                 Status = '{txtStatus.Text}',
+                                 Status = '{cmbStatus.Text}',
                                  Amount = '{txtAmount.Text}',
                                  IssueDate = '{txtIssueDate.Text}',
                                  DueDate = {txtDueDate.Text}
@@ -196,7 +196,7 @@ namespace HireKoro.Forms
         private void dgvInvoices_DoubleClick(object sender, EventArgs e)
         {
             this.txtInvoiceID.Text = this.dgvInvoices.CurrentRow.Cells["InvoiceID"].Value.ToString();
-            this.txtStatus.Text = this.dgvInvoices.CurrentRow.Cells["Status"].Value.ToString();
+            this.cmbStatus.Text = this.dgvInvoices.CurrentRow.Cells["Status"].Value.ToString();
             this.txtAmount.Text = this.dgvInvoices.CurrentRow.Cells["Amount"].Value.ToString();
             this.txtIssueDate.Text = this.dgvInvoices.CurrentRow.Cells["IssueDate"].Value.ToString();
             this.txtDueDate.Text = this.dgvInvoices.CurrentRow.Cells["DueDate"].Value.ToString();
