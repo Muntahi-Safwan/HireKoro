@@ -45,7 +45,7 @@ namespace HireKoro.Forms
 
         private void btnSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            Main.SignUpPage = new SignUp();
             Main.ChangeWindow(Main.SignUpPage);
 
         }
