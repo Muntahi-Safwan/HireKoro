@@ -32,5 +32,11 @@ namespace HireKoro.Forms
                 MessageBox.Show("Error loading projects: " + ex.Message);
             }
         }
+
+        private void btnChat_Click(object sender, EventArgs e)
+        {
+            Main.AdminProjectLogPage = new AdminProjectLogs();
+            Main.ChangeWindow(Main.AdminProjectLogPage);
+        }
     }
 }

@@ -185,7 +185,8 @@
             this.btnChat.Name = "btnChat";
             this.btnChat.Size = new System.Drawing.Size(148, 44);
             this.btnChat.TabIndex = 55;
-            this.btnChat.Text = "Payment Log";
+            this.btnChat.Text = "Project Log";
+            this.btnChat.Click += new System.EventHandler(this.btnChat_Click);
             // 
             // btnConfirm
             // 
@@ -201,7 +202,7 @@
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(148, 44);
             this.btnConfirm.TabIndex = 54;
-            this.btnConfirm.Text = "Project Log";
+            this.btnConfirm.Text = "Payment Log";
             // 
             // AdminPaymentLogs
             // 

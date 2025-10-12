@@ -13,6 +13,12 @@ namespace HireKoro.Forms
     public partial class InvoiceCard : UserControl
     {
         string invoiceID { get; set; }
+        string projectName { get; set; }
+        string currentStatus { get; set; }
+        string issueDate { get; set; }
+        string dueDate { get; set; }
+        float amount { get; set; }
+
         public InvoiceCard()
         {
             InitializeComponent();
@@ -24,10 +30,10 @@ namespace HireKoro.Forms
             if (showPayment)
             {
                 lblInvoiceID.Text = "Invoice ID: " + invoiceID;
-                lblProjectName.Text = "Project Name: " + projectName;
-                lblCurrentStatus.Text = "Current Status: " + currentStatus;
-                lblIssueDate.Text = "Issue Date: " + issueDate.ToString("dd MMMM, yyyy");
-                lblDueDate.Text = "Due Date: " + dueDate.ToString("dd MMMM, yyyy");
+                this.projectName = lblProjectName.Text = "Project Name: " + projectName;
+                this.currentStatus = lblCurrentStatus.Text = "Current Status: " + currentStatus;
+                this.issueDate = lblIssueDate.Text = "Issue Date: " + issueDate.ToString("dd MMMM, yyyy");
+                this.dueDate = lblDueDate.Text = "Due Date: " + dueDate.ToString("dd MMMM, yyyy");
                 lblAmount.Text = "Amount: $" + amount.ToString("F2");
                 if (currentStatus == "Paid")
                 {
@@ -47,7 +53,8 @@ namespace HireKoro.Forms
 
         private void btnPayment_Click(object sender, EventArgs e)
         {
-            
+            Main.PaymentPage = new PaymentPage(this.invoiceID, this.projectName, this.issueDate, this.dueDate, this.amount);
+            Main.ChangeWindow(Main.PaymentPage);
         }
     }
 }

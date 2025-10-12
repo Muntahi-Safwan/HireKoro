@@ -429,6 +429,7 @@
             this.btnMessages.Text = "Messages";
             this.btnMessages.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnMessages.UseTransparentBackground = true;
+            this.btnMessages.Click += new System.EventHandler(this.btnMessages_Click);
             // 
             // guna2Panel7
             // 
@@ -605,9 +606,9 @@
             this.lblTopText.ForeColor = System.Drawing.Color.White;
             this.lblTopText.Location = new System.Drawing.Point(13, 10);
             this.lblTopText.Name = "lblTopText";
-            this.lblTopText.Size = new System.Drawing.Size(56, 30);
+            this.lblTopText.Size = new System.Drawing.Size(55, 30);
             this.lblTopText.TabIndex = 4;
-            this.lblTopText.Text = "Ajaira";
+            this.lblTopText.Text = "Home";
             // 
             // btnMinimize
             // 

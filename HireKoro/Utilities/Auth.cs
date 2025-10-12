@@ -34,7 +34,7 @@ namespace HireKoro.Utilities
 
                 if (result > 0)
                 {
-                    MessageBox.Show("Registration Successful! Welcome to HireKoro.", "Your One Stop Solution for freelance works");
+                    MessageBox.Show("Registration Successful! Welcome to HireKoro.", "Login with your Credentials");
                     return true;
                 }
                 else
@@ -76,7 +76,7 @@ namespace HireKoro.Utilities
 
                 if (result > 0)
                 {
-                    MessageBox.Show("Registration successful! Welcome to HireKoro.", "Complete Task and Easily Manage Everything");
+                    MessageBox.Show("Registration successful! Welcome to HireKoro.", "Login With Your Credentials");
                     return true;
                 }
                 else

@@ -42,7 +42,9 @@
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // btnFreelanceRegister
@@ -300,17 +302,32 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(488, 124);
+            this.label1.Location = new System.Drawing.Point(488, 134);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(476, 34);
             this.label1.TabIndex = 29;
             this.label1.Text = "Join our platform and start earning for your skills";
+            // 
+            // btnLogo
+            // 
+            this.btnLogo.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogo.Image = ((System.Drawing.Image)(resources.GetObject("btnLogo.Image")));
+            this.btnLogo.ImageRotate = 0F;
+            this.btnLogo.Location = new System.Drawing.Point(680, 54);
+            this.btnLogo.Name = "btnLogo";
+            this.btnLogo.Size = new System.Drawing.Size(113, 77);
+            this.btnLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnLogo.TabIndex = 30;
+            this.btnLogo.TabStop = false;
+            this.btnLogo.UseTransparentBackground = true;
+            this.btnLogo.Click += new System.EventHandler(this.btnLogo_Click);
             // 
             // FreelancerRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.Controls.Add(this.btnLogo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnFreelanceRegister);
             this.Controls.Add(this.btnSignIn);
@@ -327,6 +344,7 @@
             this.Name = "FreelancerRegister";
             this.Size = new System.Drawing.Size(1150, 661);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -347,5 +365,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private Guna.UI2.WinForms.Guna2TextBox txtName;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2PictureBox btnLogo;
     }
 }

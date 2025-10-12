@@ -57,10 +57,17 @@ namespace HireKoro.Forms
             bool registerFreelancer = Main.auth.signUpFreelancer(email, password, name, username, skills, description, HourlyRate);
             if (registerFreelancer)
             {
-                Main.FreelancerTaskPage = new FreelancerTaskPage();
-                Main.ChangeWindow(Main.FreelancerTaskPage);
-                Main.SidePanel.Visible = true;
+                Main.SignInPage = new Login();
+                Main.ChangeWindow(Main.SignInPage);
+                MessageBox.Show("Freelancer Registered Successfully");
+                Main.TopLabelText.Text = "Sign In";
             }
+        }
+
+        private void btnLogo_Click(object sender, EventArgs e)
+        {
+            Main.WelcomePage = new Welcome();
+            Main.ChangeWindow(Main.WelcomePage);
         }
     }
 }

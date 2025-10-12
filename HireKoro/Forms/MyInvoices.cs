@@ -28,8 +28,8 @@ namespace HireKoro.Forms
                 {
                     query = $@"SELECT 
                                 i.InvoiceID,
-                                p.ProjectName,
-                                i.PaymentStatus AS CurrentStatus,
+                                p.Title AS ProjectName,
+                                i.Status AS CurrentStatus,
                                 i.IssueDate,
                                 i.DueDate,
                                 i.Amount
@@ -40,8 +40,8 @@ namespace HireKoro.Forms
                 {
                     query = $@"SELECT 
                                 i.InvoiceID,
-                                p.ProjectName,
-                                i.PaymentStatus AS CurrentStatus,
+                                p.Title AS ProjectName,
+                                i.Status AS CurrentStatus,
                                 i.IssueDate,
                                 i.DueDate,
                                 i.Amount

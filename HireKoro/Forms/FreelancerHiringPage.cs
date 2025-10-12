@@ -14,6 +14,7 @@ namespace HireKoro.Forms
     public partial class FreelancerHiringPage : UserControl
     {
         private string freelancerId { get; set; }
+        private string projectID { get; set; }
         public FreelancerHiringPage()
         {
             InitializeComponent();
@@ -45,12 +46,13 @@ namespace HireKoro.Forms
         {
             try
             {
-                string query = $"INSERT INTO PROJECTS (ClientID, FreelancerID, Title, ProjectDescription, StartDate, ProjectHours, ProjectStatus, Cost) VALUES ({clientId}, {freelancerId}, '{projectTitle}', '{projectDescription}', '{startDate.ToString("yyyy-MM-dd")}', {hours}, 'Ongoing', {cost})";
-                int response = Main.DB.ExecuteDMLQuery(query);
-                if (response > 0)
+                string query = $"INSERT INTO PROJECTS (ClientID, FreelancerID, Title, ProjectDescription, StartDate, ProjectHours, ProjectStatus, Cost) OUTPUT inserted.ProjectID VALUES ({clientId}, {freelancerId}, '{projectTitle}', '{projectDescription}', '{startDate.ToString("yyyy-MM-dd")}', {hours}, 'Ongoing', {cost})";
+                var response = Main.DB.ExecuteQueryTable(query);
+                this.projectID = response.Rows[0][0].ToString();
+                if (response.Rows.Count != 0)
                 {
                     MessageBox.Show("Freelancer hired successfully!");
-                   // Main.DB.ExecuteDMLQuery($"INSERT INTO PROJECT")
+                    Main.DB.ExecuteDMLQuery($"INSERT INTO PROJECTLOG (ProjectID, Status, Comment) Values ('{this.projectID}', 'Created', 'New Project Created and Hired'); ");
                 }
                 else
                 {
