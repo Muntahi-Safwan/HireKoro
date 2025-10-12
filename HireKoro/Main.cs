@@ -172,7 +172,7 @@ namespace HireKoro
         {
             this.btnAdminTasks.ForeColor = this.btnHome.ForeColor = this.btnInvoices.ForeColor = Color.White;
             this.btnMyProjects.ForeColor = this.btnProfile.ForeColor = this.btnMessages.ForeColor = Color.White;
-            this.btnDashboard.ForeColor = this.btnProjects.ForeColor = this.btnUsers.ForeColor = Color.White;
+            this.btnProjects.ForeColor = this.btnUsers.ForeColor = Color.White;
             this.btnLogs.ForeColor = this.btnReviews.ForeColor = this.btnTask.ForeColor = Color.White;
         }
 

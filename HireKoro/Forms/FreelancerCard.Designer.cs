@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.profilePic = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblFreelancerName = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
             this.lblSkills = new System.Windows.Forms.Label();
             this.lblDetails = new System.Windows.Forms.Label();
             this.lblHourlyRate = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profilePic)).BeginInit();
             this.SuspendLayout();
             // 
-            // guna2PictureBox1
+            // profilePic
             // 
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(9, 10);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(67, 74);
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
+            this.profilePic.ImageRotate = 0F;
+            this.profilePic.Location = new System.Drawing.Point(9, 10);
+            this.profilePic.Name = "profilePic";
+            this.profilePic.Size = new System.Drawing.Size(67, 74);
+            this.profilePic.TabIndex = 0;
+            this.profilePic.TabStop = false;
             // 
             // lblFreelancerName
             // 
@@ -114,11 +114,11 @@
             this.Controls.Add(this.lblSkills);
             this.Controls.Add(this.lblDescription);
             this.Controls.Add(this.lblFreelancerName);
-            this.Controls.Add(this.guna2PictureBox1);
+            this.Controls.Add(this.profilePic);
             this.Margin = new System.Windows.Forms.Padding(10);
             this.Name = "FreelancerCard";
             this.Size = new System.Drawing.Size(320, 93);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profilePic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -126,7 +126,7 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox profilePic;
         private System.Windows.Forms.Label lblFreelancerName;
         private System.Windows.Forms.Label lblDescription;
         private System.Windows.Forms.Label lblSkills;
