@@ -20,9 +20,20 @@ namespace HireKoro.Forms
 
         internal void LoadProjects(string id)
         {
+            string query;
             try
             {
-                string query = $"Select * FROM PROJECTS WHERE ClientId={id}";
+                if(Main.userRole == "Freelancer")
+                {
+                    lblTitle.Text = "My Projects";
+                    query = $"Select * FROM PROJECTS WHERE FreelancerId={id}";
+                }
+                else
+                {
+                    lblTitle.Text = "Projects Posted";
+                    query = $"Select * FROM PROJECTS WHERE ClientId={id}";
+                }
+                
                 var response = Main.DB.ExecuteQueryTable(query);
                 int count = 0;
                 while (count < response.Rows.Count)

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HireKoro.Utilities;
 
 namespace HireKoro.Forms
 {
@@ -30,13 +31,12 @@ namespace HireKoro.Forms
                     return;
                 }
 
-                this.txtName.Text = response.Rows[0]["Name"].ToString() ;
-                this.txtDescription.Text = response.Rows[0]["Description"].ToString();
-                this.txtUsername.Text = response.Rows[0]["username"].ToString();
-                this.txtEmail.Text = response.Rows[0]["Email"].ToString();
-                this.txtSkills.Text = response.Rows[0]["Skills"].ToString();
-                this.txtHourlyRate.Text = response.Rows[0]["HourlyRate"].ToString();
-
+                this.txtName.Text = response.Rows[0]["Name"]?.ToString() ?? "";
+                this.txtDescription.Text = response.Rows[0]["Description"]?.ToString() ?? "";
+                this.txtUsername.Text = response.Rows[0]["username"]?.ToString() ?? "";
+                this.txtEmail.Text = response.Rows[0]["Email"]?.ToString() ?? "";
+                this.txtSkills.Text = response.Rows[0]["Skills"]?.ToString() ?? "";
+                this.txtHourlyRate.Text = response.Rows[0]["HourlyRate"]?.ToString() ?? "";
 
             } catch (Exception e)
             {
@@ -46,15 +46,30 @@ namespace HireKoro.Forms
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            string name = this.txtName.Text;
-            string description = this.txtDescription.Text;
-            string email = this.txtEmail.Text;
-            string skills = this.txtSkills.Text;
-            string hourlyRate = this.txtHourlyRate.Text;
+            
+            string name = this.txtName.Text.Trim();
+            string description = this.txtDescription.Text.Trim();
+            string email = this.txtEmail.Text.Trim();
+            string skills = this.txtSkills.Text.Trim();
+            string hourlyRate = this.txtHourlyRate.Text.Trim();
             string userId = Main.CurrentUserId;
+
+            if (!string.IsNullOrEmpty(hourlyRate) && !decimal.TryParse(hourlyRate, out _))
+            {
+                MessageBox.Show("Please enter a valid hourly rate.", "Validation Error");
+                return;
+            }
+
             try
             {
-                string query = $"UPDATE USERS SET Name='{name}', Description='{description}', Email={email}, Skills='{skills}', HourlyRate={hourlyRate} WHERE UserID={userId}";
+                string query = $@"UPDATE USERS SET 
+                                Name='{name.Replace("'", "''")}', 
+                                Description='{description.Replace("'", "''")}', 
+                                Email='{email.Replace("'", "''")}', 
+                                Skills='{skills.Replace("'", "''")}', 
+                                HourlyRate={(string.IsNullOrEmpty(hourlyRate) ? "NULL" : hourlyRate)} 
+                                WHERE UserID={userId}";
+
                 int response = Main.DB.ExecuteDMLQuery(query);
                 if(response == 1)
                 {
@@ -65,7 +80,43 @@ namespace HireKoro.Forms
                 }
             } catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error updating profile: " + ex.Message, "Error");
+            }
+        }
+
+        private void btnUpdatePassword_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string currentPassword = txtCurrentPassword.Text;
+                string newPassword = txtNewPassword.Text;
+
+                // Validate input
+                if (string.IsNullOrWhiteSpace(currentPassword))
+                {
+                    MessageBox.Show("Please enter your current password.", "Validation Error");
+                    txtCurrentPassword.Focus();
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(newPassword))
+                {
+                    MessageBox.Show("Please enter a new password.", "Validation Error");
+                    txtNewPassword.Focus();
+                    return;
+                }
+
+                bool success = Main.auth.UpdatePassword(currentPassword, newPassword);
+
+                if (success)
+                {
+                    txtCurrentPassword.Clear();
+                    txtNewPassword.Clear();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An unexpected error occurred: " + ex.Message, "Error");
             }
         }
     }

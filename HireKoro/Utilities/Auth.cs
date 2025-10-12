@@ -173,6 +173,7 @@ namespace HireKoro.Utilities
                     break;
             }
         }
+        
         // User Logout
         internal void Logout()
         {
@@ -183,9 +184,129 @@ namespace HireKoro.Utilities
             Main.TopLabelText.Text = "HireKoro";
         }
 
-        internal void UpdatePassword(string currentpassword,string newpassword)
+        // Update Password 
+        internal bool UpdatePassword(string currentPassword, string newPassword)
         {
+            try
+            {
+                // Validate input
+                if (string.IsNullOrWhiteSpace(currentPassword) || string.IsNullOrWhiteSpace(newPassword))
+                {
+                    MessageBox.Show("Please enter both current and new password.", "Update Failed");
+                    return false;
+                }
 
+                if (string.IsNullOrEmpty(Main.CurrentUserId))
+                {
+                    MessageBox.Show("No user is currently logged in.", "Update Failed");
+                    return false;
+                }
+
+                // Current Password
+                string query = $"SELECT PasswordHash FROM USERS WHERE UserID={Main.CurrentUserId}";
+                var response = Main.DB.ExecuteQueryTable(query);
+
+                if (response.Rows.Count == 0)
+                {
+                    MessageBox.Show("User not found.", "Update Failed");
+                    return false;
+                }
+
+                string currentHashedPassword = response.Rows[0]["PasswordHash"].ToString();
+
+                // Verify current password
+                if (!PasswordHelper.VerifyPassword(currentPassword, currentHashedPassword))
+                {
+                    MessageBox.Show("Current password is incorrect.", "Update Failed");
+                    return false;
+                }
+
+                // Validate new password strength
+                if (newPassword.Length < 6)
+                {
+                    MessageBox.Show("New password must be at least 6 characters long.", "Update Failed");
+                    return false;
+                }
+
+                // Hash new password and update
+                string newHashedPassword = PasswordHelper.HashPassword(newPassword);
+                string updateQuery = $"UPDATE USERS SET PasswordHash='{newHashedPassword}' WHERE UserID={Main.CurrentUserId}";
+
+                int result = Main.DB.ExecuteDMLQuery(updateQuery);
+
+                if (result > 0)
+                {
+                    MessageBox.Show("Password updated successfully!", "Update Successful");
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("Failed to update password. Please try again.", "Update Failed");
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error updating password: " + ex.Message, "Error");
+                return false;
+            }
+        }
+
+        // Forgot Password 
+        internal bool forgotPassword(string email, string newPassword)
+        {
+            try
+            {
+                // Validate input
+                if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(newPassword))
+                {
+                    MessageBox.Show("Please enter both email and new password.", "Reset Failed");
+                    return false;
+                }
+
+                // Check Email
+                string checkQuery = $"SELECT UserID, Name FROM USERS WHERE Email='{email.Replace("'", "''")}'";
+                var response = Main.DB.ExecuteQueryTable(checkQuery);
+
+                if (response.Rows.Count == 0)
+                {
+                    MessageBox.Show("No account found with this email address.", "Reset Failed");
+                    return false;
+                }
+
+                // Validate new password strength
+                if (newPassword.Length < 6)
+                {
+                    MessageBox.Show("New password must be at least 6 characters long.", "Reset Failed");
+                    return false;
+                }
+
+                // Get user details
+                string userId = response.Rows[0]["UserID"].ToString();
+                string userName = response.Rows[0]["Name"].ToString();
+
+                // Hash new password and update
+                string newHashedPassword = PasswordHelper.HashPassword(newPassword);
+                string updateQuery = $"UPDATE USERS SET PasswordHash='{newHashedPassword}' WHERE UserID={userId}";
+
+                int result = Main.DB.ExecuteDMLQuery(updateQuery);
+
+                if (result > 0)
+                {
+                    MessageBox.Show($"Password reset successfully for {userName}! You can now login with your new password.", "Reset Successful");
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("Failed to reset password. Please try again.", "Reset Failed");
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error resetting password: " + ex.Message, "Error");
+                return false;
+            }
         }
     }
 }
