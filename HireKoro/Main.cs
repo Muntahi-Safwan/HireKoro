@@ -192,5 +192,14 @@ namespace HireKoro
             btnLogs.ForeColor = Color.FromArgb(121, 208, 253);
             Main.TopLabelText.Text = " Admin - Project Logs";
         }
+
+        private void btnMyInvoices_Click(object sender, EventArgs e)
+        {
+            MyInvoicesPage = new MyInvoices();
+            ChangeWindow(MyInvoicesPage);
+            sidebarBtnReset();
+            btnMyInvoices.ForeColor = Color.FromArgb(121, 208, 253);
+            Main.TopLabelText.Text = " My Invoices";
+        }
     }
 }

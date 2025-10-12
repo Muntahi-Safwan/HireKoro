@@ -31,10 +31,10 @@
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtNewPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtComment = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtCurrentPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.UpdatePassword = new Guna.UI2.WinForms.Guna2Button();
+            this.txtRating = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnReview = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -75,10 +75,10 @@
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
             this.guna2Panel1.BorderRadius = 12;
             this.guna2Panel1.Controls.Add(this.label12);
-            this.guna2Panel1.Controls.Add(this.txtNewPassword);
+            this.guna2Panel1.Controls.Add(this.txtComment);
             this.guna2Panel1.Controls.Add(this.label2);
-            this.guna2Panel1.Controls.Add(this.txtCurrentPassword);
-            this.guna2Panel1.Controls.Add(this.UpdatePassword);
+            this.guna2Panel1.Controls.Add(this.txtRating);
+            this.guna2Panel1.Controls.Add(this.btnReview);
             this.guna2Panel1.Controls.Add(this.label3);
             this.guna2Panel1.Controls.Add(this.cmbStatus);
             this.guna2Panel1.Controls.Add(this.label1);
@@ -112,26 +112,26 @@
             this.label12.TabIndex = 75;
             this.label12.Text = "Comment";
             // 
-            // txtNewPassword
+            // txtComment
             // 
-            this.txtNewPassword.BackColor = System.Drawing.Color.Transparent;
-            this.txtNewPassword.BorderRadius = 12;
-            this.txtNewPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNewPassword.DefaultText = "";
-            this.txtNewPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNewPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNewPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNewPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNewPassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
-            this.txtNewPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNewPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtNewPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNewPassword.Location = new System.Drawing.Point(520, 183);
-            this.txtNewPassword.Name = "txtNewPassword";
-            this.txtNewPassword.PlaceholderText = "";
-            this.txtNewPassword.SelectedText = "";
-            this.txtNewPassword.Size = new System.Drawing.Size(203, 41);
-            this.txtNewPassword.TabIndex = 74;
+            this.txtComment.BackColor = System.Drawing.Color.Transparent;
+            this.txtComment.BorderRadius = 12;
+            this.txtComment.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtComment.DefaultText = "";
+            this.txtComment.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtComment.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtComment.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtComment.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtComment.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
+            this.txtComment.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtComment.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtComment.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtComment.Location = new System.Drawing.Point(520, 183);
+            this.txtComment.Name = "txtComment";
+            this.txtComment.PlaceholderText = "";
+            this.txtComment.SelectedText = "";
+            this.txtComment.Size = new System.Drawing.Size(203, 41);
+            this.txtComment.TabIndex = 74;
             // 
             // label2
             // 
@@ -145,42 +145,42 @@
             this.label2.TabIndex = 73;
             this.label2.Text = "Rating";
             // 
-            // txtCurrentPassword
+            // txtRating
             // 
-            this.txtCurrentPassword.BackColor = System.Drawing.Color.Transparent;
-            this.txtCurrentPassword.BorderRadius = 12;
-            this.txtCurrentPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCurrentPassword.DefaultText = "";
-            this.txtCurrentPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtCurrentPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtCurrentPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCurrentPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCurrentPassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
-            this.txtCurrentPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCurrentPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtCurrentPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCurrentPassword.Location = new System.Drawing.Point(520, 91);
-            this.txtCurrentPassword.Name = "txtCurrentPassword";
-            this.txtCurrentPassword.PlaceholderText = "";
-            this.txtCurrentPassword.SelectedText = "";
-            this.txtCurrentPassword.Size = new System.Drawing.Size(203, 41);
-            this.txtCurrentPassword.TabIndex = 72;
+            this.txtRating.BackColor = System.Drawing.Color.Transparent;
+            this.txtRating.BorderRadius = 12;
+            this.txtRating.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtRating.DefaultText = "";
+            this.txtRating.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtRating.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtRating.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtRating.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtRating.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
+            this.txtRating.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtRating.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtRating.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtRating.Location = new System.Drawing.Point(520, 91);
+            this.txtRating.Name = "txtRating";
+            this.txtRating.PlaceholderText = "";
+            this.txtRating.SelectedText = "";
+            this.txtRating.Size = new System.Drawing.Size(203, 41);
+            this.txtRating.TabIndex = 72;
             // 
-            // UpdatePassword
+            // btnReview
             // 
-            this.UpdatePassword.BorderRadius = 12;
-            this.UpdatePassword.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.UpdatePassword.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.UpdatePassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.UpdatePassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.UpdatePassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
-            this.UpdatePassword.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdatePassword.ForeColor = System.Drawing.Color.Black;
-            this.UpdatePassword.Location = new System.Drawing.Point(520, 252);
-            this.UpdatePassword.Name = "UpdatePassword";
-            this.UpdatePassword.Size = new System.Drawing.Size(203, 44);
-            this.UpdatePassword.TabIndex = 70;
-            this.UpdatePassword.Text = "Add Review";
+            this.btnReview.BorderRadius = 12;
+            this.btnReview.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnReview.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnReview.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnReview.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnReview.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
+            this.btnReview.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReview.ForeColor = System.Drawing.Color.Black;
+            this.btnReview.Location = new System.Drawing.Point(520, 252);
+            this.btnReview.Name = "btnReview";
+            this.btnReview.Size = new System.Drawing.Size(203, 44);
+            this.btnReview.TabIndex = 70;
+            this.btnReview.Text = "Add Review";
             // 
             // label3
             // 
@@ -491,10 +491,10 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2ComboBox cmbStatus;
         private System.Windows.Forms.Label label12;
-        private Guna.UI2.WinForms.Guna2TextBox txtNewPassword;
+        private Guna.UI2.WinForms.Guna2TextBox txtComment;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2TextBox txtCurrentPassword;
-        private Guna.UI2.WinForms.Guna2Button UpdatePassword;
+        private Guna.UI2.WinForms.Guna2TextBox txtRating;
+        private Guna.UI2.WinForms.Guna2Button btnReview;
         private System.Windows.Forms.Label label3;
     }
 }

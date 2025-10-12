@@ -26,17 +26,28 @@ namespace HireKoro.Forms
                 flpInvoices.Controls.Clear();
                 if (Main.userRole == "Client")
                 {
-                    query = $@"
-                            SELECT 
+                    query = $@"SELECT 
                                 i.InvoiceID,
                                 p.ProjectName,
                                 i.PaymentStatus AS CurrentStatus,
                                 i.IssueDate,
                                 i.DueDate,
-                                i.Amount,
+                                i.Amount
                             FROM INVOICES i
                             JOIN PROJECTS p ON i.ProjectID = p.ProjectID
                             WHERE p.ClientID = {Main.CurrentUserId}";
+                } else if(Main.userRole == "Freelancer")
+                {
+                    query = $@"SELECT 
+                                i.InvoiceID,
+                                p.ProjectName,
+                                i.PaymentStatus AS CurrentStatus,
+                                i.IssueDate,
+                                i.DueDate,
+                                i.Amount
+                            FROM INVOICES i
+                            JOIN PROJECTS p ON i.ProjectID = p.ProjectID
+                            WHERE p.FreelancerID = {Main.CurrentUserId}";
                 }
 
                 var response = Main.DB.ExecuteQueryTable(query);
