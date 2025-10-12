@@ -182,5 +182,10 @@ namespace HireKoro.Utilities
             Main.ChangeWindow(Main.WelcomePage);
             Main.TopLabelText.Text = "HireKoro";
         }
+
+        internal void UpdatePassword(string currentpassword,string newpassword)
+        {
+
+        }
     }
 }

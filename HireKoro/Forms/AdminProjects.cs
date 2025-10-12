@@ -109,17 +109,21 @@ namespace HireKoro.Forms
         private void btnDelete_Click(object sender, EventArgs e)
         {
             this.txtProjectID.Text = this.dgvProjects.CurrentRow.Cells["ProjectID"].Value.ToString();
-            try
+            if (MessageBox.Show("Are you sure you want to delete this project?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                string query = $"DELETE FROM PROJECTS WHERE ProjectID = {this.txtProjectID.Text};";
-                var response = Main.DB.ExecuteDMLQuery(query);
-                dgvProjects.DataSource = response;
-                this.LoadProjects();
-                MessageBox.Show("Project deleted successfully!");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error deleting projects: " + ex.Message);
+                try
+                {
+                    string query = $"DELETE FROM PROJECTS WHERE ProjectID = {this.txtProjectID.Text};";
+                    var response = Main.DB.ExecuteDMLQuery(query);
+                    dgvProjects.DataSource = response;
+                    this.LoadProjects();
+                    MessageBox.Show("Project deleted successfully!");
+                    this.Clearall();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error deleting projects: " + ex.Message);
+                }
             }
         }
 

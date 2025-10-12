@@ -38,6 +38,8 @@
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgvReviews = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.txtReviewTitle = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             this.btnClear = new Guna.UI2.WinForms.Guna2Button();
             this.btnCreate = new Guna.UI2.WinForms.Guna2Button();
@@ -50,10 +52,8 @@
             this.txtReviewID = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtReviewTitle = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.ReviewID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProjectID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nameu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rating = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Comment = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -160,7 +160,7 @@
             this.dgvReviews.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvReviews.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ReviewID,
-            this.ProjectID,
+            this.Nameu,
             this.Title,
             this.Rating,
             this.Comment});
@@ -224,6 +224,40 @@
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
             this.guna2GradientPanel2.Size = new System.Drawing.Size(214, 655);
             this.guna2GradientPanel2.TabIndex = 1;
+            // 
+            // txtReviewTitle
+            // 
+            this.txtReviewTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
+            this.txtReviewTitle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(213)))), ((int)(((byte)(224)))));
+            this.txtReviewTitle.BorderRadius = 8;
+            this.txtReviewTitle.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtReviewTitle.DefaultText = "";
+            this.txtReviewTitle.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtReviewTitle.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtReviewTitle.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtReviewTitle.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtReviewTitle.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
+            this.txtReviewTitle.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtReviewTitle.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtReviewTitle.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtReviewTitle.Location = new System.Drawing.Point(19, 222);
+            this.txtReviewTitle.Name = "txtReviewTitle";
+            this.txtReviewTitle.PlaceholderText = "";
+            this.txtReviewTitle.SelectedText = "";
+            this.txtReviewTitle.Size = new System.Drawing.Size(184, 25);
+            this.txtReviewTitle.TabIndex = 29;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
+            this.label6.Location = new System.Drawing.Point(15, 197);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(77, 22);
+            this.label6.TabIndex = 28;
+            this.label6.Text = "Review Title";
             // 
             // btnDelete
             // 
@@ -435,40 +469,6 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Create / Update Reviews";
             // 
-            // txtReviewTitle
-            // 
-            this.txtReviewTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
-            this.txtReviewTitle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(213)))), ((int)(((byte)(224)))));
-            this.txtReviewTitle.BorderRadius = 8;
-            this.txtReviewTitle.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtReviewTitle.DefaultText = "";
-            this.txtReviewTitle.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtReviewTitle.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtReviewTitle.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtReviewTitle.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtReviewTitle.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
-            this.txtReviewTitle.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtReviewTitle.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtReviewTitle.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtReviewTitle.Location = new System.Drawing.Point(19, 222);
-            this.txtReviewTitle.Name = "txtReviewTitle";
-            this.txtReviewTitle.PlaceholderText = "";
-            this.txtReviewTitle.SelectedText = "";
-            this.txtReviewTitle.Size = new System.Drawing.Size(184, 25);
-            this.txtReviewTitle.TabIndex = 29;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
-            this.label6.Location = new System.Drawing.Point(15, 197);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 22);
-            this.label6.TabIndex = 28;
-            this.label6.Text = "Review Title";
-            // 
             // ReviewID
             // 
             this.ReviewID.DataPropertyName = "ReviewID";
@@ -476,12 +476,12 @@
             this.ReviewID.Name = "ReviewID";
             this.ReviewID.ReadOnly = true;
             // 
-            // ProjectID
+            // Nameu
             // 
-            this.ProjectID.DataPropertyName = "Name";
-            this.ProjectID.HeaderText = "Name";
-            this.ProjectID.Name = "ProjectID";
-            this.ProjectID.ReadOnly = true;
+            this.Nameu.DataPropertyName = "Name";
+            this.Nameu.HeaderText = "Name";
+            this.Nameu.Name = "Nameu";
+            this.Nameu.ReadOnly = true;
             // 
             // Title
             // 
@@ -546,7 +546,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtReviewTitle;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridViewTextBoxColumn ReviewID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProjectID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nameu;
         private System.Windows.Forms.DataGridViewTextBoxColumn Title;
         private System.Windows.Forms.DataGridViewTextBoxColumn Rating;
         private System.Windows.Forms.DataGridViewTextBoxColumn Comment;
