@@ -40,7 +40,7 @@ namespace HireKoro.Forms
             this.LoadProjects(query);
         }
 
-        private void load_Clientname(string query = "select * from USERS where UserID = '1';")
+        private void load_Clientname(string query = "select * from USERS where UserTypeID = '1';")
         {
 
             try
@@ -48,7 +48,7 @@ namespace HireKoro.Forms
                 var DT = Main.DB.ExecuteQueryTable(query);
                 this.cmbprojectn.DataSource = DT;
                 this.cmbprojectn.DisplayMember = "Username";
-                this.cmbprojectn.ValueMember = "UserTypeID";
+                this.cmbprojectn.ValueMember = "UserID";
 
 
             }
@@ -64,7 +64,7 @@ namespace HireKoro.Forms
                 var DT = Main.DB.ExecuteQueryTable(query);
                 this.cmbProjectm.DataSource = DT;
                 this.cmbProjectm.DisplayMember = "Username";
-                this.cmbProjectm.ValueMember = "UserTypeID";
+                this.cmbProjectm.ValueMember = "UserID";
 
 
             }
@@ -95,8 +95,8 @@ namespace HireKoro.Forms
         private void dgvProjects_DoubleClick(object sender, EventArgs e)
         {
             this.txtProjectID.Text = this.dgvProjects.CurrentRow.Cells["ProjectID"].Value.ToString();
-            this.cmbprojectn.Text = this.dgvProjects.CurrentRow.Cells["ClientID"].Value.ToString();
-            this.cmbProjectm.Text = this.dgvProjects.CurrentRow.Cells["FreelancerID"].Value.ToString();
+            this.cmbprojectn.Text = this.dgvProjects.CurrentRow.Cells["ClientName"].Value.ToString();
+            this.cmbProjectm.Text = this.dgvProjects.CurrentRow.Cells["FreelancerName"].Value.ToString();
             this.cmbProjectL.Text = this.dgvProjects.CurrentRow.Cells["ProjectStatus"].Value.ToString();
             this.txtTitle.Text = this.dgvProjects.CurrentRow.Cells["Title"].Value.ToString();
             this.txtDescription.Text = this.dgvProjects.CurrentRow.Cells["ProjectDescription"].Value.ToString();
@@ -146,11 +146,11 @@ namespace HireKoro.Forms
         {
             try
             {
-                string query = $@"INSERT INTO PROJECTS (ClientName, FreelancerName, Title, ProjectDescription, 
+                string query = $@"INSERT INTO PROJECTS (ClientID, FreelancerID, Title, ProjectDescription, 
                                  ProjectStatus, ProjectHours, StartDate, Cost) 
                                  VALUES ({cmbprojectn.SelectedValue.ToString()}, {cmbProjectm.SelectedValue.ToString()}, '{txtTitle.Text}', 
                                  '{txtDescription.Text}', '{cmbProjectL.Text}', {txtHours.Text}, 
-                                 '{DateTime.Now:yyyy-MM-dd}', {txtCost.Text})";
+                                 '{dtpStartdate.Value:yyyy-MM-dd}', {txtCost.Text})";
                 
                 Main.DB.ExecuteDMLQuery(query);
                 MessageBox.Show("Project created successfully!");
