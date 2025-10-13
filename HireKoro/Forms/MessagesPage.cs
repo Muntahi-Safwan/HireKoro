@@ -16,7 +16,7 @@ namespace HireKoro.Forms
     {
         internal static string SenderId { get; set; }
         internal static string ReceverID { get; set; } = "0";
-        internal static FlowLayoutPanel FLPmessage { get ; set; }
+        internal static FlowLayoutPanel FLPmessage { get; set; }
         internal static Label ReceverName { get; set; }
 
         public MessagesPage()
@@ -53,7 +53,7 @@ namespace HireKoro.Forms
             try
             {
                 var result = Main.DB.ExecuteQueryTable(Query);
-                if (result.Rows.Count<1)
+                if (result.Rows.Count < 1)
                 {
                     return;
                 }
@@ -61,7 +61,7 @@ namespace HireKoro.Forms
 
                 for (int i = 0; i < result.Rows.Count; i++)
                 {
-                    MessageContainer newM = new MessageContainer(result.Rows[i][1].ToString(),result.Rows[i][2].ToString(), result.Rows[i][3].ToString(), result.Rows[i][4].ToString());
+                    MessageContainer newM = new MessageContainer(result.Rows[i][1].ToString(), result.Rows[i][2].ToString(), result.Rows[i][3].ToString(), result.Rows[i][4].ToString());
                     newM.Dock = DockStyle.Top;
                     this.flpMessages.Controls.Add(newM);
                 }
@@ -109,7 +109,7 @@ namespace HireKoro.Forms
             {
                 var result = Main.DB.ExecuteQueryTable(Query);
 
-                for (int i = 0; i < result.Rows.Count ; i++)
+                for (int i = 0; i < result.Rows.Count; i++)
                 {
                     ChatBubble chats = new ChatBubble(result.Rows[i][4].ToString(), result.Rows[i][1].ToString(), result.Rows[i][5].ToString());
 

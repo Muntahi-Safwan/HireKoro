@@ -42,7 +42,7 @@ namespace HireKoro.Utilities
 
         public DataAccess()
         {
-            this.Sqlcon = new SqlConnection(@"Data Source=IronMan\SQLEXPRESS;Initial Catalog=HireKoroDB;Integrated Security=True;");
+            this.Sqlcon = new SqlConnection(@"Data Source=IronMan\SQLEXPRESS;Initial Catalog=HirekoroDB;Integrated Security=True;");
             Sqlcon.Open();
         }
 

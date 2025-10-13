@@ -22,6 +22,11 @@ namespace HireKoro.Forms
             InitializeComponent();
             loadUser(id);
             LoadProjects(id);
+            try
+            {
+                this.profileImg.Image = Image.FromFile($@"..\..\assets\users\{id}.png");
+            }
+            catch { }
             LoadReviews(id);
             this.freelancerId = id;
         }
@@ -106,6 +111,30 @@ namespace HireKoro.Forms
         {
             Main.FreelancerHiringPage = new FreelancerHiringPage(freelancerId);
             Main.ChangeWindow(Main.FreelancerHiringPage);
+        }
+        private void SendM()
+        {
+            DialogResult sure = MessageBox.Show("Are you sure want to send sms to this person?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (sure == DialogResult.No)
+            {
+                return;
+            }
+            try
+            {
+                var Query = $@"Insert into MESSAGES (SenderID,ReceiverID,Content,SendAt) Values ( {Main.CurrentUserId} ,{this.freelancerId} , 'Hello :)' , GETDATE())";
+                Main.DB.ExecuteDMLQuery(Query);
+
+                Main.MessagesPage = new MessagesPage();
+                Main.ChangeWindow(Main.MessagesPage);
+                Main.TopLabelText.Text = " Messages";
+
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
+
+        private void btnSendChat_Click(object sender, EventArgs e)
+        {
+            this.SendM();
         }
     }
 }

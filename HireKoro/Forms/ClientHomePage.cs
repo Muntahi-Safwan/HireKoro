@@ -25,6 +25,7 @@ namespace HireKoro.Forms
 
         private void txtSearchCP_TextChanged(object sender, EventArgs e)
         {
+            flowPanel.Controls.Clear();
             string query = $"Select * from Users where UserTypeID ='2' and (UserID like '{this.txtSearchCP.Text}%' or Name like '{this.txtSearchCP.Text}%')";
             this.LoadFreelancers(query);
         }
