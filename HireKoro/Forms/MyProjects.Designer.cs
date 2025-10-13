@@ -38,6 +38,7 @@
             // 
             // guna2GradientPanel1
             // 
+            this.guna2GradientPanel1.AutoScroll = true;
             this.guna2GradientPanel1.Controls.Add(this.guna2Panel1);
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(22)))), ((int)(((byte)(26)))));
@@ -51,6 +52,7 @@
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.AutoScroll = true;
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
             this.guna2Panel1.BorderRadius = 12;
             this.guna2Panel1.Controls.Add(this.flpProjects);
@@ -62,6 +64,7 @@
             // 
             // flpProjects
             // 
+            this.flpProjects.AutoScroll = true;
             this.flpProjects.Location = new System.Drawing.Point(60, 110);
             this.flpProjects.Name = "flpProjects";
             this.flpProjects.Size = new System.Drawing.Size(692, 509);

@@ -29,15 +29,16 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.flpInvoices = new System.Windows.Forms.FlowLayoutPanel();
             this.lblName = new System.Windows.Forms.Label();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.flpInvoices = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel1.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.AutoScroll = true;
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
             this.guna2Panel1.BorderRadius = 12;
             this.guna2Panel1.Controls.Add(this.flpInvoices);
@@ -46,6 +47,14 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(821, 619);
             this.guna2Panel1.TabIndex = 1;
+            // 
+            // flpInvoices
+            // 
+            this.flpInvoices.AutoScroll = true;
+            this.flpInvoices.Location = new System.Drawing.Point(63, 96);
+            this.flpInvoices.Name = "flpInvoices";
+            this.flpInvoices.Size = new System.Drawing.Size(669, 523);
+            this.flpInvoices.TabIndex = 21;
             // 
             // lblName
             // 
@@ -61,6 +70,7 @@
             // 
             // guna2GradientPanel1
             // 
+            this.guna2GradientPanel1.AutoScroll = true;
             this.guna2GradientPanel1.Controls.Add(this.guna2Panel1);
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(22)))), ((int)(((byte)(26)))));
@@ -71,13 +81,6 @@
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(929, 661);
             this.guna2GradientPanel1.TabIndex = 6;
-            // 
-            // flpInvoices
-            // 
-            this.flpInvoices.Location = new System.Drawing.Point(63, 96);
-            this.flpInvoices.Name = "flpInvoices";
-            this.flpInvoices.Size = new System.Drawing.Size(669, 523);
-            this.flpInvoices.TabIndex = 21;
             // 
             // MyInvoices
             // 
