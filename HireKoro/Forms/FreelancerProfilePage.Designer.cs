@@ -56,6 +56,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnImageUpload = new Guna.UI2.WinForms.Guna2Button();
+            this.txtImagePath = new Guna.UI2.WinForms.Guna2TextBox();
+            this.flpUpload = new System.Windows.Forms.OpenFileDialog();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).BeginInit();
@@ -78,6 +81,8 @@
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
             this.guna2Panel1.BorderRadius = 12;
+            this.guna2Panel1.Controls.Add(this.btnImageUpload);
+            this.guna2Panel1.Controls.Add(this.txtImagePath);
             this.guna2Panel1.Controls.Add(this.label12);
             this.guna2Panel1.Controls.Add(this.txtNewPassword);
             this.guna2Panel1.Controls.Add(this.label6);
@@ -211,10 +216,11 @@
             // imgProfile
             // 
             this.imgProfile.ImageRotate = 0F;
-            this.imgProfile.Location = new System.Drawing.Point(206, 88);
+            this.imgProfile.Location = new System.Drawing.Point(29, 88);
             this.imgProfile.Name = "imgProfile";
             this.imgProfile.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.imgProfile.Size = new System.Drawing.Size(167, 166);
+            this.imgProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgProfile.TabIndex = 43;
             this.imgProfile.TabStop = false;
             // 
@@ -489,6 +495,51 @@
             this.guna2Panel4.Size = new System.Drawing.Size(536, 2);
             this.guna2Panel4.TabIndex = 19;
             // 
+            // btnImageUpload
+            // 
+            this.btnImageUpload.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnImageUpload.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnImageUpload.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnImageUpload.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnImageUpload.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
+            this.btnImageUpload.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnImageUpload.ForeColor = System.Drawing.Color.DimGray;
+            this.btnImageUpload.Location = new System.Drawing.Point(435, 157);
+            this.btnImageUpload.Name = "btnImageUpload";
+            this.btnImageUpload.Size = new System.Drawing.Size(75, 28);
+            this.btnImageUpload.TabIndex = 54;
+            this.btnImageUpload.Text = "Upload";
+            this.btnImageUpload.Click += new System.EventHandler(this.btnImageUpload_Click);
+            // 
+            // txtImagePath
+            // 
+            this.txtImagePath.BackColor = System.Drawing.Color.Transparent;
+            this.txtImagePath.BorderColor = System.Drawing.Color.Transparent;
+            this.txtImagePath.BorderRadius = 8;
+            this.txtImagePath.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtImagePath.DefaultText = "";
+            this.txtImagePath.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtImagePath.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtImagePath.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtImagePath.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtImagePath.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtImagePath.Font = new System.Drawing.Font("Poppins", 12F);
+            this.txtImagePath.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(40)))));
+            this.txtImagePath.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtImagePath.Location = new System.Drawing.Point(214, 147);
+            this.txtImagePath.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtImagePath.Name = "txtImagePath";
+            this.txtImagePath.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtImagePath.PlaceholderText = "Upload Profile Picture ";
+            this.txtImagePath.SelectedText = "";
+            this.txtImagePath.Size = new System.Drawing.Size(306, 48);
+            this.txtImagePath.TabIndex = 53;
+            // 
+            // flpUpload
+            // 
+            this.flpUpload.FileName = "openFileDialog1";
+            this.flpUpload.FileOk += new System.ComponentModel.CancelEventHandler(this.flpUpload_FileOk);
+            // 
             // FreelancerProfilePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -534,5 +585,8 @@
         private Guna.UI2.WinForms.Guna2TextBox txtCurrentPassword;
         private System.Windows.Forms.Label label12;
         private Guna.UI2.WinForms.Guna2TextBox txtNewPassword;
+        private Guna.UI2.WinForms.Guna2Button btnImageUpload;
+        private Guna.UI2.WinForms.Guna2TextBox txtImagePath;
+        private System.Windows.Forms.OpenFileDialog flpUpload;
     }
 }

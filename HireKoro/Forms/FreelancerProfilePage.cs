@@ -1,21 +1,28 @@
-﻿using System;
+﻿using HireKoro.Utilities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using HireKoro.Utilities;
 
 namespace HireKoro.Forms
 {
     public partial class FreelancerProfilePage : UserControl
     {
+        internal static string destinationFilePath { set; get; }
         public FreelancerProfilePage()
         {
             InitializeComponent();
+            try
+            {
+                this.imgProfile.Image = Image.FromFile($@"..\..\assets\users\{Main.CurrentUserId}.png");
+            }
+            catch { }
             this.loadUserInfo(Main.CurrentUserId);  
         }
 
@@ -62,18 +69,22 @@ namespace HireKoro.Forms
 
             try
             {
+                this.CopyFIle();
                 string query = $@"UPDATE USERS SET 
                                 Name='{name.Replace("'", "''")}', 
                                 Description='{description.Replace("'", "''")}', 
                                 Email='{email.Replace("'", "''")}', 
                                 Skills='{skills.Replace("'", "''")}', 
-                                HourlyRate={(string.IsNullOrEmpty(hourlyRate) ? "NULL" : hourlyRate)} 
+                                HourlyRate={(string.IsNullOrEmpty(hourlyRate) ? "NULL" : hourlyRate)},
+                                ProfileImg='{destinationFilePath}'
                                 WHERE UserID={userId}";
 
                 int response = Main.DB.ExecuteDMLQuery(query);
+                
                 if(response == 1)
                 {
                     MessageBox.Show("Profile Updated Successfully", "Success");
+                    this.imgProfile.Image = Image.FromFile(destinationFilePath);
                 } else
                 {
                     MessageBox.Show("Profile Update Failed", "Failed");
@@ -120,6 +131,34 @@ namespace HireKoro.Forms
             }
         }
 
-        
+        private void CopyFIle()
+        {
+            string sourceFilePath = this.txtImagePath.Text;
+            string fileName = $"{Main.CurrentUserId}.png";
+            destinationFilePath = Path.Combine(@"..\..\assets\users", fileName);
+
+            string destinationDirectory = Path.GetDirectoryName(destinationFilePath);
+            if (!Directory.Exists(destinationDirectory))
+            {
+                Directory.CreateDirectory(destinationDirectory);
+            }
+
+            try
+            {
+                File.Copy(sourceFilePath, destinationFilePath, true);
+            }
+            catch { }
+        }
+
+        private void flpUpload_FileOk(object sender, CancelEventArgs e)
+        {
+            this.txtImagePath.Text = this.flpUpload.FileName;
+        }
+
+        private void btnImageUpload_Click(object sender, EventArgs e)
+        {
+            this.flpUpload.ShowDialog();
+        }
+
     }
 }

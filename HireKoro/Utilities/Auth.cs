@@ -154,6 +154,13 @@ namespace HireKoro.Utilities
                     Main.ChangeWindow(Main.ClientHomePage);
                     Main.TopLabelText.Text = $"Welcome, {userName}";
                     Main.SidePanel.Visible = true;
+                    Main.PNLUsers.Visible = false;
+                    Main.PNLTasks.Visible = false;
+                    Main.PNLInvoices.Visible = false;
+                    Main.PNLReviews.Visible = false;
+                    Main.PNLProjects.Visible = false;
+                    Main.PNLLogs.Visible = false;
+                    Main.PNLMyTasks.Visible = false;
                     break;
 
                 case 2: // Freelancer
@@ -162,6 +169,13 @@ namespace HireKoro.Utilities
                     Main.ChangeWindow(Main.FreelancerTaskPage);
                     Main.TopLabelText.Text = $"Welcome, {userName}";
                     Main.SidePanel.Visible = true;
+                    Main.SidePanel.Visible = true;
+                    Main.PNLUsers.Visible = false;
+                    Main.PNLTasks.Visible = false;
+                    Main.PNLInvoices.Visible = false;
+                    Main.PNLReviews.Visible = false;
+                    Main.PNLProjects.Visible = false;
+                    Main.PNLLogs.Visible = false;
                     break;
 
                 case 3: // Admin 
@@ -170,6 +184,12 @@ namespace HireKoro.Utilities
                     Main.userRole = "Admin";
                     Main.TopLabelText.Text = $"Admin Dashboard - {userName}";
                     Main.SidePanel.Visible = true;
+                    Main.PNLHome.Visible = false;
+                    Main.PNLMyProjects.Visible = false;
+                    Main.PNLMyInvoices.Visible = false;
+                    Main.PNLMyTasks.Visible = false;
+                    Main.PNLMessages.Visible = false;
+
                     break;
             }
         }

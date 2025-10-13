@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ namespace HireKoro.Forms
 {
     public partial class FreelancerRegister : UserControl
     {
+        internal static string destinationFilePath { set; get; }
         public FreelancerRegister()
         {
             InitializeComponent();
@@ -69,5 +71,7 @@ namespace HireKoro.Forms
             Main.WelcomePage = new Welcome();
             Main.ChangeWindow(Main.WelcomePage);
         }
+
+        
     }
 }
