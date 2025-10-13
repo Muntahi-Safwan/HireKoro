@@ -116,6 +116,7 @@
             this.txtPassword.Location = new System.Drawing.Point(648, 349);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtPassword.PlaceholderText = "Password :";
             this.txtPassword.SelectedText = "";
