@@ -37,6 +37,11 @@ namespace HireKoro.Forms
                     this.lblDescription.Text = response.Rows[0]["description"].ToString();
                     this.lblUsername.Text = response.Rows[0]["Username"].ToString();
                     this.lblSkills.Text = response.Rows[0]["Skills"].ToString();
+                    try
+                    {
+                        this.profileImg.Image = Image.FromFile($@"..\..\assets\users\{Main.CurrentUserId}.png");
+                    }
+                    catch { }
                     this.lblHourlyRate.Text = $"${response.Rows[0]["HourlyRate"].ToString()}/hr";
                 }
             }
