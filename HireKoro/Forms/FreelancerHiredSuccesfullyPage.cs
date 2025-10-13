@@ -23,5 +23,7 @@ namespace HireKoro.Forms
             Main.ChangeWindow(Main.ClientHomePage);
             Main.TopLabelText.Text = "Client - Home";
         }
+
+        
     }
 }

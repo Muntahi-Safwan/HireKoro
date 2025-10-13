@@ -21,6 +21,21 @@ namespace HireKoro
         internal static Panel SidePanel { get; set; }
         internal static Guna2HtmlLabel TopLabelText { get; set; }
 
+        // Sidebar Panel
+        internal static Panel PNLHome { get; set; }
+        internal static Panel PNLProjects { get; set; }
+        internal static Panel PNLUsers { get; set; }
+        internal static Panel PNLTasks { get; set; }
+        internal static Panel PNLReviews { get; set; }
+        internal static Panel PNLInvoices { get; set; }
+        internal static Panel PNLProfile { get; set; }
+        internal static Panel PNLMyProjects { get; set; }
+        internal static Panel PNLLogs { get; set; }
+        internal static Panel PNLMyInvoices { get; set; }
+        internal static Panel PNLMyTasks { get; set; }
+        internal static Panel PNLMessages { get; set; }
+
+
 
         // Pages
         internal static UserControl WelcomePage { get; set; }
@@ -65,6 +80,19 @@ namespace HireKoro
             MainPanel = this.pnlMainPanel;
             SidePanel = this.pnlSidePanel;
             TopLabelText = this.lblTopText;
+            PNLHome = this.pnlHome;
+            PNLProjects = this.pnlAdminProjects;
+            PNLUsers = this.pnlUsers;
+            PNLTasks = this.pnlAdminTasks;
+            PNLReviews = this.pnlReviews;
+            PNLInvoices = this.pnlInvoices;
+            PNLProfile = this.pnlMyProfile;
+            PNLMyProjects = this.pnlMyProjects;
+            PNLLogs = this.pnlLogs;
+            PNLMyInvoices = this.pnlMyInvoices;
+            PNLMyTasks = this.pnlMyTasks;
+            PNLMessages = this.pnlMessages;
+
             WelcomePage = new Welcome();
             this.sidebarBtnReset();
             ChangeWindow(WelcomePage);
@@ -94,6 +122,18 @@ namespace HireKoro
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             auth.Logout();
+            PNLHome.Visible = true; 
+            PNLProjects.Visible = true;
+            PNLUsers.Visible = true;
+            PNLTasks.Visible = true;
+            PNLReviews.Visible = true;
+            PNLInvoices.Visible = true;
+            PNLProfile.Visible = true;
+            PNLMyProjects.Visible = true;
+            PNLLogs.Visible = true;
+            PNLMyInvoices.Visible = true;
+            PNLMyTasks.Visible = true;
+            PNLMessages.Visible = true;
         }
 
         private void btnProfile_Click(object sender, EventArgs e)

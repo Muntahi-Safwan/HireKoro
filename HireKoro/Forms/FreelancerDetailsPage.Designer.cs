@@ -44,11 +44,11 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.profileImg = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.lblName = new System.Windows.Forms.Label();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profileImg)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -83,7 +83,7 @@
             this.guna2Panel1.Controls.Add(this.lblEmail);
             this.guna2Panel1.Controls.Add(this.lblUsername);
             this.guna2Panel1.Controls.Add(this.guna2Button1);
-            this.guna2Panel1.Controls.Add(this.guna2CirclePictureBox1);
+            this.guna2Panel1.Controls.Add(this.profileImg);
             this.guna2Panel1.Controls.Add(this.lblName);
             this.guna2Panel1.Location = new System.Drawing.Point(54, 21);
             this.guna2Panel1.Name = "guna2Panel1";
@@ -261,15 +261,16 @@
             this.guna2Button1.TabIndex = 46;
             this.guna2Button1.Text = "Chat";
             // 
-            // guna2CirclePictureBox1
+            // profileImg
             // 
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(75, 37);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(110, 110);
-            this.guna2CirclePictureBox1.TabIndex = 45;
-            this.guna2CirclePictureBox1.TabStop = false;
+            this.profileImg.ImageRotate = 0F;
+            this.profileImg.Location = new System.Drawing.Point(75, 37);
+            this.profileImg.Name = "profileImg";
+            this.profileImg.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.profileImg.Size = new System.Drawing.Size(110, 110);
+            this.profileImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.profileImg.TabIndex = 45;
+            this.profileImg.TabStop = false;
             // 
             // lblName
             // 
@@ -293,7 +294,7 @@
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profileImg)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -303,7 +304,7 @@
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label lblName;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox profileImg;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label lblDescription;

@@ -28,6 +28,11 @@ namespace HireKoro.Forms
         {
             InitializeComponent();
             this.freelancerId = id;
+            try
+            {
+                this.imgProfile.Image = Image.FromFile($@"..\..\assets\users\{id}.png");
+            }
+            catch { }
             this.lblFreelancerName.Text = name;
             this.lblDescription.Text = description;
             this.lblSkills.Text = skills;
