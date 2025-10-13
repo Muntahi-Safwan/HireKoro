@@ -35,6 +35,10 @@
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.flpTasksOngoing = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cmbprojectk = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cmbprojectm = new System.Windows.Forms.ComboBox();
+            this.cmbprojectn = new System.Windows.Forms.ComboBox();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
@@ -50,10 +54,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmbprojectn = new System.Windows.Forms.ComboBox();
-            this.cmbprojectm = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.cmbprojectk = new System.Windows.Forms.ComboBox();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -62,6 +62,7 @@
             // 
             // guna2GradientPanel1
             // 
+            this.guna2GradientPanel1.AutoScroll = true;
             this.guna2GradientPanel1.Controls.Add(this.guna2Panel1);
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(22)))), ((int)(((byte)(26)))));
@@ -75,6 +76,7 @@
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.AutoScroll = true;
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
             this.guna2Panel1.BorderColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.BorderRadius = 15;
@@ -91,6 +93,7 @@
             // 
             // flpTasksCompleted
             // 
+            this.flpTasksCompleted.AutoScroll = true;
             this.flpTasksCompleted.Location = new System.Drawing.Point(30, 392);
             this.flpTasksCompleted.Name = "flpTasksCompleted";
             this.flpTasksCompleted.Size = new System.Drawing.Size(543, 198);
@@ -120,6 +123,7 @@
             // 
             // flpTasksOngoing
             // 
+            this.flpTasksOngoing.AutoScroll = true;
             this.flpTasksOngoing.Location = new System.Drawing.Point(31, 143);
             this.flpTasksOngoing.Name = "flpTasksOngoing";
             this.flpTasksOngoing.Size = new System.Drawing.Size(543, 195);
@@ -149,6 +153,47 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(218, 498);
             this.panel1.TabIndex = 3;
+            // 
+            // cmbprojectk
+            // 
+            this.cmbprojectk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
+            this.cmbprojectk.ForeColor = System.Drawing.SystemColors.Window;
+            this.cmbprojectk.FormattingEnabled = true;
+            this.cmbprojectk.Location = new System.Drawing.Point(16, 74);
+            this.cmbprojectk.Name = "cmbprojectk";
+            this.cmbprojectk.Size = new System.Drawing.Size(181, 21);
+            this.cmbprojectk.TabIndex = 31;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
+            this.label8.Location = new System.Drawing.Point(15, 49);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(50, 22);
+            this.label8.TabIndex = 30;
+            this.label8.Text = "Project";
+            // 
+            // cmbprojectm
+            // 
+            this.cmbprojectm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
+            this.cmbprojectm.ForeColor = System.Drawing.SystemColors.Window;
+            this.cmbprojectm.FormattingEnabled = true;
+            this.cmbprojectm.Location = new System.Drawing.Point(19, 307);
+            this.cmbprojectm.Name = "cmbprojectm";
+            this.cmbprojectm.Size = new System.Drawing.Size(181, 21);
+            this.cmbprojectm.TabIndex = 29;
+            // 
+            // cmbprojectn
+            // 
+            this.cmbprojectn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
+            this.cmbprojectn.ForeColor = System.Drawing.SystemColors.Window;
+            this.cmbprojectn.FormattingEnabled = true;
+            this.cmbprojectn.Location = new System.Drawing.Point(19, 356);
+            this.cmbprojectn.Name = "cmbprojectn";
+            this.cmbprojectn.Size = new System.Drawing.Size(181, 21);
+            this.cmbprojectn.TabIndex = 28;
             // 
             // guna2Button3
             // 
@@ -379,47 +424,6 @@
             this.label1.Size = new System.Drawing.Size(466, 76);
             this.label1.TabIndex = 0;
             this.label1.Text = "Manage Your Tasks";
-            // 
-            // cmbprojectn
-            // 
-            this.cmbprojectn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
-            this.cmbprojectn.ForeColor = System.Drawing.SystemColors.Window;
-            this.cmbprojectn.FormattingEnabled = true;
-            this.cmbprojectn.Location = new System.Drawing.Point(19, 356);
-            this.cmbprojectn.Name = "cmbprojectn";
-            this.cmbprojectn.Size = new System.Drawing.Size(181, 21);
-            this.cmbprojectn.TabIndex = 28;
-            // 
-            // cmbprojectm
-            // 
-            this.cmbprojectm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
-            this.cmbprojectm.ForeColor = System.Drawing.SystemColors.Window;
-            this.cmbprojectm.FormattingEnabled = true;
-            this.cmbprojectm.Location = new System.Drawing.Point(19, 307);
-            this.cmbprojectm.Name = "cmbprojectm";
-            this.cmbprojectm.Size = new System.Drawing.Size(181, 21);
-            this.cmbprojectm.TabIndex = 29;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
-            this.label8.Location = new System.Drawing.Point(15, 49);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(50, 22);
-            this.label8.TabIndex = 30;
-            this.label8.Text = "Project";
-            // 
-            // cmbprojectk
-            // 
-            this.cmbprojectk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
-            this.cmbprojectk.ForeColor = System.Drawing.SystemColors.Window;
-            this.cmbprojectk.FormattingEnabled = true;
-            this.cmbprojectk.Location = new System.Drawing.Point(16, 74);
-            this.cmbprojectk.Name = "cmbprojectk";
-            this.cmbprojectk.Size = new System.Drawing.Size(181, 21);
-            this.cmbprojectk.TabIndex = 31;
             // 
             // FreelancerTaskPage
             // 
