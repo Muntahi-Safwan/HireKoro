@@ -38,7 +38,6 @@
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblReceverNAME = new System.Windows.Forms.Label();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.flpChats = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
@@ -50,7 +49,6 @@
             this.guna2Panel2.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel4.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.SuspendLayout();
@@ -201,7 +199,6 @@
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.BorderRadius = 12;
             this.guna2Panel1.Controls.Add(this.lblReceverNAME);
-            this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(53)))));
             this.guna2Panel1.Location = new System.Drawing.Point(15, 10);
@@ -214,23 +211,12 @@
             // 
             this.lblReceverNAME.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lblReceverNAME.ForeColor = System.Drawing.Color.White;
-            this.lblReceverNAME.Location = new System.Drawing.Point(76, 8);
+            this.lblReceverNAME.Location = new System.Drawing.Point(10, 8);
             this.lblReceverNAME.Name = "lblReceverNAME";
-            this.lblReceverNAME.Size = new System.Drawing.Size(431, 42);
+            this.lblReceverNAME.Size = new System.Drawing.Size(497, 42);
             this.lblReceverNAME.TabIndex = 1;
-            this.lblReceverNAME.Text = "OMOK";
+            this.lblReceverNAME.Text = "------";
             this.lblReceverNAME.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BorderRadius = 12;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(14, 8);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(42, 42);
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
             // 
             // guna2Panel4
             // 
@@ -297,7 +283,6 @@
             this.guna2Panel2.ResumeLayout(false);
             this.guna2GradientPanel2.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2Panel4.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -320,6 +305,5 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private System.Windows.Forms.Label lblReceverNAME;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }

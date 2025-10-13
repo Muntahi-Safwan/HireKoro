@@ -15,7 +15,7 @@ namespace HireKoro.Forms
     public partial class MessagesPage : UserControl
     {
         internal static string SenderId { get; set; }
-        internal static string ReceverID { get; set; }
+        internal static string ReceverID { get; set; } = "0";
         internal static FlowLayoutPanel FLPmessage { get ; set; }
         internal static Label ReceverName { get; set; }
 
@@ -25,7 +25,6 @@ namespace HireKoro.Forms
             SenderId = Main.CurrentUserId;
 
             ReceverName = lblReceverNAME;
-
             FLPmessage = this.flpChats;
             this.LoadMessages();
             Chats();
@@ -54,6 +53,10 @@ namespace HireKoro.Forms
             try
             {
                 var result = Main.DB.ExecuteQueryTable(Query);
+                if (result.Rows.Count<1)
+                {
+                    return;
+                }
                 ReceverID = result.Rows[0][1].ToString();
 
                 for (int i = 0; i < result.Rows.Count; i++)
@@ -62,6 +65,7 @@ namespace HireKoro.Forms
                     newM.Dock = DockStyle.Top;
                     this.flpMessages.Controls.Add(newM);
                 }
+                this.lblReceverNAME.Text = result.Rows[0][2].ToString().ToString();
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
 
@@ -79,6 +83,10 @@ namespace HireKoro.Forms
 
         internal static void Chats()
         {
+            if (ReceverID == "0")
+            {
+                return;
+            }
             FLPmessage.Controls.Clear();
 
             var Query = $@"Select M.SenderID,

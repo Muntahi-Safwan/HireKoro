@@ -33,11 +33,9 @@
             this.lblMessage = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblTime = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblName = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.pnlMessage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -51,7 +49,6 @@
             this.guna2Panel1.Controls.Add(this.pnlMessage);
             this.guna2Panel1.Controls.Add(this.lblTime);
             this.guna2Panel1.Controls.Add(this.panel1);
-            this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel1.Controls.Add(this.lblName);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(24)))), ((int)(((byte)(26)))));
@@ -83,7 +80,7 @@
             this.lblMessage.MaximumSize = new System.Drawing.Size(415, 0);
             this.lblMessage.Name = "lblMessage";
             this.lblMessage.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lblMessage.Size = new System.Drawing.Size(94, 27);
+            this.lblMessage.Size = new System.Drawing.Size(415, 27);
             this.lblMessage.TabIndex = 0;
             this.lblMessage.Text = "Message";
             // 
@@ -106,22 +103,12 @@
             this.panel1.Size = new System.Drawing.Size(503, 2);
             this.panel1.TabIndex = 2;
             // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BorderRadius = 10;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(17, 12);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(30, 30);
-            this.guna2PictureBox1.TabIndex = 1;
-            this.guna2PictureBox1.TabStop = false;
-            // 
             // lblName
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblName.Location = new System.Drawing.Point(62, 15);
+            this.lblName.Location = new System.Drawing.Point(41, 15);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(64, 25);
             this.lblName.TabIndex = 0;
@@ -143,7 +130,6 @@
             this.guna2Panel1.PerformLayout();
             this.pnlMessage.ResumeLayout(false);
             this.pnlMessage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,7 +139,6 @@
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Panel pnlMessage;
