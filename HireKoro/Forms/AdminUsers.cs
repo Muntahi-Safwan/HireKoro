@@ -130,7 +130,7 @@ namespace HireKoro.Forms
                                  WHERE UserID = '{txtUserID.Text}'";
 
                 Main.DB.ExecuteDMLQuery(query);
-                MessageBox.Show("Project updated successfully!");
+                MessageBox.Show("User updated successfully!");
                 LoadUsers();
                 Clearall();
             }
