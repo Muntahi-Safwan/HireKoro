@@ -30,11 +30,8 @@
         {
             this.pnlMessages = new Guna.UI2.WinForms.Guna2Panel();
             this.lblTime = new System.Windows.Forms.Label();
-            this.lblMessage = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnlMessages.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMessages
@@ -44,9 +41,7 @@
             this.pnlMessages.BorderRadius = 12;
             this.pnlMessages.BorderThickness = 1;
             this.pnlMessages.Controls.Add(this.lblTime);
-            this.pnlMessages.Controls.Add(this.lblMessage);
             this.pnlMessages.Controls.Add(this.lblName);
-            this.pnlMessages.Controls.Add(this.guna2PictureBox1);
             this.pnlMessages.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMessages.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
             this.pnlMessages.Location = new System.Drawing.Point(0, 0);
@@ -68,38 +63,16 @@
             this.lblTime.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblTime.Click += new System.EventHandler(this.pnlMessages_Click);
             // 
-            // lblMessage
-            // 
-            this.lblMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.lblMessage.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblMessage.Location = new System.Drawing.Point(55, 35);
-            this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(160, 19);
-            this.lblMessage.TabIndex = 2;
-            this.lblMessage.Text = "Message";
-            this.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblMessage.Click += new System.EventHandler(this.pnlMessages_Click);
-            // 
             // lblName
             // 
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.Color.White;
-            this.lblName.Location = new System.Drawing.Point(54, 13);
+            this.lblName.Location = new System.Drawing.Point(16, 20);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(160, 19);
+            this.lblName.Size = new System.Drawing.Size(198, 19);
             this.lblName.TabIndex = 1;
             this.lblName.Text = "Name";
             this.lblName.Click += new System.EventHandler(this.pnlMessages_Click);
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(13, 19);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(35, 35);
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.Click += new System.EventHandler(this.pnlMessages_Click);
             // 
             // MessageContainer
             // 
@@ -112,7 +85,6 @@
             this.Size = new System.Drawing.Size(229, 73);
             this.pnlMessages.ResumeLayout(false);
             this.pnlMessages.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -121,8 +93,6 @@
 
         private Guna.UI2.WinForms.Guna2Panel pnlMessages;
         private System.Windows.Forms.Label lblName;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Label lblTime;
-        private System.Windows.Forms.Label lblMessage;
     }
 }
