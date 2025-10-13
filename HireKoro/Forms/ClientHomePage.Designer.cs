@@ -41,6 +41,7 @@
             // 
             // guna2GradientPanel1
             // 
+            this.guna2GradientPanel1.AutoScroll = true;
             this.guna2GradientPanel1.Controls.Add(this.flowPanel);
             this.guna2GradientPanel1.Controls.Add(this.txtSearchCP);
             this.guna2GradientPanel1.Controls.Add(this.guna2Panel1);
@@ -56,6 +57,7 @@
             // 
             // flowPanel
             // 
+            this.flowPanel.AutoScroll = true;
             this.flowPanel.BackColor = System.Drawing.Color.Transparent;
             this.flowPanel.Location = new System.Drawing.Point(76, 274);
             this.flowPanel.Name = "flowPanel";
