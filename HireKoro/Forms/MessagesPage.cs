@@ -53,11 +53,31 @@ namespace HireKoro.Forms
             try
             {
                 var result = Main.DB.ExecuteQueryTable(Query);
+                bool a = false;
                 if (result.Rows.Count < 1)
                 {
-                    return;
+                    Query = $@"SELECT M.MessageID,
+                                   M.SenderID,
+                                   SU.Name,  
+                                   M.Content,
+                                   M.SendAt
+                            FROM MESSAGES AS M
+                            JOIN USERS AS RU ON RU.UserID = M.ReceiverID
+                            JOIN USERS AS SU ON SU.UserID = M.SenderID
+                            WHERE M.ReceiverID = '{SenderId}'  -- Changed to ReceiverID
+                              AND M.SendAt = (
+                                  SELECT MAX(M2.SendAt)
+                                  FROM MESSAGES AS M2
+                                  WHERE M2.SenderID = M.SenderID
+                                    AND M2.ReceiverID = M.ReceiverID
+                              )
+                            ORDER BY M.SendAt DESC;";
+
+                    result = Main.DB.ExecuteQueryTable(Query);
+                    if (result.Rows.Count < 1) return;
+                    a = true;
+                    ReceverID = result.Rows[0][1].ToString();
                 }
-                ReceverID = result.Rows[0][1].ToString();
 
                 for (int i = 0; i < result.Rows.Count; i++)
                 {

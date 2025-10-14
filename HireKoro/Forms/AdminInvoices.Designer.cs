@@ -34,6 +34,8 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.dptIssueDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dtpDueDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.cmbprojectn = new System.Windows.Forms.ComboBox();
             this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
@@ -59,8 +61,7 @@
             this.IssueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.dtpDueDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.dptIssueDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
@@ -100,6 +101,7 @@
             // 
             // guna2GradientPanel3
             // 
+            this.guna2GradientPanel3.Controls.Add(this.guna2Button1);
             this.guna2GradientPanel3.Controls.Add(this.dptIssueDate);
             this.guna2GradientPanel3.Controls.Add(this.dtpDueDate);
             this.guna2GradientPanel3.Controls.Add(this.cmbStatus);
@@ -125,6 +127,46 @@
             this.guna2GradientPanel3.Name = "guna2GradientPanel3";
             this.guna2GradientPanel3.Size = new System.Drawing.Size(220, 661);
             this.guna2GradientPanel3.TabIndex = 4;
+            // 
+            // dptIssueDate
+            // 
+            this.dptIssueDate.BackColor = System.Drawing.Color.Transparent;
+            this.dptIssueDate.BorderColor = System.Drawing.Color.White;
+            this.dptIssueDate.BorderRadius = 8;
+            this.dptIssueDate.BorderThickness = 1;
+            this.dptIssueDate.Checked = true;
+            this.dptIssueDate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
+            this.dptIssueDate.Font = new System.Drawing.Font("Poppins", 6F);
+            this.dptIssueDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
+            this.dptIssueDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dptIssueDate.Location = new System.Drawing.Point(16, 294);
+            this.dptIssueDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dptIssueDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dptIssueDate.Name = "dptIssueDate";
+            this.dptIssueDate.Size = new System.Drawing.Size(184, 28);
+            this.dptIssueDate.TabIndex = 23;
+            this.dptIssueDate.UseTransparentBackground = true;
+            this.dptIssueDate.Value = new System.DateTime(2025, 10, 8, 17, 25, 52, 474);
+            // 
+            // dtpDueDate
+            // 
+            this.dtpDueDate.BackColor = System.Drawing.Color.Transparent;
+            this.dtpDueDate.BorderColor = System.Drawing.Color.White;
+            this.dtpDueDate.BorderRadius = 8;
+            this.dtpDueDate.BorderThickness = 1;
+            this.dtpDueDate.Checked = true;
+            this.dtpDueDate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
+            this.dtpDueDate.Font = new System.Drawing.Font("Poppins", 6F);
+            this.dtpDueDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
+            this.dtpDueDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpDueDate.Location = new System.Drawing.Point(16, 350);
+            this.dtpDueDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpDueDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpDueDate.Name = "dtpDueDate";
+            this.dtpDueDate.Size = new System.Drawing.Size(184, 23);
+            this.dtpDueDate.TabIndex = 22;
+            this.dtpDueDate.UseTransparentBackground = true;
+            this.dtpDueDate.Value = new System.DateTime(2025, 10, 8, 17, 25, 52, 474);
             // 
             // cmbStatus
             // 
@@ -515,45 +557,20 @@
             this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
-            // dtpDueDate
+            // guna2Button1
             // 
-            this.dtpDueDate.BackColor = System.Drawing.Color.Transparent;
-            this.dtpDueDate.BorderColor = System.Drawing.Color.White;
-            this.dtpDueDate.BorderRadius = 8;
-            this.dtpDueDate.BorderThickness = 1;
-            this.dtpDueDate.Checked = true;
-            this.dtpDueDate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
-            this.dtpDueDate.Font = new System.Drawing.Font("Poppins", 6F);
-            this.dtpDueDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
-            this.dtpDueDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpDueDate.Location = new System.Drawing.Point(16, 350);
-            this.dtpDueDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtpDueDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtpDueDate.Name = "dtpDueDate";
-            this.dtpDueDate.Size = new System.Drawing.Size(184, 23);
-            this.dtpDueDate.TabIndex = 22;
-            this.dtpDueDate.UseTransparentBackground = true;
-            this.dtpDueDate.Value = new System.DateTime(2025, 10, 8, 17, 25, 52, 474);
-            // 
-            // dptIssueDate
-            // 
-            this.dptIssueDate.BackColor = System.Drawing.Color.Transparent;
-            this.dptIssueDate.BorderColor = System.Drawing.Color.White;
-            this.dptIssueDate.BorderRadius = 8;
-            this.dptIssueDate.BorderThickness = 1;
-            this.dptIssueDate.Checked = true;
-            this.dptIssueDate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
-            this.dptIssueDate.Font = new System.Drawing.Font("Poppins", 6F);
-            this.dptIssueDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
-            this.dptIssueDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dptIssueDate.Location = new System.Drawing.Point(16, 294);
-            this.dptIssueDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dptIssueDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dptIssueDate.Name = "dptIssueDate";
-            this.dptIssueDate.Size = new System.Drawing.Size(184, 28);
-            this.dptIssueDate.TabIndex = 23;
-            this.dptIssueDate.UseTransparentBackground = true;
-            this.dptIssueDate.Value = new System.DateTime(2025, 10, 8, 17, 25, 52, 474);
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(20, 559);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(180, 45);
+            this.guna2Button1.TabIndex = 24;
+            this.guna2Button1.Text = "guna2Button1";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // AdminInvoices
             // 
@@ -606,5 +623,6 @@
         private System.Windows.Forms.ComboBox cmbStatus;
         private Guna.UI2.WinForms.Guna2DateTimePicker dptIssueDate;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpDueDate;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }
