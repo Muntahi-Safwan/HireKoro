@@ -16,7 +16,7 @@ namespace HireKoro.Forms
     {
         internal static string SenderId { get; set; }
         internal static string ReceverID { get; set; } = "0";
-        internal static FlowLayoutPanel FLPmessage { get ; set; }
+        internal static FlowLayoutPanel FLPmessage { get; set; }
         internal static Label ReceverName { get; set; }
 
         public MessagesPage()
@@ -53,15 +53,35 @@ namespace HireKoro.Forms
             try
             {
                 var result = Main.DB.ExecuteQueryTable(Query);
-                if (result.Rows.Count<1)
+                bool a = false;
+                if (result.Rows.Count < 1)
                 {
-                    return;
+                    Query = $@"SELECT M.MessageID,
+                                   M.SenderID,
+                                   SU.Name,  
+                                   M.Content,
+                                   M.SendAt
+                            FROM MESSAGES AS M
+                            JOIN USERS AS RU ON RU.UserID = M.ReceiverID
+                            JOIN USERS AS SU ON SU.UserID = M.SenderID
+                            WHERE M.ReceiverID = '{SenderId}'  -- Changed to ReceiverID
+                              AND M.SendAt = (
+                                  SELECT MAX(M2.SendAt)
+                                  FROM MESSAGES AS M2
+                                  WHERE M2.SenderID = M.SenderID
+                                    AND M2.ReceiverID = M.ReceiverID
+                              )
+                            ORDER BY M.SendAt DESC;";
+
+                    result = Main.DB.ExecuteQueryTable(Query);
+                    if (result.Rows.Count < 1) return;
+                    a = true;
+                    ReceverID = result.Rows[0][1].ToString();
                 }
-                ReceverID = result.Rows[0][1].ToString();
 
                 for (int i = 0; i < result.Rows.Count; i++)
                 {
-                    MessageContainer newM = new MessageContainer(result.Rows[i][1].ToString(),result.Rows[i][2].ToString(), result.Rows[i][3].ToString(), result.Rows[i][4].ToString());
+                    MessageContainer newM = new MessageContainer(result.Rows[i][1].ToString(), result.Rows[i][2].ToString(), result.Rows[i][3].ToString(), result.Rows[i][4].ToString());
                     newM.Dock = DockStyle.Top;
                     this.flpMessages.Controls.Add(newM);
                 }
@@ -109,7 +129,7 @@ namespace HireKoro.Forms
             {
                 var result = Main.DB.ExecuteQueryTable(Query);
 
-                for (int i = 0; i < result.Rows.Count ; i++)
+                for (int i = 0; i < result.Rows.Count; i++)
                 {
                     ChatBubble chats = new ChatBubble(result.Rows[i][4].ToString(), result.Rows[i][1].ToString(), result.Rows[i][5].ToString());
 

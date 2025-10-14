@@ -43,7 +43,7 @@
             this.lblHourlyRate = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSendChat = new Guna.UI2.WinForms.Guna2Button();
             this.profileImg = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.lblName = new System.Windows.Forms.Label();
             this.guna2GradientPanel1.SuspendLayout();
@@ -82,7 +82,7 @@
             this.guna2Panel1.Controls.Add(this.lblHourlyRate);
             this.guna2Panel1.Controls.Add(this.lblEmail);
             this.guna2Panel1.Controls.Add(this.lblUsername);
-            this.guna2Panel1.Controls.Add(this.guna2Button1);
+            this.guna2Panel1.Controls.Add(this.btnSendChat);
             this.guna2Panel1.Controls.Add(this.profileImg);
             this.guna2Panel1.Controls.Add(this.lblName);
             this.guna2Panel1.Location = new System.Drawing.Point(54, 21);
@@ -243,23 +243,24 @@
             this.lblUsername.TabIndex = 48;
             this.lblUsername.Text = "user_name";
             // 
-            // guna2Button1
+            // btnSendChat
             // 
-            this.guna2Button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
-            this.guna2Button1.BorderRadius = 3;
-            this.guna2Button1.BorderThickness = 1;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
-            this.guna2Button1.Location = new System.Drawing.Point(675, 51);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(93, 30);
-            this.guna2Button1.TabIndex = 46;
-            this.guna2Button1.Text = "Chat";
+            this.btnSendChat.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
+            this.btnSendChat.BorderRadius = 3;
+            this.btnSendChat.BorderThickness = 1;
+            this.btnSendChat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSendChat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSendChat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSendChat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSendChat.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
+            this.btnSendChat.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSendChat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(208)))), ((int)(((byte)(253)))));
+            this.btnSendChat.Location = new System.Drawing.Point(675, 51);
+            this.btnSendChat.Name = "btnSendChat";
+            this.btnSendChat.Size = new System.Drawing.Size(93, 30);
+            this.btnSendChat.TabIndex = 46;
+            this.btnSendChat.Text = "Chat";
+            this.btnSendChat.Click += new System.EventHandler(this.btnSendChat_Click);
             // 
             // profileImg
             // 
@@ -305,7 +306,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label lblName;
         private Guna.UI2.WinForms.Guna2CirclePictureBox profileImg;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnSendChat;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label lblDescription;
         private System.Windows.Forms.Label lblHourlyRate;

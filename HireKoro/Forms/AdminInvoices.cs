@@ -200,5 +200,10 @@ namespace HireKoro.Forms
             this.dptIssueDate.Text = this.dgvInvoices.CurrentRow.Cells["IssueDate"].Value.ToString();
             this.dtpDueDate.Text = this.dgvInvoices.CurrentRow.Cells["DueDate"].Value.ToString();
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("");
+        }
     }
 }

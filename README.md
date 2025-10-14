@@ -2,6 +2,10 @@
 
 # HireKoro
 
+<div align="center" >
+  <img src="./HireKoro/assets/public/banner.png" alt="AiroWatch Banner" width="100%" />
+</div>
+
 ### Desktop Freelance Marketplace Platform
 
 ![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
@@ -36,6 +40,7 @@
 HireKoro is a comprehensive project management system designed for the freelance economy. It provides dedicated interfaces for three user types—clients, freelancers, and administrators—each with tailored workflows and features. The platform handles everything from freelancer discovery and project creation to task tracking, invoicing, and real-time messaging.
 
 ### 📊 Quick Stats
+<div align="center">
 
 | Metric | Count |
 |--------|-------|
@@ -45,6 +50,8 @@ HireKoro is a comprehensive project management system designed for the freelance
 | 👥 **User Roles** | 3 distinct role types (Client, Freelancer, Admin) |
 | ✨ **Features** | 60+ planned enhancements |
 | 🔐 **Security** | BCrypt password hashing |
+
+</div>
 
 ### 🎯 Core Capabilities
 
